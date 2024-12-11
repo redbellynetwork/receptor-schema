@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Automatically adds branch name and branch description to every commit message.
+#
+branch_name=$(git branch | grep '*' | sed 's/* //') 
+ticket_name=${branch_name#*/}
+ticket_id=${ticket_name%/*}
+echo "[$ticket_id]"': '$(cat "$1") > "$1"
