@@ -1,0 +1,18 @@
+version: '3'
+
+tasks:
+  runChecks : 
+      cmds:
+        - echo 'static check successful'
+
+  runTests :
+      cmds:
+        - echo 'Test run successful'
+
+  runBuild :
+      cmds:
+        - echo 'Build successful'
+
+  runDeploy:
+      cmds:
+        - echo 'Deployment successful'
