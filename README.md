@@ -1,29 +1,10 @@
-# REPO_NAME
+# Receptor-schema
 
 ## Description
 
-- Provide a short description about the repository.
-
-## Index
-
-- Contents for readme.
-
-## Pre-requisites/Assumptions
-
-- Any pre-requisites or assumptions before working with repository
-
-## How to Install/Run
-
-- How to install or run the code in repository
-
-## How Test
-
-- Steps to test the code in repository or add new tests
+- This provides a list of schemas supported by the Receptor protocol by redbelly.
 
 ## Features
 
-- Features of the codebase in repository
-
-## Developer notes
-
-- How to create packages and release
+- You can have an insight into all the JSON-LD, and JSON schema definitions of the Verifiable Credentials supported by Redbelly.
+- You can also find the vocabulary files for the Credentials supported by Redbelly.
