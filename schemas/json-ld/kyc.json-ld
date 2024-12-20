@@ -42,6 +42,41 @@
             "@type": "xsd:integer"
           }
         }
+      },
+      "AMLCTFVerification": {
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/kyc.jsonld#AMLCTFVerification",
+        "@context": {
+          "@version": 1.1,
+          "@protected": true,
+          "id": "@id",
+          "type": "@type",
+          "kyc-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/kyc.md#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "amlCheckStatus": {
+            "@id": "kyc-vocab:amlCheckStatus",
+            "@type": "xsd:string"
+          },
+          "ctfCheckStatus": {
+            "@id": "kyc-vocab:amlCheckStatus",
+            "@type": "xsd:string"
+          },
+          "jurisdiction": {
+            "@id": "kyc-vocab:jurisdiction",
+            "@type": "xsd:string"
+          },
+          "pepStatus": {
+            "@id": "kyc-vocab:pepStatus",
+            "@type": "xsd:boolean"
+          },
+          "sanctionsCheck": {
+            "@id": "kyc-vocab:sanctionsCheck",
+            "@type": "xsd:boolean"
+          },
+          "monitoringStatus": {
+            "@id": "kyc-vocab:monitoringStatus",
+            "@type": "xsd:string"
+          }
+        }
       }
     }
   ]
