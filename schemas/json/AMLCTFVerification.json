@@ -15,7 +15,8 @@
     "issuanceDate",
     "expirationDate",
     "credentialSubject",
-    "proof"
+    "credentialSchema",
+    "credentialStatus"
   ],
   "properties": {
     "@context": {
@@ -102,41 +103,6 @@
           "type": "string",
           "enum": ["active", "inactive"],
           "description": "Status of ongoing monitoring for compliance."
-        }
-      }
-    },
-    "proof": {
-      "type": "object",
-      "description": "Cryptographic proof of the credential.",
-      "required": [
-        "type",
-        "created",
-        "proofPurpose",
-        "verificationMethod",
-        "jws"
-      ],
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "Type of proof mechanism used."
-        },
-        "created": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Creation date and time of the proof."
-        },
-        "proofPurpose": {
-          "type": "string",
-          "description": "Purpose of the proof, such as 'assertionMethod'."
-        },
-        "verificationMethod": {
-          "type": "string",
-          "format": "uri",
-          "description": "Identifier for the verification method."
-        },
-        "jws": {
-          "type": "string",
-          "description": "The JSON Web Signature (JWS)."
         }
       }
     }
