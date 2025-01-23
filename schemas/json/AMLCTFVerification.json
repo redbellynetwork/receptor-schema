@@ -69,7 +69,14 @@
     },
     "credentialSubject": {
       "type": "object",
-      "required": ["id", "amlCheckStatus", "ctfCheckStatus"],
+      "required": [
+        "id",
+        "amlCheckStatus",
+        "pepStatus",
+        "sanctionsCheck",
+        "adverseMediaStatus",
+        "monitoringStatus"
+      ],
       "properties": {
         "id": {
           "title": "Credential Subject ID",
@@ -79,25 +86,23 @@
         },
         "amlCheckStatus": {
           "type": "string",
-          "enum": ["passed", "failed", "pending"],
+          "enum": ["passed", "failed"],
           "description": "Result of the AML check."
         },
-        "ctfCheckStatus": {
-          "type": "string",
-          "enum": ["passed", "failed", "pending"],
-          "description": "Result of the CTF check."
-        },
-        "jurisdiction": {
-          "type": "string",
-          "description": "Jurisdiction where the checks were performed."
-        },
         "pepStatus": {
-          "type": "boolean",
-          "description": "Indicates if the subject is a Politically Exposed Person (PEP)."
+          "type": "string",
+          "enum": ["passed", "failed"],
+          "description": "Status of the PEP check."
         },
         "sanctionsCheck": {
-          "type": "boolean",
-          "description": "Indicates if the subject is on a sanctions list."
+          "type": "string",
+          "enum": ["passed", "failed"],
+          "description": "Indicate status of sanction check, that user is not part of sanctions list."
+        },
+        "adverseMediaStatus": {
+          "type": "string",
+          "enum": ["passed", "failed"],
+          "description": "Status of the adverse Media"
         },
         "monitoringStatus": {
           "type": "string",

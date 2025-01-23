@@ -56,21 +56,17 @@
             "@id": "kyc-vocab:amlCheckStatus",
             "@type": "xsd:string"
           },
-          "ctfCheckStatus": {
-            "@id": "kyc-vocab:amlCheckStatus",
-            "@type": "xsd:string"
-          },
-          "jurisdiction": {
-            "@id": "kyc-vocab:jurisdiction",
-            "@type": "xsd:string"
-          },
           "pepStatus": {
             "@id": "kyc-vocab:pepStatus",
-            "@type": "xsd:boolean"
+            "@type": "xsd:string"
           },
           "sanctionsCheck": {
             "@id": "kyc-vocab:sanctionsCheck",
-            "@type": "xsd:boolean"
+            "@type": "xsd:string"
+          },
+          "adverseMediaStatus": {
+            "@id": "kyc-vocab:adverseMediaStatus",
+            "@type": "xsd:string"
           },
           "monitoringStatus": {
             "@id": "kyc-vocab:monitoringStatus",

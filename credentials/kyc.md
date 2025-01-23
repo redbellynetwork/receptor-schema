@@ -72,42 +72,34 @@ amlCheckStatus is the status of Anti-Money Laundering check
   "amlCheckStatus": "passed"
 ```
 
-# ctfCheckStatus
-
-ctfCheckStatus
-
-```
-  "ctfCheckStatus"
-```
-
-# jurisdiction
-
-jurisdiction
-
-```
-  "jurisdiction"
-```
-
 # pepStatus
 
-pepStatus
+pepStatus is status of the PEP check
 
 ```
-  "pepStatus"
+  "pepStatus": "passed"
 ```
 
 # sanctionsCheck
 
-sanctionsCheck
+sanctionsCheck indicate status of sanction check, that user is not part of sanctions list
 
 ```
-  "sanctionsCheck"
+  "sanctionsCheck": "passed"
+```
+
+# adverseMediaStatus
+
+adverseMediaStatus is status of adverse Media check
+
+```
+  "adverseMediaStatus": "passed"
 ```
 
 # monitoringStatus
 
-monitoringStatus
+monitoringStatus is status of ongoing monitoring for compliance
 
 ```
-  "monitoringStatus"
+  "monitoringStatus": "active"
 ```
