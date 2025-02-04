@@ -13,7 +13,7 @@
             "id": "@id",
             "type": "@type",
             "xsd": "http://www.w3.org/2001/XMLSchema#",
-            "driversLicence-vocab": "https://github.com/redbellynetwork/did-schema/blob/main/passportDriverLicenceVocab.md#",
+            "driversLicence-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/driversLicence.md#",
             "name": {
               "@id": "driversLicence-vocab:name",
               "@type": "xsd:string"
