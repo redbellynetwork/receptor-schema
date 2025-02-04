@@ -23,10 +23,11 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] Others (specify)
 
 **Test Configuration**:
-* Firmware version:
-* Hardware:
-* Toolchain:
-* SDK:
+
+- Firmware version:
+- Hardware:
+- Toolchain:
+- SDK:
 
 # Checklist:
 
