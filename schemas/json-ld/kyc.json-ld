@@ -43,8 +43,8 @@
           }
         }
       },
-      "AMLCTFVerification": {
-        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/feature/PROD-2230/aml-schema/schemas/json-ld/kyc.json-ld#AMLCTFVerification",
+      "AMLCTFCredential": {
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/feature/PROD-2230/aml-schema/schemas/json-ld/kyc.json-ld#AMLCTFCredential",
         "@context": {
           "@version": 1.1,
           "@protected": true,
