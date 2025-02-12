@@ -61,5 +61,5 @@ verified means that identity passed KYC verification procedure (boolean)
 documentType identifies the document type which belongs to the claim data
 
 ```
-  "verified": true
+  "documentType": 2
 ```
