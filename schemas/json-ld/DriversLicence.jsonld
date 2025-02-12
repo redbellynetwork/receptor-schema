@@ -1,0 +1,49 @@
+{
+    "@context": [
+      {
+        "@version": 1.1,
+        "@protected": true,
+        "id": "@id",
+        "type": "@type",
+        "DriversLicenceCredential": {
+          "@id": "https://redbellynetwork.github.io/receptor-schema/json-ld/DriversLicence.jsonld",
+          "@context": {
+            "@version": 1.1,
+            "@protected": true,
+            "id": "@id",
+            "type": "@type",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "driversLicence-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/driversLicence.md#",
+            "name": {
+              "@id": "driversLicence-vocab:name",
+              "@type": "xsd:string"
+            },
+            "licenceNumber": {
+              "@id": "driversLicence-vocab:licenseNumber",
+              "@type": "xsd:string"
+            },
+            "stateOfIssuance": {
+              "@id": "driversLicence-vocab:stateOfIssuance",
+              "@type": "xsd:string"
+            },
+            "birthDate": {
+              "@id": "driversLicence-vocab:birthDate",
+              "@type": "xsd:integer"
+            },
+            "customerReference": {
+              "@id": "driversLicence-vocab:customerReference",
+              "@type": "xsd:string"
+            },
+            "expiryDate": {
+              "@id": "driversLicence-vocab:expiryDate",
+              "@type": "xsd:integer"
+            },
+            "publicAddress": {
+              "@id": "driversLicence-vocab:publicAddress",
+              "@type": "xsd:string"
+            }
+          }
+        }
+      }
+    ]
+  }

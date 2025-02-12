@@ -1,6 +1,5 @@
 <h2> <i> BJJ proof example </i> </h2>
 
-
 ```json
 {
   "@type": "BJJSignature2021",
@@ -30,14 +29,13 @@
 }
 ```
 
-
 # issuer_data
 
 Represents all information about issuer that was used for signature proof generation
 
 # auth_claim
 
-auth claim  is an information about BJJ Claim of issuer
+auth claim is an information about BJJ Claim of issuer
 
 # state
 
@@ -66,7 +64,6 @@ Issuer Identifier
 # created
 
 Time in Unix when signature has been created
-
 
 # mtp
 
