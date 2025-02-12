@@ -5,7 +5,7 @@ on:
     types: [reopened, opened, synchronize, edited]
 
 jobs:
-  static-check :
+  static-check:
     runs-on: ubuntu-20.04
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -17,7 +17,7 @@ jobs:
       - name: Run checks
         run: task runChecks
 
-  test :
+  test:
     runs-on: ubuntu-20.04
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -29,7 +29,7 @@ jobs:
       - name: Run tests
         run: task runTests
 
-  build :
+  build:
     runs-on: ubuntu-20.04
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -39,9 +39,9 @@ jobs:
         uses: arduino/setup-task@v1
 
       - name: Run build
-        run: task runBuild            
+        run: task runBuild
 
-  deploy :
+  deploy:
     runs-on: ubuntu-20.04
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it

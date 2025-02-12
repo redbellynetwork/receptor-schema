@@ -1,4 +1,5 @@
 [comment]: <> ([age is ]&# 40;# age&# 41;)
+
 # age
 
 age represents person age as integer value
@@ -22,7 +23,6 @@ birthDate represents person age as integer value
 ```
   "birthDate": 6
 ```
-
 
 # birthdayMonth
 
@@ -53,12 +53,13 @@ countryCode is numeric code (integer)
 verified means that identity passed KYC verification procedure (boolean)
 
 ```
-  "verified": true 
- ```
+  "verified": true
+```
+
 # documentType
 
 documentType identifies the document type which belongs to the claim data
 
 ```
-  "verified": true 
- ```
+  "verified": true
+```

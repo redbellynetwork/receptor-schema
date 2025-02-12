@@ -2,12 +2,12 @@ name: releases
 
 on:
   workflow_dispatch:
-   inputs:
-     versionTag:
+    inputs:
+      versionTag:
         description: 'Version tag to create tag and release'
         type: string
         required: true
-    
+
 jobs:
   reate-release:
     runs-on: ubuntu-latest
@@ -29,8 +29,8 @@ jobs:
           prerelease: true
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_ACTIONS_TOKEN }}
-          
-  static-check :
+
+  static-check:
     runs-on: ubuntu-20.04
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -42,7 +42,7 @@ jobs:
       - name: Run checks
         run: task runChecks
 
-  test :
+  test:
     runs-on: ubuntu-20.04
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -54,7 +54,7 @@ jobs:
       - name: Run tests
         run: task runTests
 
-  build :
+  build:
     runs-on: ubuntu-20.04
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -64,9 +64,9 @@ jobs:
         uses: arduino/setup-task@v1
 
       - name: Run build
-        run: task runBuild            
+        run: task runBuild
 
-  deploy :
+  deploy:
     runs-on: ubuntu-20.04
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -76,4 +76,4 @@ jobs:
         uses: arduino/setup-task@v1
 
       - name: Run deployment
-        run: task runDeploy    
+        run: task runDeploy
