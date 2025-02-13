@@ -1,0 +1,18 @@
+name: receptor-schema
+id: ari:cloud:compass:1794ff3d-579e-455b-ae19-07f3651d7bb2:component/8f784f5d-165e-48a8-800f-432089cd8105/54638672-ac13-4dcd-9df7-43feb8f61f4f
+description: Receptor DID schema
+configVersion: 1
+typeId: WEBSITE
+ownerId: ari:cloud:identity::team/97cd924d-51ad-48b2-b253-863a8b7f7483
+fields:
+  tier: 4
+links:
+  - name: null
+    type: REPOSITORY
+    url: https://github.com/redbellynetwork/receptor-schema
+relationships:
+  DEPENDS_ON: []
+labels:
+  - language:shell
+  - source:github
+customFields: null

@@ -8,3 +8,9 @@
 
 - You can have an insight into all the JSON-LD, and JSON schema definitions of the Verifiable Credentials supported by Redbelly.
 - You can also find the vocabulary files for the Credentials supported by Redbelly.
+
+# Provided Schemas are :-
+
+- AMLCTFVerification
+- KYCAgeCredential
+- KYCCountryResidenceCredential
