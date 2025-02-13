@@ -1,0 +1,49 @@
+{
+  "@context": [
+    {
+      "@version": 1.1,
+      "@protected": true,
+      "id": "@id",
+      "type": "@type",
+      "NationalIDCredential": {
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalId.jsonld#NationalIDCredential",
+        "@context": {
+          "@version": 1.1,
+          "@protected": true,
+          "id": "@id",
+          "type": "@type",
+          "nid-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/nationalId.md#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "name": {
+            "@id": "nid-vocab:name",
+            "@type": "xsd:string"
+          },
+          "birthDate": {
+            "@id": "nid-vocab:birthDate",
+            "@type": "xsd:integer"
+          },
+          "nationalIDNumber": {
+            "@id": "nid-vocab:nationalIDNumber",
+            "@type": "xsd:string"
+          },
+          "country": {
+            "@id": "nid-vocab:country",
+            "@type": "xsd:string"
+          },
+          "customerReference": {
+              "@id": "nid-vocab:customerReference",
+              "@type": "xsd:string"
+            },
+            "expiryDate": {
+              "@id": "nid-vocab:expiryDate",
+              "@type": "xsd:integer"
+            },
+            "publicAddress": {
+              "@id": "nid-vocab:publicAddress",
+              "@type": "xsd:string"
+            }
+        }
+      }
+    }
+  ]
+}
