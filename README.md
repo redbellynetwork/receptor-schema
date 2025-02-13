@@ -2,7 +2,7 @@
 
 ## Description
 
-- This provides a list of schemas supported by the Receptor protocol by Redbelly.
+- This provides a list of schemas supported by the Receptor protocol by redbelly.
 
 ## Features
 
@@ -11,7 +11,6 @@
 
 # Provided Schemas are :-
 
-- AMLCTFCredential
-- DriversLicenceCredential
-- NationalIdCredential
-- PassportCredential
+- AMLCTFVerification
+- KYCAgeCredential
+- KYCCountryResidenceCredential
