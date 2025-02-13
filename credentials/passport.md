@@ -6,20 +6,20 @@ The name of the person.
   "name": "my name"
 ```
 
-# licenceNumber
+# passportNumber
 
-Represents the licence number as a string value.
-
-```
-  "licenceNumber": "128739833"
-```
-
-# stateOfIssuance
-
-Represents the state that issued the document as a string value.
+Represents the passport number as a string value.
 
 ```
-  "stateOfIssuance": "ABC"
+  "passportNumber": "128739833"
+```
+
+# nationality
+
+Represents the country that issued the document as a string value.
+
+```
+  "nationality": "IND"
 ```
 
 # birthDate
