@@ -1,12 +1,11 @@
 name: receptor-schema:dev
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
   pull_request:
     types: [reopened, opened, synchronize, edited]
-
+  workflow_dispatch:
 jobs:
   playwright:
     uses: ./.github/workflows/playwright.yaml
