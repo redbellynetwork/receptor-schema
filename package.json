@@ -1,13 +1,15 @@
 {
   "scripts": {
     "format": "prettier --write .",
-    "test": "npx playwright test"
+    "test": "npx jest"
   },
   "devDependencies": {
-    "@playwright/test": "^1.50.1",
+    "@types/jest": "^29.5.14",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "jest": "^29.7.0",
     "prettier": "^3.4.2",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.2"
   }
