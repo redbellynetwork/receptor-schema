@@ -1,0 +1,30 @@
+name: receptor-schema:dev
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [reopened, opened, synchronize, edited]
+
+jobs:
+  playwright:
+    uses: ./.github/workflows/playwright.yaml
+    secrets: inherit
+  compass-success:
+    needs: [static-check, playwright-test, deploy-testing]
+    if: success()
+    uses: ./.github/workflows/compass-status.yaml
+    with:
+      compassId: ari:cloud:compass:1794ff3d-579e-455b-ae19-07f3651d7bb2:metric-source/8f784f5d-165e-48a8-800f-432089cd8105/ecfd38cb-d88b-46c2-96b9-382c35ca5e9e
+      metricValue: 1
+    secrets: inherit
+  compass-failure:
+    needs: [static-check, playwright-test, deploy-testing]
+    if: failure()
+    uses: ./.github/workflows/compass-status.yaml
+    with:
+      compassId: ari:cloud:compass:1794ff3d-579e-455b-ae19-07f3651d7bb2:metric-source/8f784f5d-165e-48a8-800f-432089cd8105/ecfd38cb-d88b-46c2-96b9-382c35ca5e9e
+      metricValue: 0
+    secrets: inherit
+

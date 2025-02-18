@@ -1,0 +1,33 @@
+name: compass
+
+on:
+  workflow_call:
+    inputs:
+      metricValue:
+        type: number
+        required: true
+      compassId:
+        type: string
+        required: true
+
+jobs:
+  compass:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Success to Compass
+        env:
+          USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
+          USER_API_KEY: ${{ secrets.JIRA_API_TOKEN }}
+          METRIC_VALUE: ${{ inputs.metricValue }}
+          COMPASS_ID: ${{ inputs.compassId }}
+        run: |
+          curl --request POST \
+            --url https://redbelly.atlassian.net/gateway/api/compass/v1/metrics \
+            --user "$USER_EMAIL:$USER_API_KEY" \
+            --header "Accept: application/json" \
+            --header "Content-Type: application/json" \
+            --data "{
+              \"metricSourceId\": \"$COMPASS_ID\",
+              \"value\": $METRIC_VALUE,
+              \"timestamp\": \"$(date -u +'%Y-%m-%dT%H:%M:%SZ')\"
+            }"
