@@ -1,7 +1,6 @@
 import Ajv from 'ajv';
 import fs from 'fs';
 import addFormats from 'ajv-formats';
-import { test, expect } from '@playwright/test';
 
 const fileList = fs.readdirSync('./test/data');
 
@@ -16,9 +15,9 @@ fileList.forEach((file) => {
   addFormats(ajv);
   const validate = ajv.compile(credentialSchema);
 
-  test.describe(`Testcases for ${file}: `, () => {
+  describe(`Testcases for ${file}: `, () => {
     scenarios.forEach(
-      (scenario: { name: string; data: any; expectedValid: any }) => {
+      (scenario: { name?: any; data?: any; expectedValid?: any; }) => {
         test(scenario.name, async () => {
           const { data, expectedValid } = scenario;
           const valid = validate(data);
@@ -27,11 +26,12 @@ fileList.forEach((file) => {
             ? validate.errors
                 .map((error) => `${error.instancePath} ${error.message}`)
                 .join(', ')
-            : undefined;
+            : "An Unknown error occured";
 
-          expect(valid, {
-            message: `${errors ? errors : 'Validation result not expected'}`,
-          }).toBe(expectedValid);
+            if (!valid) {
+              console.error(`Validation failed for ${scenario.name}:`, errors);
+            }
+          expect(valid).toBe(expectedValid);
         });
       }
     );

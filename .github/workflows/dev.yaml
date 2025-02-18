@@ -7,11 +7,11 @@ on:
     types: [reopened, opened, synchronize, edited]
   workflow_dispatch:
 jobs:
-  playwright:
-    uses: ./.github/workflows/playwright.yaml
+  validate:
+    uses: ./.github/workflows/validation-test.yaml
     secrets: inherit
   compass-success:
-    needs: [playwright]
+    needs: [validate]
     if: success()
     uses: ./.github/workflows/compass-status.yaml
     with:
@@ -19,7 +19,7 @@ jobs:
       metricValue: 1
     secrets: inherit
   compass-failure:
-    needs: [playwright]
+    needs: [validate]
     if: failure()
     uses: ./.github/workflows/compass-status.yaml
     with:
