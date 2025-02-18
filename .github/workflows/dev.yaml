@@ -19,7 +19,7 @@ jobs:
       metricValue: 1
     secrets: inherit
   compass-failure:
-    needs: [playwright-test]
+    needs: [playwright]
     if: failure()
     uses: ./.github/workflows/compass-status.yaml
     with:
