@@ -14,4 +14,4 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run validation tests
-        run: npx run test
+        run: npx test
