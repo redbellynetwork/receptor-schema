@@ -1,4 +1,4 @@
-name: receptor-schema:dev
+name: receptor-schema:pr
 on:
   pull_request:
     types: [reopened, opened, synchronize, edited]
