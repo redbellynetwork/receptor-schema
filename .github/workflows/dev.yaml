@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    types: [reopened, opened, synchronize, edited]
   workflow_dispatch:
 jobs:
   validate:
