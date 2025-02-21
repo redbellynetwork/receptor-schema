@@ -13,7 +13,7 @@ jobs:
     if: success()
     uses: ./.github/workflows/compass-status.yaml
     with:
-      compassId: ari:cloud:compass:1794ff3d-579e-455b-ae19-07f3651d7bb2:metric-source/8f784f5d-165e-48a8-800f-432089cd8105/ecfd38cb-d88b-46c2-96b9-382c35ca5e9e
+      compassId: ari:cloud:compass:1794ff3d-579e-455b-ae19-07f3651d7bb2:metric-source/8f784f5d-165e-48a8-800f-432089cd8105/cdf96920-6204-42d6-9e79-1f8618d3e851
       metricValue: 1
     secrets: inherit
   compass-failure:
@@ -21,7 +21,6 @@ jobs:
     if: failure()
     uses: ./.github/workflows/compass-status.yaml
     with:
-      compassId: ari:cloud:compass:1794ff3d-579e-455b-ae19-07f3651d7bb2:metric-source/8f784f5d-165e-48a8-800f-432089cd8105/ecfd38cb-d88b-46c2-96b9-382c35ca5e9e
+      compassId: ari:cloud:compass:1794ff3d-579e-455b-ae19-07f3651d7bb2:metric-source/8f784f5d-165e-48a8-800f-432089cd8105/cdf96920-6204-42d6-9e79-1f8618d3e851
       metricValue: 0
     secrets: inherit
-
