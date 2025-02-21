@@ -1,0 +1,10 @@
+name: receptor-schema:pr
+on:
+  pull_request:
+    types: [reopened, opened, synchronize, edited]
+  workflow_dispatch:
+jobs:
+  validate:
+    uses: ./.github/workflows/validation-test.yaml
+    secrets: inherit
+
