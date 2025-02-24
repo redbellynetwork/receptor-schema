@@ -191,11 +191,11 @@ function generatePassportCredential(callback?: (data: any) => void): any {
   data.credentialSubject = {
     id: faker.internet.url(),
     name: faker.person.fullName(),
-    birthDate: faker.date.recent({ days: 10 }),
+    birthDate: yyyymmdd(faker.date.recent({ days: 10 })),
     passportNumber: faker.string.uuid(),
     nationality: faker.location.country(),
     customerReference: faker.string.uuid(),
-    expiryDate: faker.date.soon({ days: 5 }),
+    expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
     publicAddress: faker.finance.ethereumAddress(),
   };
 
@@ -677,6 +677,13 @@ const passportTestScenarios = [
   //   }),
   //   expectedValid: false,
   // },
+  {
+    name: 'Invalid date type',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.birthDate = faker.date.recent({ days: 1 });
+    }),
+    expectedValid: false,
+  },
 ];
 
 const testObject = {
