@@ -74,6 +74,10 @@ function generateAMLCTFCredential(callback?: (data: any) => void): any {
 
 function generateDriversLicenceCredential(callback?: (data: any) => void): any {
   const data = jsf.generate(dlSchema) as any;
+  const did = `did:receptor:redbelly:${faker.helpers.arrayElement([
+    'testnet',
+    'mainnet',
+  ])}:${faker.string.alphanumeric(42)}`;
 
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/DriversLicence.jsonld';
@@ -101,7 +105,7 @@ function generateDriversLicenceCredential(callback?: (data: any) => void): any {
   data.updatable = faker.datatype.boolean();
 
   data.credentialSubject = {
-    id: faker.internet.url(),
+    id: did,
     name: faker.person.fullName(),
     licenceNumber: faker.string.uuid(),
     stateOfIssuance: faker.location.state(),
@@ -371,13 +375,6 @@ const dLTestScenarios = [
     }),
     expectedValid: false,
   },
-  // {
-  //   name: 'Extra Undefined Field',
-  //   data: generateDriversLicenceCredential((data) => {
-  //     data.credentialSubject.unknownField = 'randomValue';
-  //   }),
-  //   expectedValid: false,
-  // },
   {
     name: 'Wrong Data Type',
     data: generateDriversLicenceCredential((data) => {
@@ -420,20 +417,6 @@ const dLTestScenarios = [
   //   }),
   //   expectedValid: false,
   // },
-  // {
-  //   name: 'Unusual Characters',
-  //   data: generateDriversLicenceCredential((data) => {
-  //     data.credentialSubject.name = '💥🔥🚀';
-  //   }),
-  //   expectedValid: false,
-  // },
-  // {
-  //   name: 'Empty Fields',
-  //   data: generateDriversLicenceCredential((data) => {
-  //     data.credentialSubject.name = '';
-  //   }),
-  //   expectedValid: false,
-  // },
   {
     name: 'Null Values',
     data: generateDriversLicenceCredential((data) => {
@@ -469,13 +452,166 @@ const dLTestScenarios = [
     }),
     expectedValid: false,
   },
+  {
+    name: 'Leading/Trailing Spaces',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.stateOfIssuance = ' NSW ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.id: invalid string',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.id = 'did:In-valid string:redbelly';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.id: empty string',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.id = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.name: empty',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.name = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.licenceNumber: leading spaces',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.licenceNumber = ' QWER12345';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.licenceNumber: trailing spaces',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.licenceNumber = 'QWER12345 ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.licenceNumber: empty string',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.licenceNumber = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.licenceNumber: spaces in between',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.licenceNumber = 'QWER 12345';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.stateOfIssuance: spaces in between',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.stateOfIssuance = "Martha's vineyard";
+    }),
+    expectedValid: false,
+  },{
+    name: 'Invalid credentialSubject.stateOfIssuance: empty string',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.stateOfIssuance = "";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.stateOfIssuance: trailing space',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.stateOfIssuance = "CA ";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.stateOfIssuance: leading space',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.stateOfIssuance = " California";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.stateOfIssuance: hyphen not allowed',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.stateOfIssuance = "New-York";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.stateOfIssuance: numbers not allowed',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.stateOfIssuance = "1234";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid birthDate: Too short',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.birthDate = 10101;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid birthDate: Too long',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.birthDate = 199901011;
+    }),
+    expectedValid: false,
+  },
   // {
-  //   name: 'Leading/Trailing Spaces',
+  //   name: 'Invalid birthDate: Invalid date (Feb 30)',
   //   data: generateDriversLicenceCredential((data) => {
-  //     data.credentialSubject.stateOfIssuance = ' NSW ';
+  //     data.credentialSubject.birthDate = 20240230;
   //   }),
   //   expectedValid: false,
   // },
+  // {
+  //   name: 'Invalid birthDate: MMDDYYYY instead of YYYYMMDD',
+  //   data: generateDriversLicenceCredential((data) => {
+  //     data.credentialSubject.birthDate = 12022024;
+  //   }),
+  //   expectedValid: false,
+  // },
+  {
+    name: 'Invalid publicAddress: Too short',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.publicAddress = "0x123";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Contains non-hex characters',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.publicAddress = "0xGHIJKL7890abcdef1234567890abcdef12345678";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Missing 0x prefix',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.publicAddress = "1234567890abcdef1234567890abcdef12345678";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Uppercase 0X prefix',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.publicAddress = "0XABCDEF1234567890ABCDEF1234567890ABCDEF12";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Valid publicAddress: Mixed case (allowed in Ethereum)',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.publicAddress = "0xAbCdEf1234567890ABCDEF1234567890abcdef12";
+    }),
+    expectedValid: true,
+  },
 ];
 
 const nationalIdTestScenarios = [
@@ -706,9 +842,9 @@ const passportTestScenarios = [
 
 const testObject = {
   AMLCTFCredential: amlCtfTestScenarios,
-  // DriversLicenceCredential: dLTestScenarios,
-  // NationalIdCredential: nationalIdTestScenarios,
-  // PassportCredential: passportTestScenarios,
+  DriversLicenceCredential: dLTestScenarios,
+  NationalIdCredential: nationalIdTestScenarios,
+  PassportCredential: passportTestScenarios,
 };
 
 if (!fs.existsSync('./test/data')) {
