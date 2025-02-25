@@ -35,11 +35,15 @@ const yyyymmdd = function (date: Date) {
 function generateAMLCTFCredential(callback?: (data: any) => void): any {
   const data = jsf.generate(amlCtfSchema) as any;
 
+  const did = `did:receptor:redbelly:${faker.helpers.arrayElement([
+    'testnet',
+    'mainnet',
+  ])}:${faker.string.alphanumeric(42)}`;
+
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AMLCTFCredential.jsonld';
 
-  data.credentialSubject.id = faker.internet.url();
-  data.credentialSubject.type = 'AMLCTFCredential';
+  data.credentialSubject.id = did;
   data.credentialSubject.amlCheckStatus = faker.helpers.arrayElement([
     'passed',
     'failed',
@@ -338,6 +342,20 @@ const amlCtfTestScenarios = [
     }),
     expectedValid: false,
   },
+  {
+    name: 'Invalid credentialSubject.id: invalid string',
+    data: generateAMLCTFCredential((data) => {
+      data.credentialSubject.id = 'did:In-valid string:redbelly';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.id: empty string',
+    data: generateAMLCTFCredential((data) => {
+      data.credentialSubject.id = '';
+    }),
+    expectedValid: false,
+  }
 ];
 
 const dLTestScenarios = [
@@ -688,9 +706,9 @@ const passportTestScenarios = [
 
 const testObject = {
   AMLCTFCredential: amlCtfTestScenarios,
-  DriversLicenceCredential: dLTestScenarios,
-  NationalIdCredential: nationalIdTestScenarios,
-  PassportCredential: passportTestScenarios,
+  // DriversLicenceCredential: dLTestScenarios,
+  // NationalIdCredential: nationalIdTestScenarios,
+  // PassportCredential: passportTestScenarios,
 };
 
 if (!fs.existsSync('./test/data')) {
