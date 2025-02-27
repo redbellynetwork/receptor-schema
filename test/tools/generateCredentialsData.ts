@@ -174,6 +174,10 @@ function generateNationalIdCredential(callback?: (data: any) => void): any {
 
 function generatePassportCredential(callback?: (data: any) => void): any {
   const data = jsf.generate(passportSchema) as any;
+  const did = `did:receptor:redbelly:${faker.helpers.arrayElement([
+    'testnet',
+    'mainnet',
+  ])}:${faker.string.alphanumeric(42)}`;
 
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld';
@@ -201,10 +205,10 @@ function generatePassportCredential(callback?: (data: any) => void): any {
   data.updatable = faker.datatype.boolean();
 
   data.credentialSubject = {
-    id: faker.internet.url(),
+    id: did,
     name: faker.person.fullName(),
     birthDate: yyyymmdd(faker.date.recent({ days: 10 })),
-    passportNumber: faker.string.uuid(),
+    passportNumber: faker.string.alphanumeric({length:{min:6,max:7}}),
     nationality: faker.location.country(),
     customerReference: faker.string.uuid(),
     expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
@@ -829,7 +833,7 @@ const nationalIdTestScenarios = [
   // {
   //   name: 'Invalid birthDate: Invalid date (Feb 30)',
   //   data: generateNationalIdCredential((data) => {
-  //     data.credentialSubject.country = ' USA ';
+  //     data.credentialSubject.birthDate = 20240230;
   //   }),
   //   expectedValid: false,
   // },
@@ -946,13 +950,6 @@ const passportTestScenarios = [
   //   }),
   //   expectedValid: false,
   // },
-  // {
-  //   name: 'Empty Fields',
-  //   data: generatePassportCredential((data) => {
-  //     data.credentialSubject.name = '';
-  //   }),
-  //   expectedValid: false,
-  // },
   {
     name: 'Null Values',
     data: generatePassportCredential((data) => {
@@ -981,19 +978,200 @@ const passportTestScenarios = [
     }),
     expectedValid: false,
   },
-  // {
-  //   name: 'Leading/Trailing Spaces',
-  //   data: generatePassportCredential((data) => {
-  //     data.credentialSubject.nationality = ' USA ';
-  //   }),
-  //   expectedValid: false,
-  // },
   {
     name: 'Invalid date type',
     data: generatePassportCredential((data) => {
       data.credentialSubject.birthDate = faker.date.recent({ days: 1 });
     }),
     expectedValid: false,
+  },
+  {
+    name: 'Leading/Trailing Spaces',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.nationality = ' USA ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Empty Fields',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.name = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.id: invalid string',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.id = 'did:In-valid string:redbelly';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.id: empty string',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.id = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.name: empty',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.name = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.passportNumber: leading spaces',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.passportNumber = ' QWER12345';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.passportNumber: trailing spaces',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.passportNumber = 'QWER12345 ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.passportNumber: empty string',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.passportNumber = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.passportNumber: spaces in between',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.passportNumber = 'QWER 12345';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.passportNumber: Too short (5 characters)',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.passportNumber = "ABC12";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.passportNumber: Too long (10 characters)',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.passportNumber = "1234567890";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.passportNumber: Contains special characters',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.passportNumber = "!@#4567";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.nationality: spaces in between',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.nationality = "Martha's vineyard";
+    }),
+    expectedValid: false,
+  },{
+    name: 'Invalid credentialSubject.nationality: empty string',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.nationality = "";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.nationality: trailing space',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.nationality = "CA ";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.nationality: leading space',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.nationality = " California";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.nationality: hyphen not allowed',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.nationality = "New-York";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.nationality: numbers not allowed',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.nationality = "1234";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid birthDate: Too short',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.birthDate = 10101;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid birthDate: Too long',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.birthDate = 199901011;
+    }),
+    expectedValid: false,
+  },
+  // {
+  //   name: 'Invalid birthDate: Invalid date (Feb 30)',
+  //   data: generatePassportCredential((data) => {
+  //     data.credentialSubject.birthDate = 20240230;
+  //   }),
+  //   expectedValid: false,
+  // },
+  // {
+  //   name: 'Invalid birthDate: MMDDYYYY instead of YYYYMMDD',
+  //   data: generatePassportCredential((data) => {
+  //     data.credentialSubject.birthDate = 12022024;
+  //   }),
+  //   expectedValid: false,
+  // },
+  {
+    name: 'Invalid publicAddress: Too short',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.publicAddress = "0x123";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Contains non-hex characters',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.publicAddress = "0xGHIJKL7890abcdef1234567890abcdef12345678";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Missing 0x prefix',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.publicAddress = "1234567890abcdef1234567890abcdef12345678";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Uppercase 0X prefix',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.publicAddress = "0XABCDEF1234567890ABCDEF1234567890ABCDEF12";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Valid publicAddress: Mixed case (allowed in Ethereum)',
+    data: generatePassportCredential((data) => {
+      data.credentialSubject.publicAddress = "0xAbCdEf1234567890ABCDEF1234567890abcdef12";
+    }),
+    expectedValid: true,
   },
 ];
 
