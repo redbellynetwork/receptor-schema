@@ -124,6 +124,10 @@ function generateDriversLicenceCredential(callback?: (data: any) => void): any {
 
 function generateNationalIdCredential(callback?: (data: any) => void): any {
   const data = jsf.generate(nationalIdSchema) as any;
+  const did = `did:receptor:redbelly:${faker.helpers.arrayElement([
+    'testnet',
+    'mainnet',
+  ])}:${faker.string.alphanumeric(42)}`;
 
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalId.jsonld';
@@ -151,11 +155,11 @@ function generateNationalIdCredential(callback?: (data: any) => void): any {
   data.updatable = faker.datatype.boolean();
 
   data.credentialSubject = {
-    id: faker.internet.url(),
+    id: did,
     name: faker.person.fullName(),
     birthDate: yyyymmdd(faker.date.recent({ days: 10 })),
     nationalIDNumber: faker.string.uuid(),
-    country: faker.location.countryCode(),
+    country: faker.location.country(),
     customerReference: faker.string.uuid(),
     expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
     publicAddress: faker.finance.ethereumAddress(),
@@ -711,13 +715,166 @@ const nationalIdTestScenarios = [
     }),
     expectedValid: false,
   },
+  {
+    name: 'Leading/Trailing Spaces',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.country = ' USA ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.id: invalid string',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.id = 'did:In-valid string:redbelly';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.id: empty string',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.id = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.name: empty',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.name = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.nationalIDNumber: leading spaces',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.nationalIDNumber = ' QWER12345';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.nationalIDNumber: trailing spaces',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.nationalIDNumber = 'QWER12345 ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.nationalIDNumber: empty string',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.nationalIDNumber = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.nationalIDNumber: spaces in between',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.nationalIDNumber = 'QWER 12345';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: spaces in between',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.country = "Martha's vineyard";
+    }),
+    expectedValid: false,
+  },{
+    name: 'Invalid credentialSubject.country: empty string',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.country = "";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: trailing space',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.country = "CA ";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: leading space',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.country = " California";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: hyphen not allowed',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.country = "New-York";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: numbers not allowed',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.country = "1234";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid birthDate: Too short',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.birthDate = 10101;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid birthDate: Too long',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.birthDate = 199901011;
+    }),
+    expectedValid: false,
+  },
   // {
-  //   name: 'Leading/Trailing Spaces',
+  //   name: 'Invalid birthDate: Invalid date (Feb 30)',
   //   data: generateNationalIdCredential((data) => {
   //     data.credentialSubject.country = ' USA ';
   //   }),
   //   expectedValid: false,
   // },
+  // {
+  //   name: 'Invalid birthDate: MMDDYYYY instead of YYYYMMDD',
+  //   data: generateNationalIdCredential((data) => {
+  //     data.credentialSubject.birthDate = 12022024;
+  //   }),
+  //   expectedValid: false,
+  // },
+  {
+    name: 'Invalid publicAddress: Too short',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.publicAddress = "0x123";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Contains non-hex characters',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.publicAddress = "0xGHIJKL7890abcdef1234567890abcdef12345678";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Missing 0x prefix',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.publicAddress = "1234567890abcdef1234567890abcdef12345678";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Uppercase 0X prefix',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.publicAddress = "0XABCDEF1234567890ABCDEF1234567890ABCDEF12";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Valid publicAddress: Mixed case (allowed in Ethereum)',
+    data: generateNationalIdCredential((data) => {
+      data.credentialSubject.publicAddress = "0xAbCdEf1234567890ABCDEF1234567890abcdef12";
+    }),
+    expectedValid: true,
+  },
 ];
 
 const passportTestScenarios = [
