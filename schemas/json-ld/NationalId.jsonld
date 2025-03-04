@@ -30,18 +30,14 @@
             "@id": "nid-vocab:country",
             "@type": "xsd:string"
           },
-          "customerReference": {
-              "@id": "nid-vocab:customerReference",
-              "@type": "xsd:string"
-            },
-            "expiryDate": {
-              "@id": "nid-vocab:expiryDate",
-              "@type": "xsd:integer"
-            },
-            "publicAddress": {
-              "@id": "nid-vocab:publicAddress",
-              "@type": "xsd:string"
-            }
+          "expiryDate": {
+            "@id": "nid-vocab:expiryDate",
+            "@type": "xsd:integer"
+          },
+          "publicAddress": {
+            "@id": "nid-vocab:publicAddress",
+            "@type": "xsd:string"
+          }
         }
       }
     }

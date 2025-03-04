@@ -30,10 +30,6 @@
               "@id": "passport-vocab:birthDate",
               "@type": "xsd:integer"
             },
-            "customerReference": {
-              "@id": "passport-vocab:customerReference",
-              "@type": "xsd:string"
-            },
             "expiryDate": {
               "@id": "passport-vocab:expiryDate",
               "@type": "xsd:integer"
