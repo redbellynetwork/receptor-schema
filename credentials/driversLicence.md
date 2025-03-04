@@ -30,14 +30,6 @@ The birth date of the person, formatted as YYYYMMDD (integer).
   "birthDate": 19941221
 ```
 
-# customerReference
-
-Represents the customer reference as a string value.
-
-```
-  "customerReference": "cbabc825-ca29-6637-c1fb-dc6e35b53a25"
-```
-
 # expiryDate
 
 The expiry date of the issued document, formatted as YYYYMMDD (integer).

@@ -110,7 +110,6 @@ function generateDriversLicenceCredential(callback?: (data: any) => void): any {
     licenceNumber: faker.string.uuid(),
     country: faker.location.state(),
     birthDate: yyyymmdd(faker.date.recent({ days: 10 })),
-    customerReference: faker.string.uuid(),
     expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
     publicAddress: faker.finance.ethereumAddress(),
   };
@@ -160,7 +159,6 @@ function generateNationalIdCredential(callback?: (data: any) => void): any {
     birthDate: yyyymmdd(faker.date.recent({ days: 10 })),
     nationalIDNumber: faker.string.uuid(),
     country: faker.location.country(),
-    customerReference: faker.string.uuid(),
     expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
     publicAddress: faker.finance.ethereumAddress(),
   };
@@ -210,7 +208,6 @@ function generatePassportCredential(callback?: (data: any) => void): any {
     birthDate: yyyymmdd(faker.date.recent({ days: 10 })),
     passportNumber: faker.string.alphanumeric({ length: { min: 6, max: 7 } }),
     nationality: faker.location.country(),
-    customerReference: faker.string.uuid(),
     expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
     publicAddress: faker.finance.ethereumAddress(),
   };
