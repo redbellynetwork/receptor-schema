@@ -108,7 +108,7 @@ function generateDriversLicenceCredential(callback?: (data: any) => void): any {
     id: did,
     name: faker.person.fullName(),
     licenceNumber: faker.string.uuid(),
-    stateOfIssuance: faker.location.state(),
+    country: faker.location.state(),
     birthDate: yyyymmdd(faker.date.recent({ days: 10 })),
     expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
     publicAddress: faker.finance.ethereumAddress(),
@@ -206,7 +206,7 @@ function generatePassportCredential(callback?: (data: any) => void): any {
     id: did,
     name: faker.person.fullName(),
     birthDate: yyyymmdd(faker.date.recent({ days: 10 })),
-    passportNumber: faker.string.alphanumeric({length:{min:6,max:7}}),
+    passportNumber: faker.string.alphanumeric({ length: { min: 6, max: 7 } }),
     nationality: faker.location.country(),
     expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
     publicAddress: faker.finance.ethereumAddress(),
@@ -251,7 +251,7 @@ const amlCtfTestScenarios = [
   //   data: generateAMLCTFCredential((data) => {
   //     data['@context'] = 'invalid_context';
   //   }),
-  //   expectedValid: false, 
+  //   expectedValid: false,
   // },
   // {
   //   name: 'Malformed Context: Empty array',
@@ -364,7 +364,7 @@ const amlCtfTestScenarios = [
       data.credentialSubject.id = '';
     }),
     expectedValid: false,
-  }
+  },
 ];
 
 const dLTestScenarios = [
@@ -425,7 +425,7 @@ const dLTestScenarios = [
   {
     name: 'Null Values',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.stateOfIssuance = null;
+      data.credentialSubject.country = null;
     }),
     expectedValid: false,
   },
@@ -460,7 +460,7 @@ const dLTestScenarios = [
   {
     name: 'Leading/Trailing Spaces',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.stateOfIssuance = ' NSW ';
+      data.credentialSubject.country = ' NSW ';
     }),
     expectedValid: false,
   },
@@ -514,43 +514,44 @@ const dLTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Invalid credentialSubject.stateOfIssuance: spaces in between',
+    name: 'Invalid credentialSubject.country: spaces in between',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.stateOfIssuance = "Martha's vineyard";
-    }),
-    expectedValid: false,
-  },{
-    name: 'Invalid credentialSubject.stateOfIssuance: empty string',
-    data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.stateOfIssuance = "";
+      data.credentialSubject.country = "Martha's vineyard";
     }),
     expectedValid: false,
   },
   {
-    name: 'Invalid credentialSubject.stateOfIssuance: trailing space',
+    name: 'Invalid credentialSubject.country: empty string',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.stateOfIssuance = "CA ";
+      data.credentialSubject.country = '';
     }),
     expectedValid: false,
   },
   {
-    name: 'Invalid credentialSubject.stateOfIssuance: leading space',
+    name: 'Invalid credentialSubject.country: trailing space',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.stateOfIssuance = " California";
+      data.credentialSubject.country = 'CA ';
     }),
     expectedValid: false,
   },
   {
-    name: 'Invalid credentialSubject.stateOfIssuance: hyphen not allowed',
+    name: 'Invalid credentialSubject.country: leading space',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.stateOfIssuance = "New-York";
+      data.credentialSubject.country = ' California';
     }),
     expectedValid: false,
   },
   {
-    name: 'Invalid credentialSubject.stateOfIssuance: numbers not allowed',
+    name: 'Invalid credentialSubject.country: hyphen not allowed',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.stateOfIssuance = "1234";
+      data.credentialSubject.country = 'New-York';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: numbers not allowed',
+    data: generateDriversLicenceCredential((data) => {
+      data.credentialSubject.country = '1234';
     }),
     expectedValid: false,
   },
@@ -585,35 +586,39 @@ const dLTestScenarios = [
   {
     name: 'Invalid publicAddress: Too short',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.publicAddress = "0x123";
+      data.credentialSubject.publicAddress = '0x123';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid publicAddress: Contains non-hex characters',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.publicAddress = "0xGHIJKL7890abcdef1234567890abcdef12345678";
+      data.credentialSubject.publicAddress =
+        '0xGHIJKL7890abcdef1234567890abcdef12345678';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid publicAddress: Missing 0x prefix',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.publicAddress = "1234567890abcdef1234567890abcdef12345678";
+      data.credentialSubject.publicAddress =
+        '1234567890abcdef1234567890abcdef12345678';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid publicAddress: Uppercase 0X prefix',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.publicAddress = "0XABCDEF1234567890ABCDEF1234567890ABCDEF12";
+      data.credentialSubject.publicAddress =
+        '0XABCDEF1234567890ABCDEF1234567890ABCDEF12';
     }),
     expectedValid: false,
   },
   {
     name: 'Valid publicAddress: Mixed case (allowed in Ethereum)',
     data: generateDriversLicenceCredential((data) => {
-      data.credentialSubject.publicAddress = "0xAbCdEf1234567890ABCDEF1234567890abcdef12";
+      data.credentialSubject.publicAddress =
+        '0xAbCdEf1234567890ABCDEF1234567890abcdef12';
     }),
     expectedValid: true,
   },
@@ -778,38 +783,39 @@ const nationalIdTestScenarios = [
       data.credentialSubject.country = "Martha's vineyard";
     }),
     expectedValid: false,
-  },{
+  },
+  {
     name: 'Invalid credentialSubject.country: empty string',
     data: generateNationalIdCredential((data) => {
-      data.credentialSubject.country = "";
+      data.credentialSubject.country = '';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.country: trailing space',
     data: generateNationalIdCredential((data) => {
-      data.credentialSubject.country = "CA ";
+      data.credentialSubject.country = 'CA ';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.country: leading space',
     data: generateNationalIdCredential((data) => {
-      data.credentialSubject.country = " California";
+      data.credentialSubject.country = ' California';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.country: hyphen not allowed',
     data: generateNationalIdCredential((data) => {
-      data.credentialSubject.country = "New-York";
+      data.credentialSubject.country = 'New-York';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.country: numbers not allowed',
     data: generateNationalIdCredential((data) => {
-      data.credentialSubject.country = "1234";
+      data.credentialSubject.country = '1234';
     }),
     expectedValid: false,
   },
@@ -844,35 +850,39 @@ const nationalIdTestScenarios = [
   {
     name: 'Invalid publicAddress: Too short',
     data: generateNationalIdCredential((data) => {
-      data.credentialSubject.publicAddress = "0x123";
+      data.credentialSubject.publicAddress = '0x123';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid publicAddress: Contains non-hex characters',
     data: generateNationalIdCredential((data) => {
-      data.credentialSubject.publicAddress = "0xGHIJKL7890abcdef1234567890abcdef12345678";
+      data.credentialSubject.publicAddress =
+        '0xGHIJKL7890abcdef1234567890abcdef12345678';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid publicAddress: Missing 0x prefix',
     data: generateNationalIdCredential((data) => {
-      data.credentialSubject.publicAddress = "1234567890abcdef1234567890abcdef12345678";
+      data.credentialSubject.publicAddress =
+        '1234567890abcdef1234567890abcdef12345678';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid publicAddress: Uppercase 0X prefix',
     data: generateNationalIdCredential((data) => {
-      data.credentialSubject.publicAddress = "0XABCDEF1234567890ABCDEF1234567890ABCDEF12";
+      data.credentialSubject.publicAddress =
+        '0XABCDEF1234567890ABCDEF1234567890ABCDEF12';
     }),
     expectedValid: false,
   },
   {
     name: 'Valid publicAddress: Mixed case (allowed in Ethereum)',
     data: generateNationalIdCredential((data) => {
-      data.credentialSubject.publicAddress = "0xAbCdEf1234567890ABCDEF1234567890abcdef12";
+      data.credentialSubject.publicAddress =
+        '0xAbCdEf1234567890ABCDEF1234567890abcdef12';
     }),
     expectedValid: true,
   },
@@ -1048,21 +1058,21 @@ const passportTestScenarios = [
   {
     name: 'Invalid credentialSubject.passportNumber: Too short (5 characters)',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.passportNumber = "ABC12";
+      data.credentialSubject.passportNumber = 'ABC12';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.passportNumber: Too long (10 characters)',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.passportNumber = "1234567890";
+      data.credentialSubject.passportNumber = '1234567890';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.passportNumber: Contains special characters',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.passportNumber = "!@#4567";
+      data.credentialSubject.passportNumber = '!@#4567';
     }),
     expectedValid: false,
   },
@@ -1072,38 +1082,39 @@ const passportTestScenarios = [
       data.credentialSubject.nationality = "Martha's vineyard";
     }),
     expectedValid: false,
-  },{
+  },
+  {
     name: 'Invalid credentialSubject.nationality: empty string',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.nationality = "";
+      data.credentialSubject.nationality = '';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.nationality: trailing space',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.nationality = "CA ";
+      data.credentialSubject.nationality = 'CA ';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.nationality: leading space',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.nationality = " California";
+      data.credentialSubject.nationality = ' California';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.nationality: hyphen not allowed',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.nationality = "New-York";
+      data.credentialSubject.nationality = 'New-York';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.nationality: numbers not allowed',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.nationality = "1234";
+      data.credentialSubject.nationality = '1234';
     }),
     expectedValid: false,
   },
@@ -1138,35 +1149,39 @@ const passportTestScenarios = [
   {
     name: 'Invalid publicAddress: Too short',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.publicAddress = "0x123";
+      data.credentialSubject.publicAddress = '0x123';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid publicAddress: Contains non-hex characters',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.publicAddress = "0xGHIJKL7890abcdef1234567890abcdef12345678";
+      data.credentialSubject.publicAddress =
+        '0xGHIJKL7890abcdef1234567890abcdef12345678';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid publicAddress: Missing 0x prefix',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.publicAddress = "1234567890abcdef1234567890abcdef12345678";
+      data.credentialSubject.publicAddress =
+        '1234567890abcdef1234567890abcdef12345678';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid publicAddress: Uppercase 0X prefix',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.publicAddress = "0XABCDEF1234567890ABCDEF1234567890ABCDEF12";
+      data.credentialSubject.publicAddress =
+        '0XABCDEF1234567890ABCDEF1234567890ABCDEF12';
     }),
     expectedValid: false,
   },
   {
     name: 'Valid publicAddress: Mixed case (allowed in Ethereum)',
     data: generatePassportCredential((data) => {
-      data.credentialSubject.publicAddress = "0xAbCdEf1234567890ABCDEF1234567890abcdef12";
+      data.credentialSubject.publicAddress =
+        '0xAbCdEf1234567890ABCDEF1234567890abcdef12';
     }),
     expectedValid: true,
   },

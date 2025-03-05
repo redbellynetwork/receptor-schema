@@ -14,12 +14,12 @@ Represents the licence number as a string value.
   "licenceNumber": "128739833"
 ```
 
-# stateOfIssuance
+# country
 
-Represents the state that issued the document as a string value.
+Represents the country that issued the document as a string value.
 
 ```
-  "stateOfIssuance": "ABC"
+  "country": "ABC"
 ```
 
 # birthDate

@@ -1,45 +1,45 @@
 {
-    "@context": [
-      {
-        "@version": 1.1,
-        "@protected": true,
-        "id": "@id",
-        "type": "@type",
-        "DriversLicenceCredential": {
-          "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/DriversLicence.jsonld#DriversLicenceCredential",
-          "@context": {
-            "@version": 1.1,
-            "@protected": true,
-            "id": "@id",
-            "type": "@type",
-            "xsd": "http://www.w3.org/2001/XMLSchema#",
-            "driversLicence-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/driversLicence.md#",
-            "name": {
-              "@id": "driversLicence-vocab:name",
-              "@type": "xsd:string"
-            },
-            "licenceNumber": {
-              "@id": "driversLicence-vocab:licenceNumber",
-              "@type": "xsd:string"
-            },
-            "stateOfIssuance": {
-              "@id": "driversLicence-vocab:stateOfIssuance",
-              "@type": "xsd:string"
-            },
-            "birthDate": {
-              "@id": "driversLicence-vocab:birthDate",
-              "@type": "xsd:integer"
-            },
-            "expiryDate": {
-              "@id": "driversLicence-vocab:expiryDate",
-              "@type": "xsd:integer"
-            },
-            "publicAddress": {
-              "@id": "driversLicence-vocab:publicAddress",
-              "@type": "xsd:string"
-            }
+  "@context": [
+    {
+      "@version": 1.1,
+      "@protected": true,
+      "id": "@id",
+      "type": "@type",
+      "DriversLicenceCredential": {
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/DriversLicence.jsonld#DriversLicenceCredential",
+        "@context": {
+          "@version": 1.1,
+          "@protected": true,
+          "id": "@id",
+          "type": "@type",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "driversLicence-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/driversLicence.md#",
+          "name": {
+            "@id": "driversLicence-vocab:name",
+            "@type": "xsd:string"
+          },
+          "licenceNumber": {
+            "@id": "driversLicence-vocab:licenceNumber",
+            "@type": "xsd:string"
+          },
+          "country": {
+            "@id": "driversLicence-vocab:country",
+            "@type": "xsd:string"
+          },
+          "birthDate": {
+            "@id": "driversLicence-vocab:birthDate",
+            "@type": "xsd:integer"
+          },
+          "expiryDate": {
+            "@id": "driversLicence-vocab:expiryDate",
+            "@type": "xsd:integer"
+          },
+          "publicAddress": {
+            "@id": "driversLicence-vocab:publicAddress",
+            "@type": "xsd:string"
           }
         }
       }
-    ]
-  }
+    }
+  ]
+}
