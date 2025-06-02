@@ -15,3 +15,4 @@
 - DriversLicenceCredential
 - NationalIdCredential
 - PassportCredential
+- KYC1By1Credential
