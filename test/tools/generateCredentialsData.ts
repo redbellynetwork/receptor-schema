@@ -11,6 +11,10 @@ const dlSchema = JSON.parse(
   fs.readFileSync('./schemas/json/DriversLicenceCredential.json', 'utf-8')
 );
 
+const kyc1by1schema = JSON.parse(
+  fs.readFileSync('./schemas/json/KYC1By1Credential.json', 'utf-8')
+);
+
 const nationalIdSchema = JSON.parse(
   fs.readFileSync('./schemas/json/NationalIdCredential.json', 'utf-8')
 );
@@ -114,6 +118,60 @@ function generateDriversLicenceCredential(callback?: (data: any) => void): any {
     licenceNumber: faker.string.uuid(),
     country: faker.location.state(),
     birthDate: yyyymmdd(faker.date.recent({ days: 10 })),
+    expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
+    publicAddress: faker.finance.ethereumAddress(),
+  };
+
+  if (callback) {
+    callback(data);
+  }
+
+  return data;
+}
+
+function generateKYC1By1Credential(callback?: (data: any) => void): any {
+  const data = jsf.generate(kyc1by1schema) as any;
+  const did = `did:receptor:redbelly:${faker.helpers.arrayElement([
+    'testnet',
+    'mainnet',
+  ])}:${faker.string.alphanumeric(42)}`;
+
+  data['@context'] =
+    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/KYC1By1Credential.jsonld';
+  data.id = faker.string.uuid();
+  data.type = ['VerifiableCredential', 'KYC1By1Credential'];
+  data.issuanceDate = faker.date.past().toISOString();
+  data.expirationDate = faker.date.future().toISOString();
+  data.issuer = { id: faker.internet.url() };
+  data.credentialStatus = {
+    id: faker.internet.url(),
+    type: 'CredentialStatusList2021',
+    revocationNonce: faker.number.int(),
+  };
+  data.credentialSchema = {
+    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/KYC1By1Credential.json',
+    type: 'JsonSchemaValidator2018',
+  };
+  data.subjectPosition = faker.helpers.arrayElement(['none', 'index', 'value']);
+  data.merklizationRootPosition = faker.helpers.arrayElement([
+    'none',
+    'index',
+    'value',
+  ]);
+  data.revNonce = faker.number.int();
+  data.version = faker.number.int();
+  data.updatable = faker.datatype.boolean();
+
+  data.credentialSubject = {
+    id: did,
+    name: faker.person.fullName(),
+    birthDate: yyyymmdd(faker.date.recent({ days: 10 })),
+    referenceId: faker.string.uuid(),
+    country: faker.location.state(),
+    documentType: faker.helpers
+      .slugify(faker.word.words({ count: { min: 1, max: 2 } }))
+      .replace(/-/g, '_')
+      .toUpperCase(),
     expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
     publicAddress: faker.finance.ethereumAddress(),
   };
@@ -647,6 +705,235 @@ const dLTestScenarios = [
         '0xAbCdEf1234567890ABCDEF1234567890abcdef12';
     }),
     expectedValid: true,
+  },
+];
+
+const kyc1By1TestScenarios = [
+  {
+    name: 'Valid KYC1By1Credential',
+    data: generateKYC1By1Credential(),
+    expectedValid: true,
+  },
+  {
+    name: 'Missing Required Field',
+    data: generateKYC1By1Credential((data) => {
+      delete data.credentialSubject.referenceId;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Wrong Data Type',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.birthDate = 'not_a_date';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Malformed Context: undefined',
+    data: generateKYC1By1Credential((data) => {
+      data['@context'] = undefined;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid value in id',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.id = 'invalid_value';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Null Values',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.country = null;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Missing id',
+    data: generateKYC1By1Credential((data) => {
+      delete data.credentialSubject.id;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Leading/Trailing Spaces',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.country = ' USA ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.id: empty string',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.id = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.name: empty',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.name = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.referenceId: leading spaces',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.referenceId = ' QWER12345';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.referenceId: trailing spaces',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.referenceId = 'QWER12345 ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.referenceId: empty string',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.referenceId = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.referenceId: spaces in between',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.referenceId = 'QWER 12345';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: spaces in between',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.country = "Martha's vineyard";
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: empty string',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.country = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: trailing space',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.country = 'CA ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: leading space',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.country = ' California';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: hyphen not allowed',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.country = 'New-York';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.country: numbers not allowed',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.country = '1234';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid birthDate: Too short',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.birthDate = -2240524800;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Too short',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.publicAddress = '0x123';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Contains non-hex characters',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.publicAddress =
+        '0xGHIJKL7890abcdef1234567890abcdef12345678';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Missing 0x prefix',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.publicAddress =
+        '1234567890abcdef1234567890abcdef12345678';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid publicAddress: Uppercase 0X prefix',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.publicAddress =
+        '0XABCDEF1234567890ABCDEF1234567890ABCDEF12';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Valid publicAddress: Mixed case (allowed in Ethereum)',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.publicAddress =
+        '0xAbCdEf1234567890ABCDEF1234567890abcdef12';
+    }),
+    expectedValid: true,
+  },
+  {
+    name: 'Invalid credentialSubject.documentType: spaces in between',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.documentType = 'ID CARD';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.documentType: empty string',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.documentType = '';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.documentType: trailing space',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.documentType = 'PASSPORT ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.documentType: leading space',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.documentType = ' PASSPORT';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.documentType: hyphen not allowed',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.documentType = 'ID-CARD';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid credentialSubject.documentType: numbers not allowed',
+    data: generateKYC1By1Credential((data) => {
+      data.credentialSubject.documentType = '1234';
+    }),
+    expectedValid: false,
   },
 ];
 
@@ -1285,6 +1572,7 @@ const testObject = {
   AMLCTFCredential: amlCtfTestScenarios,
   DriversLicenceCredential: dLTestScenarios,
   NationalIdCredential: nationalIdTestScenarios,
+  KYC1By1Credential: kyc1By1TestScenarios,
   PassportCredential: passportTestScenarios,
   OptimaV1Credential: optimaV1TestScenarios,
 };
