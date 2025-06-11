@@ -346,7 +346,7 @@ function generateProofOfAddressCredential(callback?: (data: any) => void): any {
     postCode: faker.location.zipCode('#####'),
     country: faker.location.countryCode('alpha-3'),
   };
-  console.log({ data: data.credentialSubject });
+
   if (callback) {
     callback(data);
   }
