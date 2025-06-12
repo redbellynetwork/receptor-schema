@@ -396,6 +396,8 @@ function generateWholesaleInvestorCredentials(callback?: (data: any) => void): a
 
   data.credentialSubject = {
     id: did,
+    name: faker.person.fullName(),
+    email: faker.internet.email(),
     certificateNumber: faker.string.uuid(),
     jurisdiction: faker.location.country(),
     grossIncome: faker.number.int({ min: 50000, max: 1000000 }),
@@ -1768,6 +1770,11 @@ const proofOfAddressTestScenarios = [
 ];
 
 const wholesaleInvestorTestScenarios = [
+  {
+    name: 'Valid WholesaleInvestorCredential',
+    data: generateWholesaleInvestorCredentials(),
+    expectedValid: true,
+  },
   {
     name: 'Missing Required Field: id',
     data: generateWholesaleInvestorCredentials((data) => {
