@@ -51,8 +51,8 @@
               "@id": "ws-i-vocab:certifyingBody",
               "@type": "xsd:string"
             },
-            "licenseNumber": {
-              "@id": "ws-i-vocab:licenseNumber",
+            "licenceNumber": {
+              "@id": "ws-i-vocab:licenceNumber",
               "@type": "xsd:string"
             }
           }
