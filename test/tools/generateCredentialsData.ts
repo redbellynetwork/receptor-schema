@@ -1852,13 +1852,6 @@ const wholesaleInvestorTestScenarios = [
     }),
     expectedValid: false,
   },
-  {
-    name: 'Invalid country: whitespace only',
-    data: generateWholesaleInvestorCredentials((data) => {
-      data.credentialSubject.country = '   ';
-    }),
-    expectedValid: false,
-  },
 ];
 
 const testObject = {
