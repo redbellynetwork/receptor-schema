@@ -1769,6 +1769,11 @@ const proofOfAddressTestScenarios = [
 
 const wholesaleInvestorTestScenarios = [
   {
+    name: 'Valid WholesaleInvestorCredential',
+    data: generateWholesaleInvestorCredentials(),
+    expectedValid: true,
+  },
+  {
     name: 'Missing Required Field: id',
     data: generateWholesaleInvestorCredentials((data) => {
       delete data.credentialSubject.id;
