@@ -31,6 +31,10 @@ const proofOfAddressSchema = JSON.parse(
   fs.readFileSync('./schemas/json/ProofOfAddressCredential.json', 'utf-8')
 );
 
+const wholesaleInvestorSchema = JSON.parse(
+  fs.readFileSync('./schemas/json/WholesaleInvestorCredential.json', 'utf-8')
+);
+
 const yyyymmdd = function (date: Date) {
   var mm = date.getMonth() + 1;
   var dd = date.getDate();
@@ -345,6 +349,72 @@ function generateProofOfAddressCredential(callback?: (data: any) => void): any {
     city: faker.location.city(),
     postCode: faker.location.zipCode('#####'),
     country: faker.location.countryCode('alpha-3'),
+  };
+
+  if (callback) {
+    callback(data);
+  }
+
+  return data;
+}
+
+function generateWholesaleInvestorCredentials(callback?: (data: any) => void): any {
+  const data = jsf.generate(wholesaleInvestorSchema) as any;
+  const did = `did:receptor:redbelly:${faker.helpers.arrayElement([
+    'testnet',
+    'mainnet',
+  ])}:${faker.string.alphanumeric(42)}`;
+
+  const bytes = faker.number.int({ min: 1 * 1024 * 1024, max: 2 * 1024 * 1024 });
+  const contentSize = (bytes / (1024 * 1024)).toFixed(1) + 'MB';
+
+  data['@context'] =
+    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/WholesaleInvestor.jsonld';
+  data.id = faker.string.uuid();
+  data.type = ['VerifiableCredential', 'WholesaleInvestorCredential'];
+  data.issuanceDate = faker.date.past().toISOString();
+  data.expirationDate = faker.date.future().toISOString();
+  data.issuer = { id: faker.internet.url() };
+  data.credentialStatus = {
+    id: faker.internet.url(),
+    type: 'CredentialStatusList2021',
+    revocationNonce: faker.number.int(),
+  };
+  data.credentialSchema = {
+    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/KYC1By1Credential.json',
+    type: 'JsonSchemaValidator2018',
+  };
+  data.subjectPosition = faker.helpers.arrayElement(['none', 'index', 'value']);
+  data.merklizationRootPosition = faker.helpers.arrayElement([
+    'none',
+    'index',
+    'value',
+  ]);
+  data.revNonce = faker.number.int();
+  data.version = faker.number.int();
+  data.updatable = faker.datatype.boolean();
+
+  data.credentialSubject = {
+    id: did,
+    certificateNumber: faker.string.uuid(),
+    jurisdiction: faker.location.country(),
+    grossIncome: faker.number.int({ min: 50000, max: 1000000 }),
+    netAssets: faker.number.int({ min: 50000, max: 1000000 }),
+    validUntil: yyyymmdd(faker.date.soon({ days: 5 })),
+    accountantDetails: {
+      name: faker.person.fullName(),
+      certifyingBody: faker.company.name(),
+      licenceNumber: faker.string.uuid(),
+    },
+    attachments: [
+      {
+        type: 'Document',
+        contentUrl: faker.internet.url(),
+        contentSize,
+        contentType: 'application/pdf',
+        name: faker.system.fileName(),
+      }
+    ]
   };
 
   if (callback) {
@@ -1697,6 +1767,98 @@ const proofOfAddressTestScenarios = [
   },
 ];
 
+const wholesaleInvestorTestScenarios = [
+  {
+    name: 'Valid WholesaleInvestorCredential',
+    data: generateWholesaleInvestorCredentials(),
+    expectedValid: true,
+  },
+  {
+    name: 'Missing Required Field: id',
+    data: generateWholesaleInvestorCredentials((data) => {
+      delete data.credentialSubject.id;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Missing Required Field: certificateNumber',
+    data: generateWholesaleInvestorCredentials((data) => {
+      delete data.credentialSubject.certificateNumber;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Missing Required Field: jurisdiction',
+    data: generateWholesaleInvestorCredentials((data) => {
+      delete data.credentialSubject.jurisdiction;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Missing Required Field: grossIncome',
+    data: generateWholesaleInvestorCredentials((data) => {
+      delete data.credentialSubject.grossIncome;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Missing Required Field: netAssets',
+    data: generateWholesaleInvestorCredentials((data) => {
+      delete data.credentialSubject.netAssets;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Missing Required Field: validUntil',
+    data: generateWholesaleInvestorCredentials((data) => {
+      delete data.credentialSubject.validUntil;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Missing Required Field: accountantDetails',
+    data: generateWholesaleInvestorCredentials((data) => {
+      delete data.credentialSubject.accountantDetails;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Missing Required Field: accountantDetails.name',
+    data: generateWholesaleInvestorCredentials((data) => {
+      delete data.credentialSubject.accountantDetails.name;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Missing Required Field: accountantDetails.certifyingBody',
+    data: generateWholesaleInvestorCredentials((data) => {
+      delete data.credentialSubject.accountantDetails.certifyingBody;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Missing Required Field: accountantDetails.licenseNumber',
+    data: generateWholesaleInvestorCredentials((data) => {
+      delete data.credentialSubject.accountantDetails.licenseNumber;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Malformed Context: undefined',
+    data: generateWholesaleInvestorCredentials((data) => {
+      data['@context'] = undefined;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid country: whitespace only',
+    data: generateWholesaleInvestorCredentials((data) => {
+      data.credentialSubject.country = '   ';
+    }),
+    expectedValid: false,
+  },
+];
+
 const testObject = {
   AMLCTFCredential: amlCtfTestScenarios,
   DriversLicenceCredential: dLTestScenarios,
@@ -1705,6 +1867,7 @@ const testObject = {
   PassportCredential: passportTestScenarios,
   OptimaV1Credential: optimaV1TestScenarios,
   ProofOfAddressCredential: proofOfAddressTestScenarios,
+  WholesaleInvestorCredential: wholesaleInvestorTestScenarios,
 };
 
 if (!fs.existsSync('./test/data')) {
