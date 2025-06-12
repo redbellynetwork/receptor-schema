@@ -17,7 +17,7 @@
 - PassportCredential
 - OptimaV1Credential
 - KYC1By1Credential
-- WholesaleInvestorCredentail
+- WholesaleInvestorCredential
 
 # To Create test cases :-
 

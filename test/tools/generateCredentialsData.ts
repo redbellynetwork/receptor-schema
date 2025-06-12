@@ -406,7 +406,7 @@ function generateWholesaleInvestorCredentials(callback?: (data: any) => void): a
     accountantDetails: {
       name: faker.person.fullName(),
       certifyingBody: faker.company.name(),
-      licenseNumber: faker.string.uuid(),
+      licenceNumber: faker.string.uuid(),
     },
     attachments: [
       {
@@ -1839,9 +1839,9 @@ const wholesaleInvestorTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Missing Required Field: accountantDetails.licenseNumber',
+    name: 'Missing Required Field: accountantDetails.licenceNumber',
     data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.accountantDetails.licenseNumber;
+      delete data.credentialSubject.accountantDetails.licenceNumber;
     }),
     expectedValid: false,
   },

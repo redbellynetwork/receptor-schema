@@ -11,7 +11,7 @@ Unique number of the certificate issued.
 Jurisdiction for which the credential applies
 
 ```
-  "juridiction": "Australia"
+  "jurisdiction": "Australia"
 ```
 
 # name
@@ -63,7 +63,7 @@ Details of the accountant certifying the investor's status.
   "accountantDetails": {
     "name": "Jane Accountant",
     "certifyingBody": "Institute of Chartered Accountants of Australia",
-    "licenseNumber": "AUS12345"
+    "licenceNumber": "AUS12345"
   }
 }
 ```
@@ -73,7 +73,7 @@ Details of the accountant certifying the investor's status.
 Name of the accountant.
 
 ```
-  "accountantName": "Jane Accountant",
+  "name": "Jane Accountant",
 ```
 
 # certifyingBody
@@ -84,12 +84,12 @@ Organization that certifies the accountant.
   "certifyingBody": "Institute of Chartered Accountants of Australia",
 ```
 
-# licenseNumber
+# licenceNumber
 
-License number of the accountant.
+Licence number of the accountant.
 
 ```
-  "licenseNumber": "AUS12345"
+  "licenceNumber": "AUS12345"
 ```
 
 # attachments
@@ -147,5 +147,5 @@ a MIME format
 name of the item
 
 ```
-  name: "Accountant Certification"
+  name: "Attachment name"
 ```
