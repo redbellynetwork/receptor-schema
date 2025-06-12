@@ -406,7 +406,7 @@ function generateWholesaleInvestorCredentials(callback?: (data: any) => void): a
     accountantDetails: {
       name: faker.person.fullName(),
       certifyingBody: faker.company.name(),
-      licenceNumber: faker.string.uuid(),
+      licenseNumber: faker.string.uuid(),
     },
     attachments: [
       {
