@@ -400,7 +400,7 @@ function generateWholesaleInvestorCredentials(callback?: (data: any) => void): a
     jurisdiction: faker.location.country(),
     grossIncome: faker.number.int({ min: 50000, max: 1000000 }),
     netAssets: faker.number.int({ min: 50000, max: 1000000 }),
-    validUntil: yyyymmdd(faker.date.soon({ days: 5 })).toString(),
+    validUntil: faker.date.future().toISOString(),
     accountantDetails: {
       name: faker.person.fullName(),
       certifyingBody: faker.company.name(),
