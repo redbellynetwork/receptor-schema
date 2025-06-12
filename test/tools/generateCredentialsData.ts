@@ -413,7 +413,7 @@ function generateWholesaleInvestorCredentials(callback?: (data: any) => void): a
         type: 'Document',
         contentUrl: faker.internet.url(),
         contentSize,
-        contentType: 'application/pdf',
+        encodingFormat: 'application/pdf',
         name: faker.system.fileName(),
       }
     ]
