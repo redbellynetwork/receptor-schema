@@ -345,6 +345,7 @@ function generateProofOfAddressCredential(callback?: (data: any) => void): any {
   data.updatable = faker.datatype.boolean();
 
   data.credentialSubject = {
+    id: did,
     street: faker.location.street(),
     city: faker.location.city(),
     postCode: faker.location.zipCode('#####'),
@@ -358,14 +359,19 @@ function generateProofOfAddressCredential(callback?: (data: any) => void): any {
   return data;
 }
 
-function generateWholesaleInvestorCredentials(callback?: (data: any) => void): any {
+function generateWholesaleInvestorCredentials(
+  callback?: (data: any) => void
+): any {
   const data = jsf.generate(wholesaleInvestorSchema) as any;
   const did = `did:receptor:redbelly:${faker.helpers.arrayElement([
     'testnet',
     'mainnet',
   ])}:${faker.string.alphanumeric(42)}`;
 
-  const bytes = faker.number.int({ min: 1 * 1024 * 1024, max: 2 * 1024 * 1024 });
+  const bytes = faker.number.int({
+    min: 1 * 1024 * 1024,
+    max: 2 * 1024 * 1024,
+  });
   const contentSize = (bytes / (1024 * 1024)).toFixed(1) + 'MB';
 
   data['@context'] =
@@ -415,8 +421,8 @@ function generateWholesaleInvestorCredentials(callback?: (data: any) => void): a
         contentSize,
         encodingFormat: 'application/pdf',
         name: faker.system.fileName(),
-      }
-    ]
+      },
+    ],
   };
 
   if (callback) {
