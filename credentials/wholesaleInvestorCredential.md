@@ -48,7 +48,7 @@ Represents the net assets of the credential subject in the jurisdiction currency
 
 # validUntil
 
-Represents date until which the credential is valid
+Represents date until which the credential is valid, in YYYYMMDD format
 
 ```
     "validUntil": "20450101"
