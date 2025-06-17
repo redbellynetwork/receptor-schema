@@ -38,7 +38,7 @@
         },
         "validUntil": {
           "@id": "ws-i-vocab:validUntil",
-          "@type": "xsd:dateTime"
+          "@type": "xsd:integer"
         },
         "accountantDetails": {
           "@id": "ws-i-vocab:accountantDetails",
