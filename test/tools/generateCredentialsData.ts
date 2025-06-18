@@ -410,7 +410,7 @@ function generateWholesaleInvestorCredentials(
     netAssets: faker.number.int({ min: 50000, max: 1000000 }),
     validUntil: yyyymmdd(faker.date.soon({ days: 5 })),
     accountantDetails: {
-      name: faker.person.fullName(),
+      accountantName: faker.person.fullName(),
       certifyingBody: faker.company.name(),
       licenceNumber: faker.string.uuid(),
     },
@@ -420,7 +420,7 @@ function generateWholesaleInvestorCredentials(
         contentUrl: faker.internet.url(),
         contentSize,
         encodingFormat: 'application/pdf',
-        name: faker.system.fileName(),
+        attachmentName: faker.system.fileName(),
       },
     ],
   };
@@ -1831,9 +1831,9 @@ const wholesaleInvestorTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Missing Required Field: accountantDetails.name',
+    name: 'Missing Required Field: accountantDetails.accountantName',
     data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.accountantDetails.name;
+      delete data.credentialSubject.accountantDetails.accountantName;
     }),
     expectedValid: false,
   },
