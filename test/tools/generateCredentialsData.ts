@@ -387,7 +387,7 @@ function generateWholesaleInvestorCredentials(
     revocationNonce: faker.number.int(),
   };
   data.credentialSchema = {
-    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/KYC1By1Credential.json',
+    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/WholesaleInvestorCredential.json',
     type: 'JsonSchemaValidator2018',
   };
   data.subjectPosition = faker.helpers.arrayElement(['none', 'index', 'value']);
@@ -416,7 +416,7 @@ function generateWholesaleInvestorCredentials(
     },
     attachments: [
       {
-        type: 'Document',
+        attachmentType: 'Document',
         contentUrl: faker.internet.url(),
         contentSize,
         encodingFormat: 'application/pdf',
