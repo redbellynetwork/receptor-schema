@@ -62,7 +62,7 @@
           "attachments": {
             "@id": "ws-i-vocab:attachments",
             "@context": {
-              "type": {
+              "attachmentType": {
                 "@id": "ws-i-vocab:type"
               },
               "contentUrl": {
