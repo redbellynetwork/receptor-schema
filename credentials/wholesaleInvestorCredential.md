@@ -100,7 +100,7 @@ Additional documentation or evidence attached to the credential.
 {
   "attachments": [
       {
-        "type": "MediaObject",
+        "attachmentType": "MediaObject",
         "contentUrl": "https://example.com/certificate.pdf",
         "contentSize": "1.2MB",
         "encodingFormat": "application/pdf",
@@ -115,7 +115,7 @@ Additional documentation or evidence attached to the credential.
 Type of the item
 
 ```
-  type: "MediaObject",
+  attachmentType: "MediaObject",
 ```
 
 # contentUrl
