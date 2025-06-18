@@ -416,7 +416,7 @@ function generateWholesaleInvestorCredentials(
     },
     attachments: [
       {
-        type: 'Document',
+        attachmentType: 'Document',
         contentUrl: faker.internet.url(),
         contentSize,
         encodingFormat: 'application/pdf',
