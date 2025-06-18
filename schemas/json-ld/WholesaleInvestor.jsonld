@@ -49,7 +49,7 @@
               "@protected": true,
               "id": "@id",
               "type": "@type",
-              "name": {
+              "accountantName": {
                 "@id": "ws-i-vocab:accountantName",
                 "@type": "xsd:string"
               },
@@ -85,7 +85,7 @@
                 "@id": "ws-i-vocab:encodingFormat",
                 "@type": "xsd:string"
               },
-              "name": {
+              "attachmentName": {
                 "@id": "ws-i-vocab:attachmentName",
                 "@type": "xsd:string"
               }
