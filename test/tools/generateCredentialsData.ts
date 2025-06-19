@@ -414,15 +414,15 @@ function generateWholesaleInvestorCredentials(
       certifyingBody: faker.company.name(),
       licenceNumber: faker.string.uuid(),
     },
-    attachments: [
-      {
-        attachmentType: 'Document',
-        contentUrl: faker.internet.url(),
-        contentSize,
-        encodingFormat: 'application/pdf',
-        attachmentName: faker.system.fileName(),
-      },
-    ],
+    // attachments: [
+    //   {
+    //     attachmentType: 'Document',
+    //     contentUrl: faker.internet.url(),
+    //     contentSize,
+    //     encodingFormat: 'application/pdf',
+    //     attachmentName: faker.system.fileName(),
+    //   },
+    // ],
   };
 
   if (callback) {

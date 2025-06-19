@@ -14,20 +14,20 @@
           "type": "@type",
           "ws-i-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/wholesaleInvestorCredential.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
-          "certificateNumber": {
-            "@id": "ws-i-vocab:certificateNumber",
-            "@type": "xsd:string"
-          },
-          "jurisdiction": {
-            "@id": "ws-i-vocab:jurisdiction",
-            "@type": "xsd:string"
-          },
           "name": {
             "@id": "ws-i-vocab:name",
             "@type": "xsd:string"
           },
           "email": {
             "@id": "ws-i-vocab:email",
+            "@type": "xsd:string"
+          },
+          "certificateNumber": {
+            "@id": "ws-i-vocab:certificateNumber",
+            "@type": "xsd:string"
+          },
+          "jurisdiction": {
+            "@id": "ws-i-vocab:jurisdiction",
             "@type": "xsd:string"
           },
           "grossIncome": {
@@ -55,31 +55,6 @@
               },
               "licenceNumber": {
                 "@id": "ws-i-vocab:licenceNumber",
-                "@type": "xsd:string"
-              }
-            }
-          },
-          "attachments": {
-            "@id": "ws-i-vocab:attachments",
-            "@container": "@set",
-            "@context": {
-              "attachmentType": {
-                "@id": "ws-i-vocab:type"
-              },
-              "contentUrl": {
-                "@id": "ws-i-vocab:contentUrl",
-                "@type": "xsd:anyURI"
-              },
-              "contentSize": {
-                "@id": "ws-i-vocab:contentSize",
-                "@type": "xsd:string"
-              },
-              "encodingFormat": {
-                "@id": "ws-i-vocab:encodingFormat",
-                "@type": "xsd:string"
-              },
-              "attachmentName": {
-                "@id": "ws-i-vocab:attachmentName",
                 "@type": "xsd:string"
               }
             }
