@@ -408,7 +408,7 @@ function generateWholesaleInvestorCredentials(
     jurisdiction: faker.location.country(),
     grossIncome: faker.number.int({ min: 50000, max: 1000000 }),
     netAssets: faker.number.int({ min: 50000, max: 1000000 }),
-    validUntil: yyyymmdd(faker.date.soon({ days: 5 })),
+    expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
     accountantDetails: {
       accountantName: faker.person.fullName(),
       certifyingBody: faker.company.name(),
@@ -1817,9 +1817,9 @@ const wholesaleInvestorTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Missing Required Field: validUntil',
+    name: 'Missing Required Field: expiryDate',
     data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.validUntil;
+      delete data.credentialSubject.expiryDate;
     }),
     expectedValid: false,
   },

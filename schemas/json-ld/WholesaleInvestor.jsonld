@@ -38,8 +38,8 @@
             "@id": "ws-i-vocab:netAssets",
             "@type": "xsd:decimal"
           },
-          "validUntil": {
-            "@id": "ws-i-vocab:validUntil",
+          "expiryDate": {
+            "@id": "ws-i-vocab:expiryDate",
             "@type": "xsd:integer"
           },
           "accountantDetails": {
