@@ -402,27 +402,9 @@ function generateWholesaleInvestorCredentials(
 
   data.credentialSubject = {
     id: did,
-    name: faker.person.fullName(),
-    email: faker.internet.email(),
-    certificateNumber: faker.string.uuid(),
-    jurisdiction: faker.location.country(),
-    grossIncome: faker.number.int({ min: 50000, max: 1000000 }),
-    netAssets: faker.number.int({ min: 50000, max: 1000000 }),
-    expiryDate: yyyymmdd(faker.date.soon({ days: 5 })),
-    accountantDetails: {
-      accountantName: faker.person.fullName(),
-      certifyingBody: faker.company.name(),
-      licenceNumber: faker.string.uuid(),
-    },
-    // attachments: [
-    //   {
-    //     attachmentType: 'Document',
-    //     contentUrl: faker.internet.url(),
-    //     contentSize,
-    //     encodingFormat: 'application/pdf',
-    //     attachmentName: faker.system.fileName(),
-    //   },
-    // ],
+    accountantCertification: faker.helpers.arrayElement(['CPA', 'CA', 'IPA']),
+    accountantMembershipNumber: faker.string.uuid(),
+    accountantEmail: faker.internet.email(),
   };
 
   if (callback) {
@@ -1789,41 +1771,6 @@ const wholesaleInvestorTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Missing Required Field: certificateNumber',
-    data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.certificateNumber;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Missing Required Field: jurisdiction',
-    data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.jurisdiction;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Missing Required Field: grossIncome',
-    data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.grossIncome;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Missing Required Field: netAssets',
-    data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.netAssets;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Missing Required Field: expiryDate',
-    data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.expiryDate;
-    }),
-    expectedValid: false,
-  },
-  {
     name: 'Missing Required Field: accountantDetails',
     data: generateWholesaleInvestorCredentials((data) => {
       delete data.credentialSubject.accountantDetails;
@@ -1831,23 +1778,23 @@ const wholesaleInvestorTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Missing Required Field: accountantDetails.accountantName',
+    name: 'Missing Required Field: accountantMembershipNumber',
     data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.accountantDetails.accountantName;
+      delete data.credentialSubject.accountantMembershipNumber;
     }),
     expectedValid: false,
   },
   {
-    name: 'Missing Required Field: accountantDetails.certifyingBody',
+    name: 'Missing Required Field: accountantCertification',
     data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.accountantDetails.certifyingBody;
+      delete data.credentialSubject.accountantCertification;
     }),
     expectedValid: false,
   },
   {
-    name: 'Missing Required Field: accountantDetails.licenceNumber',
+    name: 'Missing Required Field: accountantEmail',
     data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.accountantDetails.licenceNumber;
+      delete data.credentialSubject.accountantEmail;
     }),
     expectedValid: false,
   },
