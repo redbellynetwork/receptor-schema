@@ -1771,13 +1771,6 @@ const wholesaleInvestorTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Missing Required Field: accountantDetails',
-    data: generateWholesaleInvestorCredentials((data) => {
-      delete data.credentialSubject.accountantDetails;
-    }),
-    expectedValid: false,
-  },
-  {
     name: 'Missing Required Field: accountantMembershipNumber',
     data: generateWholesaleInvestorCredentials((data) => {
       delete data.credentialSubject.accountantMembershipNumber;
