@@ -1,151 +1,23 @@
-# certificateNumber
+# accountantMembershipNumber
 
-Unique number of the certificate issued.
+Unique Membership Number
 
 ```
   "certificateNumber": "CERT-2024-0001"
 ```
 
-# jurisdiction
+# accountantCertification
 
-Jurisdiction for which the credential applies
-
-```
-  "jurisdiction": "Australia"
-```
-
-# name
-
-The name of the person.
+Which professional body does your account have membership at? e.g. CPA, CA, IPA
 
 ```
-  "name": "John Doe"
+  "accountantCertification": "CPA"
 ```
 
-# email
+# accountantEmail
 
-Email address of the credential subject.
-
-```
-  "email": johndoe@example.com
-```
-
-# grossIncome
-
-Represents the gross income of the credential subject in the jurisdiction currency
+Email of the accountant
 
 ```
-  "grossIncome": 300000
-```
-
-# netAssets
-
-Represents the net assets of the credential subject in the jurisdiction currency
-
-```
-  "netAssets": 3000000
-```
-
-# validUntil
-
-Represents date until which the credential is valid, in YYYYMMDD format
-
-```
-    "validUntil": "20450101"
-```
-
-# accountantDetails
-
-Details of the accountant certifying the investor's status.
-
-```json
-{
-  "accountantDetails": {
-    "name": "Jane Accountant",
-    "certifyingBody": "Institute of Chartered Accountants of Australia",
-    "licenceNumber": "AUS12345"
-  }
-}
-```
-
-# accountantName
-
-Name of the accountant.
-
-```
-  "name": "Jane Accountant",
-```
-
-# certifyingBody
-
-Organization that certifies the accountant.
-
-```
-  "certifyingBody": "Institute of Chartered Accountants of Australia",
-```
-
-# licenceNumber
-
-Licence number of the accountant.
-
-```
-  "licenceNumber": "AUS12345"
-```
-
-# attachments
-
-Additional documentation or evidence attached to the credential.
-
-```json
-{
-  "attachments": [
-      {
-        "attachmentType": "MediaObject",
-        "contentUrl": "https://example.com/certificate.pdf",
-        "contentSize": "1.2MB",
-        "encodingFormat": "application/pdf",
-        "name": "Accountant Certification"
-      }
-    ]
-}
-```
-
-# type
-
-Type of the item
-
-```
-  attachmentType: "MediaObject",
-```
-
-# contentUrl
-
-URL of the item.
-
-```
-  contentUrl: https://example.com/certificate.pdf
-```
-
-# contentSize
-
-Size of the item
-
-```
-contentSize: "1.2MB"
-```
-
-# encodingFormat
-
-a MIME format
-
-```
-  encodingFormat: "application/pdf"
-```
-
-# attachmentName
-
-name of the item
-
-```
-  name: "Attachment name"
+  "accountantEmail": "jane.accountant@example.com"
 ```

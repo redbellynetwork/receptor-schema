@@ -14,50 +14,17 @@
           "type": "@type",
           "ws-i-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/wholesaleInvestorCredential.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
-          "name": {
-            "@id": "ws-i-vocab:name",
+          "accountantCertification": {
+            "@id": "ws-i-vocab:accountantCertification",
             "@type": "xsd:string"
           },
-          "email": {
-            "@id": "ws-i-vocab:email",
+          "accountantMembershipNumber": {
+            "@id": "ws-i-vocab:accountantMembershipNumber",
             "@type": "xsd:string"
           },
-          "certificateNumber": {
-            "@id": "ws-i-vocab:certificateNumber",
+          "accountantEmail": {
+            "@id": "ws-i-vocab:accountantEmail",
             "@type": "xsd:string"
-          },
-          "jurisdiction": {
-            "@id": "ws-i-vocab:jurisdiction",
-            "@type": "xsd:string"
-          },
-          "grossIncome": {
-            "@id": "ws-i-vocab:grossIncome",
-            "@type": "xsd:decimal"
-          },
-          "netAssets": {
-            "@id": "ws-i-vocab:netAssets",
-            "@type": "xsd:decimal"
-          },
-          "expiryDate": {
-            "@id": "ws-i-vocab:expiryDate",
-            "@type": "xsd:integer"
-          },
-          "accountantDetails": {
-            "@id": "ws-i-vocab:accountantDetails",
-            "@context": {
-              "accountantName": {
-                "@id": "ws-i-vocab:accountantName",
-                "@type": "xsd:string"
-              },
-              "certifyingBody": {
-                "@id": "ws-i-vocab:certifyingBody",
-                "@type": "xsd:string"
-              },
-              "licenceNumber": {
-                "@id": "ws-i-vocab:licenceNumber",
-                "@type": "xsd:string"
-              }
-            }
           }
         }
       }
