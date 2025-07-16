@@ -1,22 +1,22 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Drivers Licence",
   "type": "object",
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AMLCTFCredential.jsonld",
-      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AMLCTFCredential.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json"
     }
   },
   "required": [
     "@context",
     "id",
     "type",
-    "issuer",
     "issuanceDate",
-    "expirationDate",
     "credentialSubject",
     "credentialSchema",
-    "credentialStatus"
+    "credentialStatus",
+    "issuer"
   ],
   "properties": {
     "@context": {
@@ -63,22 +63,6 @@
         }
       }
     },
-    "credentialStatus": {
-      "type": "object",
-      "required": ["id", "revocationNonce", "type"],
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "revocationNonce": {
-          "type": "integer"
-        },
-        "type": {
-          "type": "string"
-        }
-      }
-    },
     "subjectPosition": {
       "type": "string",
       "enum": ["none", "index", "value"]
@@ -100,11 +84,12 @@
       "type": "object",
       "required": [
         "id",
-        "amlCheckStatus",
-        "pepStatus",
-        "sanctionsCheck",
-        "adverseMediaStatus",
-        "monitoringStatus"
+        "name",
+        "licenceNumber",
+        "country",
+        "birthDate",
+        "expiryDate",
+        "publicAddress"
       ],
       "properties": {
         "id": {
@@ -113,30 +98,37 @@
           "format": "uri",
           "description": "Identifier for the subject of the credential."
         },
-        "amlCheckStatus": {
+        "name": {
           "type": "string",
-          "enum": ["passed", "failed"],
-          "description": "Result of the AML check."
+          "pattern": "^\\S.*\\S$|^\\S$",
+          "description": "Full name as per DL"
         },
-        "pepStatus": {
+        "licenceNumber": {
           "type": "string",
-          "enum": ["passed", "failed"],
-          "description": "Status of the PEP check."
+          "pattern": "^[^\\s]+$",
+          "description": "Licence number as per DL."
         },
-        "sanctionsCheck": {
+        "country": {
           "type": "string",
-          "enum": ["passed", "failed"],
-          "description": "Indicate status of sanction check, that user is not part of sanctions list."
+          "pattern": "^[A-Za-z]+(?: [A-Za-z]+)*$",
+          "description": "Country of issuance."
         },
-        "adverseMediaStatus": {
-          "type": "string",
-          "enum": ["passed", "failed"],
-          "description": "Status of the adverse Media"
+        "birthDate": {
+          "type": "integer",
+          "minimum": 19000101,
+          "maximum": 22251231,
+          "description": "Date of birth as per DL, in YYYYMMDD format ."
         },
-        "monitoringStatus": {
+        "expiryDate": {
+          "type": "integer",
+          "minimum": 19000101,
+          "maximum": 22251231,
+          "description": "Expiration date of DL, in YYYYMMDD format ."
+        },
+        "publicAddress": {
           "type": "string",
-          "enum": ["active", "inactive"],
-          "description": "Status of ongoing monitoring for compliance."
+          "pattern": "^0x[a-fA-F0-9]{40}$",
+          "description": "Public address of the owner of DL."
         }
       }
     }

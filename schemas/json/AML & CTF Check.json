@@ -1,22 +1,23 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Wholesale Investor Credential",
+  "title": "AML & CTF Check",
   "type": "object",
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/WholesaleInvestor.jsonld",
-      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/WholesaleInvestorCredential.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTF%20Check.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AML%20&%20CTF%20Check.json"
     }
   },
   "required": [
     "@context",
     "id",
     "type",
+    "issuer",
     "issuanceDate",
+    "expirationDate",
     "credentialSubject",
     "credentialSchema",
-    "credentialStatus",
-    "issuer"
+    "credentialStatus"
   ],
   "properties": {
     "@context": {
@@ -100,9 +101,11 @@
       "type": "object",
       "required": [
         "id",
-        "accountantCertification",
-        "accountantMembershipNumber",
-        "accountantEmail"
+        "amlCheckStatus",
+        "pepStatus",
+        "sanctionsCheck",
+        "adverseMediaStatus",
+        "monitoringStatus"
       ],
       "properties": {
         "id": {
@@ -111,18 +114,30 @@
           "format": "uri",
           "description": "Identifier for the subject of the credential."
         },
-        "accountantCertification": {
+        "amlCheckStatus": {
           "type": "string",
-          "description": "Certification status of the accountant"
+          "enum": ["passed", "failed"],
+          "description": "Result of the AML check."
         },
-        "accountantMembershipNumber": {
+        "pepStatus": {
           "type": "string",
-          "description": "Membership number of the accountant"
+          "enum": ["passed", "failed"],
+          "description": "Status of the PEP check."
         },
-        "accountantEmail": {
+        "sanctionsCheck": {
           "type": "string",
-          "format": "email",
-          "description": "Email address of the accountant"
+          "enum": ["passed", "failed"],
+          "description": "Indicate status of sanction check, that user is not part of sanctions list."
+        },
+        "adverseMediaStatus": {
+          "type": "string",
+          "enum": ["passed", "failed"],
+          "description": "Status of the adverse Media"
+        },
+        "monitoringStatus": {
+          "type": "string",
+          "enum": ["active", "inactive"],
+          "description": "Status of ongoing monitoring for compliance."
         }
       }
     }

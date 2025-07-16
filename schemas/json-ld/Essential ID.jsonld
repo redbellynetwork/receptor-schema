@@ -5,8 +5,8 @@
       "@protected": true,
       "id": "@id",
       "type": "@type",
-      "KYC1By1Credential": {
-        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/KYC1By1Credential.jsonld#KYC1By1Credential",
+      "EssentialID": {
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Essential%20ID.jsonld#EssentialID",
         "@context": {
           "@version": 1.1,
           "@protected": true,

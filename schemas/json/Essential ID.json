@@ -1,10 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Essential ID",
   "type": "object",
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddressCredential.jsonld",
-      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddressCredential.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Essential%20ID.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Essential%20ID.json"
     }
   },
   "required": [
@@ -97,7 +98,16 @@
     },
     "credentialSubject": {
       "type": "object",
-      "required": ["id", "country", "city", "street", "postCode"],
+      "required": [
+        "id",
+        "name",
+        "birthDate",
+        "referenceId",
+        "country",
+        "documentType",
+        "expiryDate",
+        "publicAddress"
+      ],
       "properties": {
         "id": {
           "title": "Credential Subject ID",
@@ -105,25 +115,42 @@
           "format": "uri",
           "description": "Identifier for the subject of the credential."
         },
+        "name": {
+          "type": "string",
+          "pattern": "^\\S.*\\S$|^\\S$",
+          "description": "Full legal name of the individual."
+        },
+        "birthDate": {
+          "type": "integer",
+          "minimum": 19000101,
+          "maximum": 22251231,
+          "description": "Date of birth, in YYYYMMDD format."
+        },
+        "referenceId": {
+          "type": "string",
+          "pattern": "^[^\\s]+$",
+          "description": "Document unique number"
+        },
         "country": {
           "type": "string",
-          "pattern": "^\\S.*\\S$|^\\S$",
-          "description": "Country of residence."
+          "pattern": "^[A-Za-z]+(?: [A-Za-z]+)*$",
+          "description": "Country of issuance."
         },
-        "city": {
+        "documentType": {
           "type": "string",
-          "pattern": "^\\S.*\\S$|^\\S$",
-          "description": "City of residence"
+          "pattern": "^[A-Za-z_]+$",
+          "description": "Type of Document"
         },
-        "street": {
-          "type": "string",
-          "pattern": "^\\S.*\\S$|^\\S$",
-          "description": "Street name"
+        "expiryDate": {
+          "type": "integer",
+          "minimum": 19000101,
+          "maximum": 22251231,
+          "description": "Date until which the document is valid, in YYYYMMDD format."
         },
-        "postCode": {
+        "publicAddress": {
           "type": "string",
-          "pattern": "^[0-9]{5,}$",
-          "description": "Post Code"
+          "pattern": "^0x[a-fA-F0-9]{40}$",
+          "description": "Public address of the owner of the credential."
         }
       }
     }
