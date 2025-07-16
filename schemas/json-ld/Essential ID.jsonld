@@ -12,7 +12,7 @@
           "@protected": true,
           "id": "@id",
           "type": "@type",
-          "kyc-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/kyc1By1Credential.md#",
+          "kyc-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/essentialID.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
           "name": {
             "@id": "kyc-vocab:name",
