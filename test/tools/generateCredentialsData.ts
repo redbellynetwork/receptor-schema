@@ -377,7 +377,7 @@ function generateWholesaleInvestorCredentials(
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AU%20Sophisticated%20Wholesale%20Investor.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'WholesaleInvestorCredential'];
+  data.type = ['VerifiableCredential', 'AUSophisticatedWholesaleInvestorCredential'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };

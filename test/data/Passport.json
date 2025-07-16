@@ -3,37 +3,37 @@
     "name": "Valid PassportCredential",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "061c8e91-bb2d-4f00-ab87-1e906c18b021",
+      "id": "f56442e6-1059-4b3f-86f9-c34e0dd06a14",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://acceptable-thorn.org"
+        "id": "https://courageous-pasta.net/"
       },
-      "issuanceDate": "2025-06-30T15:56:03.242Z",
-      "expirationDate": "2025-09-10T08:38:58.513Z",
+      "issuanceDate": "2025-05-20T06:58:55.451Z",
+      "expirationDate": "2025-09-22T15:52:33.838Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
-      "version": 1351968206804862,
-      "updatable": true,
+      "subjectPosition": "none",
+      "merklizationRootPosition": "none",
+      "version": 165698914104919,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:TYpVcmnMeYYQuGmgmRabqaFdzcRtiWrNvYZIac9foo",
-        "name": "Dean Nicolas",
-        "birthDate": 20250715,
-        "passportNumber": "benCrS",
-        "nationality": "Palau",
-        "expiryDate": 20250718,
-        "publicAddress": "0xdeae72ddab528e7463b38522eecf9fc6d0bbaf73"
+        "id": "did:receptor:redbelly:testnet:jZs0G6wVrNnRrY5nlxgnCMhKKTKnPAnryutQ3UaHWi",
+        "name": "Darryl Tremblay III",
+        "birthDate": 20250711,
+        "passportNumber": "ZGmcqD",
+        "nationality": "Spain",
+        "expiryDate": 20250721,
+        "publicAddress": "0x82d6c0132d8e35db6cccabbbd2c9acbe670c51ec"
       },
       "credentialStatus": {
-        "id": "https://educated-tuba.net",
+        "id": "https://snarling-mortise.info/",
         "type": "CredentialStatusList2021"
-      },
-      "merklizationRootPosition": "index"
+      }
     },
     "expectedValid": true
   },
@@ -41,36 +41,36 @@
     "name": "Missing Required Field",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "a5fcf582-fc0d-45ba-908e-b45abfd4c287",
+      "id": "27af742d-50c6-4297-ac9d-d1998f3dfc6f",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://hollow-lay.com"
+        "id": "https://delectable-airport.biz"
       },
-      "issuanceDate": "2024-08-18T18:09:56.518Z",
-      "expirationDate": "2026-06-06T21:29:05.656Z",
+      "issuanceDate": "2024-11-22T13:55:13.579Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
+      "subjectPosition": "none",
       "merklizationRootPosition": "index",
-      "version": 8466826387712146,
-      "updatable": true,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:lU43bQ27jl4CQcNax7USYM7O75HQeEl9uciZGHgYnU",
-        "name": "Lisa Halvorson DDS",
-        "birthDate": 20250716,
-        "nationality": "Mauritius",
-        "expiryDate": 20250719,
-        "publicAddress": "0x7ac1f667a56c7b9dfc9ababc7bef6e1beede9c8d"
+        "id": "did:receptor:redbelly:mainnet:ignLeURe3igsDFH1VfxHxOTb1SYYmdYGVqoObLjvtc",
+        "name": "Angie Homenick",
+        "birthDate": 20250711,
+        "nationality": "Tanzania",
+        "expiryDate": 20250717,
+        "publicAddress": "0xb72cfd5c6e9ddbfc164ce2ac0b7aa0e0a1c8f330"
       },
+      "expirationDate": "2026-06-07T17:38:35.898Z",
       "credentialStatus": {
-        "id": "https://pleasant-window.name/",
+        "id": "https://queasy-igloo.info",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "version": 2540046411083912
     },
     "expectedValid": false
   },
@@ -78,74 +78,74 @@
     "name": "Wrong Data Type",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "978f2ce6-2005-4c2d-bf23-00ad0e2caba8",
+      "id": "e0321286-8318-4633-a6e2-00543281a83e",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://unkempt-underneath.info"
+        "id": "https://sick-cardboard.net"
       },
-      "issuanceDate": "2024-07-20T09:30:02.847Z",
+      "issuanceDate": "2025-01-10T14:35:34.846Z",
+      "expirationDate": "2026-02-25T17:09:35.895Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "merklizationRootPosition": "value",
+      "subjectPosition": "value",
+      "merklizationRootPosition": "index",
+      "version": 8900376488405818,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:ATXxCbd8tesuyKyYPyOktXsNrXL4ZCouQFpIjsLpRL",
-        "name": "Anthony Morissette",
+        "id": "did:receptor:redbelly:testnet:UwVV0g7yCg8YWESYNlWTiEU2MxFhZC52C2C6jkgsIJ",
+        "name": "Isaac Berge",
         "birthDate": "not_a_date",
-        "passportNumber": "Gne0SBa",
-        "nationality": "Zambia",
-        "expiryDate": 20250717,
-        "publicAddress": "0xd8b7ff9d4fb64c07b9e24b2a104d41ce2ccc7c03"
+        "passportNumber": "sXhHCt",
+        "nationality": "Sudan",
+        "expiryDate": 20250720,
+        "publicAddress": "0xfab17cde2fd256c104fe305f50be9615e2c8e330"
       },
-      "expirationDate": "2025-08-18T10:37:17.600Z",
       "credentialStatus": {
-        "id": "https://powerless-lounge.net",
+        "id": "https://hungry-mozzarella.com/",
         "type": "CredentialStatusList2021"
-      },
-      "subjectPosition": "index",
-      "version": 3071450134071460,
-      "updatable": false
+      }
     },
     "expectedValid": false
   },
   {
     "name": "Malformed Context: undefined",
     "data": {
-      "id": "6200f791-6b2a-489c-b4be-288b69b4ed1a",
+      "id": "28894e55-0e15-47d4-a5a4-ab8236e1b3b6",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://informal-pressure.biz/"
+        "id": "https://normal-eyeliner.net"
       },
-      "issuanceDate": "2025-01-19T13:49:11.952Z",
-      "expirationDate": "2025-11-30T13:57:25.601Z",
+      "issuanceDate": "2024-10-06T14:35:07.247Z",
+      "expirationDate": "2026-06-03T14:22:01.557Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
       "merklizationRootPosition": "index",
-      "version": 6585498604026769,
-      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:EuwzAlOkylCPqSjyJ5mqK9MobzNC2sp9ndF0ZOTTPu",
-        "name": "Guillermo Jacobs",
-        "birthDate": 20250712,
-        "passportNumber": "j3YYcIk",
-        "nationality": "Australia",
-        "expiryDate": 20250719,
-        "publicAddress": "0xd83d80b5dd5de9f98ec8e9e8da03b15bb0c54c36"
+        "id": "did:receptor:redbelly:testnet:azgt70u9Fz9qjagKGQx0EGsPSzXrrLv2nHkUaLkGUe",
+        "name": "Stella Goldner",
+        "birthDate": 20250711,
+        "passportNumber": "6aUfhM",
+        "nationality": "Chad",
+        "expiryDate": 20250720,
+        "publicAddress": "0x8acdf63d1add58eb043e64bb37b8efda1e6c66a8"
       },
       "credentialStatus": {
-        "id": "https://noxious-impact.net",
+        "id": "https://physical-advancement.name",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "subjectPosition": "none",
+      "version": 4176849911415655,
+      "updatable": false
     },
     "expectedValid": false
   },
@@ -153,35 +153,35 @@
     "name": "Invalid URL in id",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "66dbf91f-f211-458d-aabd-e169223ad5ed",
+      "id": "d5fd016d-7faf-4929-a869-238c9d868afc",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://gentle-fog.biz/"
+        "id": "https://sparkling-juggernaut.net"
       },
-      "issuanceDate": "2024-11-28T10:18:24.898Z",
-      "expirationDate": "2025-10-19T00:18:45.313Z",
+      "issuanceDate": "2025-03-12T06:03:22.366Z",
+      "expirationDate": "2026-06-02T08:25:59.628Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "none",
-      "merklizationRootPosition": "value",
-      "version": 1221943349706535,
+      "merklizationRootPosition": "index",
+      "version": 6552772847316466,
       "updatable": true,
       "credentialSubject": {
         "id": "invalid_url",
-        "name": "Walter Medhurst-Parker",
-        "birthDate": 20250707,
-        "passportNumber": "8fwIZwR",
-        "nationality": "Bosnia and Herzegovina",
-        "expiryDate": 20250721,
-        "publicAddress": "0x9a7cabae92b8b16a1af0b4507de8e7cb7f95627d"
+        "name": "Miss Pauline Koepp-Prosacco",
+        "birthDate": 20250713,
+        "passportNumber": "TJ28Vw",
+        "nationality": "Panama",
+        "expiryDate": 20250717,
+        "publicAddress": "0xe0ab4cccb1e9fc3ce98b76d1f2eca10452a368f8"
       },
       "credentialStatus": {
-        "id": "https://firsthand-impact.net",
+        "id": "https://hot-packaging.info/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -191,35 +191,35 @@
     "name": "Null Values",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "03bd7c81-2682-400e-9f55-4215a5594b4c",
+      "id": "2186181c-a9ea-4693-a624-4eaca553d8e3",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://secondary-bidet.name"
+        "id": "https://infinite-reboot.biz/"
       },
-      "issuanceDate": "2024-10-27T21:36:57.538Z",
-      "expirationDate": "2026-06-21T18:07:35.499Z",
+      "issuanceDate": "2025-05-06T15:58:37.384Z",
+      "expirationDate": "2026-03-18T21:27:52.370Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "none",
       "merklizationRootPosition": "none",
-      "version": 6630707555201489,
+      "version": 8248604356260759,
       "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:S2HYaQX7dAf8Fj837N8qSrObcCoIlnEYltOk3STomZ",
-        "name": "Allen Ankunding",
-        "birthDate": 20250708,
-        "passportNumber": "djJFnvc",
+        "id": "did:receptor:redbelly:testnet:guxB71iMLiJqsgOkakvcvrRPqVI6TwUKVQXygNfL2G",
+        "name": "Orville Heller-Turner",
+        "birthDate": 20250707,
+        "passportNumber": "aiC0I3",
         "nationality": null,
-        "expiryDate": 20250717,
-        "publicAddress": "0x09a5ce22940fd8beaedaac5c639abdf8c6fed112"
+        "expiryDate": 20250722,
+        "publicAddress": "0x92f1f2f0e23dfccdfbe8cb8aa1f0fed483ca04cc"
       },
       "credentialStatus": {
-        "id": "https://thin-galoshes.com",
+        "id": "https://known-morbidity.name",
         "type": "CredentialStatusList2021"
       }
     },
@@ -228,37 +228,37 @@
   {
     "name": "Missing id",
     "data": {
+      "credentialStatus": {
+        "id": "https://gummy-exasperation.biz",
+        "type": "CredentialStatusList2021"
+      },
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "a6df5ec9-1b71-444c-bc41-9aef5a87bb5a",
+      "id": "5d5392c5-7a67-4564-8747-5b11d94bc56b",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://somber-rosemary.net/"
+        "id": "https://powerless-fit.com/"
       },
-      "issuanceDate": "2024-10-19T20:54:59.594Z",
-      "expirationDate": "2026-02-01T22:09:18.760Z",
+      "issuanceDate": "2024-11-30T06:23:51.964Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "value",
-      "version": 2768637827553663,
-      "updatable": true,
       "credentialSubject": {
-        "name": "Jacqueline Wisoky",
-        "birthDate": 20250709,
-        "passportNumber": "cxlwzHI",
-        "nationality": "Qatar",
+        "name": "Travis Dach",
+        "birthDate": 20250715,
+        "passportNumber": "7ecAWes",
+        "nationality": "Thailand",
         "expiryDate": 20250719,
-        "publicAddress": "0x5fa5d423bd4c77bbc054bab9c2c03fbab63967ff"
+        "publicAddress": "0xedabf4d78c6f88eb2e6f6cbef7dd3a713f642baf"
       },
-      "credentialStatus": {
-        "id": "https://sentimental-omelet.biz/",
-        "type": "CredentialStatusList2021"
-      }
+      "expirationDate": "2025-10-20T17:46:59.375Z",
+      "subjectPosition": "value",
+      "merklizationRootPosition": "none",
+      "version": 2795222870227432,
+      "updatable": false
     },
     "expectedValid": false
   },
@@ -266,35 +266,35 @@
     "name": "Invalid date type",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "a189b4a6-e28c-4481-a504-48eb0e0b0b34",
+      "id": "886586d1-f2ef-48a1-a4fc-6ed3fcfcb52b",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://probable-exhaust.net"
+        "id": "https://fruitful-harp.biz"
       },
-      "issuanceDate": "2025-07-08T04:37:55.007Z",
-      "expirationDate": "2026-01-14T03:59:55.863Z",
+      "issuanceDate": "2025-02-15T23:49:26.039Z",
+      "expirationDate": "2026-01-08T16:56:41.411Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
+      "subjectPosition": "value",
       "merklizationRootPosition": "value",
-      "version": 2588880118385763,
-      "updatable": true,
+      "version": 3488239833475394,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:uSSnCfUQIud2q5rAMkiLVYAC0J9CwQNXPwjjQyd66E",
-        "name": "Tommy Rau",
-        "birthDate": "2025-07-15T23:45:16.861Z",
-        "passportNumber": "cl897qq",
-        "nationality": "Zambia",
-        "expiryDate": 20250719,
-        "publicAddress": "0x440b210462bdecb0d5a9bd0fdd4abe0781ed1cfe"
+        "id": "did:receptor:redbelly:mainnet:vKaegydlW2ArabOyTHJcVTWDfBboEQFmQ6BUJiBjh3",
+        "name": "Dr. Jermaine Cormier",
+        "birthDate": "2025-07-16T13:49:47.402Z",
+        "passportNumber": "iNIK8J",
+        "nationality": "Bouvet Island",
+        "expiryDate": 20250721,
+        "publicAddress": "0xfbdebdeba8b83aa4be06f94eda1d80cc3ac179e1"
       },
       "credentialStatus": {
-        "id": "https://lone-dredger.com",
+        "id": "https://reckless-polyester.info/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -304,37 +304,37 @@
     "name": "Leading/Trailing Spaces",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "81e8918f-ed2a-4539-bc12-f564818d7b41",
+      "id": "7e2f2067-5c1e-47a7-ab82-35efe24118a8",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://worst-pear.biz/"
+        "id": "https://untrue-legend.org"
       },
-      "issuanceDate": "2025-01-13T05:51:23.305Z",
+      "issuanceDate": "2024-08-11T02:22:25.787Z",
+      "expirationDate": "2025-09-04T06:17:30.802Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "merklizationRootPosition": "none",
-      "version": 4596175520809867,
+      "subjectPosition": "value",
+      "merklizationRootPosition": "index",
+      "version": 4472036775379433,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:7ngkPrpUJd0ixgC6uih8HZSx6XvYhcXumDJLRa2YE6",
-        "name": "Krystal Hand",
-        "birthDate": 20250716,
-        "passportNumber": "SMUFKe",
+        "id": "did:receptor:redbelly:mainnet:1cyVQolMVuQZntMZ2bQINEJ8ACnvO76gvEWubhTWwl",
+        "name": "Denise Waters",
+        "birthDate": 20250708,
+        "passportNumber": "wScutD",
         "nationality": " USA ",
-        "expiryDate": 20250718,
-        "publicAddress": "0x2f5fb57f05d33afeb5880fecf0f7ab0eef14c6ea"
+        "expiryDate": 20250720,
+        "publicAddress": "0xdd602b2d734cfc39b95fcaf4f8f73aaa76dcb864"
       },
-      "expirationDate": "2026-04-23T09:48:31.038Z",
       "credentialStatus": {
-        "id": "https://doting-affiliate.net/",
+        "id": "https://lined-object.name/",
         "type": "CredentialStatusList2021"
-      },
-      "subjectPosition": "index",
-      "updatable": true
+      }
     },
     "expectedValid": false
   },
@@ -342,35 +342,35 @@
     "name": "Empty Fields",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "d88b189b-ef63-422b-bed7-e429ade30125",
+      "id": "68e2697b-cff2-4139-8d6c-d734f31ef586",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://curly-heartbeat.name/"
+        "id": "https://avaricious-minority.name/"
       },
-      "issuanceDate": "2024-09-28T09:49:51.179Z",
-      "expirationDate": "2026-07-12T12:07:15.589Z",
+      "issuanceDate": "2024-07-27T21:11:59.980Z",
+      "expirationDate": "2025-09-25T17:09:26.268Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "none",
-      "version": 8427171524881056,
+      "subjectPosition": "value",
+      "merklizationRootPosition": "value",
+      "version": 4590996511272896,
       "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:M8gUfeEBC3N636En1KILiDbrgmkXNeDBqiPO54rLvn",
+        "id": "did:receptor:redbelly:mainnet:1W19IpBvkoepYQg5szPne484NpH1SM9bc0z7buHv76",
         "name": "",
-        "birthDate": 20250708,
-        "passportNumber": "NWwUBD",
-        "nationality": "Bonaire, Sint Eustatius and Saba",
+        "birthDate": 20250715,
+        "passportNumber": "IpHaOd",
+        "nationality": "India",
         "expiryDate": 20250718,
-        "publicAddress": "0x72fcac977b9c12d69ebefae10f06ceeb1ccf3ed5"
+        "publicAddress": "0xedfceebbdbbc0f6004ef7e32e2f8da39b716b1e3"
       },
       "credentialStatus": {
-        "id": "https://equatorial-farmer.net/",
+        "id": "https://blank-tomb.biz",
         "type": "CredentialStatusList2021"
       }
     },
@@ -380,35 +380,35 @@
     "name": "Invalid credentialSubject.id: invalid string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "477ecacb-b72f-4900-89b2-aa61c34026f3",
+      "id": "4081849e-1b27-4c69-ad44-636289432ce4",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://pure-gift.biz/"
+        "id": "https://powerless-milestone.net"
       },
-      "issuanceDate": "2024-12-24T23:20:11.163Z",
-      "expirationDate": "2025-10-01T11:52:07.807Z",
+      "issuanceDate": "2024-09-23T12:20:30.655Z",
+      "expirationDate": "2025-08-28T16:35:58.472Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "index",
-      "merklizationRootPosition": "none",
-      "version": 3626038119304993,
+      "merklizationRootPosition": "value",
+      "version": 3444854936710893,
       "updatable": true,
       "credentialSubject": {
         "id": "did:In-valid string:redbelly",
-        "name": "Virgil Prohaska",
-        "birthDate": 20250710,
-        "passportNumber": "XaS9eg",
-        "nationality": "Vanuatu",
-        "expiryDate": 20250717,
-        "publicAddress": "0x4c73a05b7be4fad42bdbf7f08a24cc4edbe92ab8"
+        "name": "Jonathan Lehner",
+        "birthDate": 20250716,
+        "passportNumber": "thF7eEx",
+        "nationality": "Yemen",
+        "expiryDate": 20250718,
+        "publicAddress": "0x5a4fdaefadb773d2fccedcb1eb154b94eacf1114"
       },
       "credentialStatus": {
-        "id": "https://friendly-fat.com",
+        "id": "https://tall-iridescence.net",
         "type": "CredentialStatusList2021"
       }
     },
@@ -418,35 +418,35 @@
     "name": "Invalid credentialSubject.id: empty string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "495136a1-88c5-4cc0-9e62-6f53ed17c6fd",
+      "id": "6e617f69-72d4-4174-b3af-4b05212f30b1",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://writhing-technician.info"
+        "id": "https://beneficial-valentine.name"
       },
-      "issuanceDate": "2025-02-14T01:27:03.572Z",
-      "expirationDate": "2026-04-30T18:31:10.322Z",
+      "issuanceDate": "2024-07-19T13:46:19.375Z",
+      "expirationDate": "2025-08-19T17:55:34.442Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "value",
-      "version": 3371556563013812,
+      "subjectPosition": "value",
+      "merklizationRootPosition": "none",
+      "version": 2053529219294899,
       "updatable": false,
       "credentialSubject": {
         "id": "",
-        "name": "Dr. Edith Langworth",
-        "birthDate": 20250710,
-        "passportNumber": "omivsDc",
-        "nationality": "South Africa",
+        "name": "Johnathan Williamson",
+        "birthDate": 20250712,
+        "passportNumber": "D3psPB",
+        "nationality": "Afghanistan",
         "expiryDate": 20250720,
-        "publicAddress": "0x97caadadf8f61ac8aebf0a1bad5beceb7cec27fc"
+        "publicAddress": "0xda910f51110ecef7ce1ef73c645dbcdbccbe66be"
       },
       "credentialStatus": {
-        "id": "https://annual-hydrant.biz/",
+        "id": "https://firm-video.net/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -456,35 +456,35 @@
     "name": "Invalid credentialSubject.name: empty",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "f9c71728-efb0-421a-82bf-dcd6e5850f10",
+      "id": "39125cf1-b576-43bd-9dad-f1dc3eb3eefc",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://tasty-trolley.org"
+        "id": "https://weird-bandwidth.info"
       },
-      "issuanceDate": "2024-08-07T22:59:41.334Z",
-      "expirationDate": "2025-11-06T14:31:29.928Z",
+      "issuanceDate": "2024-09-17T03:50:26.591Z",
+      "expirationDate": "2026-01-21T17:56:53.545Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
+      "subjectPosition": "value",
       "merklizationRootPosition": "none",
-      "version": 1185318761426812,
+      "version": 354385810331049,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:2REKlc7trFQ3OrIYX5YYYUe97Ovwt87r7JN3ogj6Xf",
+        "id": "did:receptor:redbelly:testnet:6GZfqKvZhB8WvF8CKZr9HVFWl4GxWBI9rTB0YqgcTy",
         "name": "",
-        "birthDate": 20250714,
-        "passportNumber": "vp5TXq",
-        "nationality": "Democratic People's Republic of Korea",
-        "expiryDate": 20250719,
-        "publicAddress": "0xbca237a5b93cfdbd8aa56a0a1a92ff5fe9a15a00"
+        "birthDate": 20250709,
+        "passportNumber": "FJBnuh",
+        "nationality": "France",
+        "expiryDate": 20250721,
+        "publicAddress": "0xd024cccf96a09fb490c5adcdac0f5369be3f747c"
       },
       "credentialStatus": {
-        "id": "https://lucky-calculus.org",
+        "id": "https://lumpy-median.biz/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -494,35 +494,35 @@
     "name": "Invalid credentialSubject.passportNumber: leading spaces",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "e2192026-8045-47ab-8364-d13a4594ab28",
+      "id": "3d9fc08c-ab66-47cf-9f17-3e1ee2006e43",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://steep-digit.com/"
+        "id": "https://distinct-tarragon.info"
       },
-      "issuanceDate": "2024-12-22T19:44:19.897Z",
-      "expirationDate": "2026-07-16T11:15:29.075Z",
+      "issuanceDate": "2025-02-03T10:42:18.912Z",
+      "expirationDate": "2026-01-16T12:17:39.835Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
+      "subjectPosition": "value",
       "merklizationRootPosition": "index",
-      "version": 7196969714756624,
+      "version": 6410922528000266,
       "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:YgmPka9uaE1FVxmzvHh5z7Su1KNE62Zjzm71IDt2Gu",
-        "name": "Kellie Zemlak",
+        "id": "did:receptor:redbelly:mainnet:hQeAoFjVwL0rZ6BlS5N8IMdqBl5B7Jmyo4VSE11Vem",
+        "name": "Victor Hilll",
         "birthDate": 20250707,
         "passportNumber": " QWER12345",
-        "nationality": "Greece",
-        "expiryDate": 20250721,
-        "publicAddress": "0x78e7f549e9c24debcc3acd6aec00e1dec050eb7b"
+        "nationality": "Slovenia",
+        "expiryDate": 20250718,
+        "publicAddress": "0x9c7d44c5ac7d8f542d128b7ebdde9dfdeddf69fd"
       },
       "credentialStatus": {
-        "id": "https://only-bug.info/",
+        "id": "https://colorless-interviewer.biz/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -532,35 +532,35 @@
     "name": "Invalid credentialSubject.passportNumber: trailing spaces",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "2f8f33cd-832d-47be-ac46-26bab77849ef",
+      "id": "9f980f06-65d7-489e-868f-02238e7b1030",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://disloyal-thunderbolt.info/"
+        "id": "https://hairy-sandbar.org/"
       },
-      "issuanceDate": "2025-03-10T22:08:44.994Z",
-      "expirationDate": "2025-07-26T02:37:50.215Z",
+      "issuanceDate": "2025-05-17T17:04:53.063Z",
+      "expirationDate": "2025-12-31T07:16:38.118Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "merklizationRootPosition": "index",
-      "version": 3443841359363798,
-      "updatable": false,
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "version": 3222729587971403,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:zn26Wt5XnSEAhpTVvuXqaw4AwuXJiGgyYUn5mzps6e",
-        "name": "Darrel Weber",
-        "birthDate": 20250710,
+        "id": "did:receptor:redbelly:mainnet:c1elVW9uc3GlhNdKrU8NwmrTboWGCatANQu8cKgwZf",
+        "name": "Anna Reichel I",
+        "birthDate": 20250708,
         "passportNumber": "QWER12345 ",
-        "nationality": "Latvia",
+        "nationality": "Gibraltar",
         "expiryDate": 20250719,
-        "publicAddress": "0x9464f76b8abf8d39931acabcccdb2702caeda1f3"
+        "publicAddress": "0xa5dffd1c7dad4b247fd91a858cfeadfcb0a677cf"
       },
       "credentialStatus": {
-        "id": "https://swift-editor.net/",
+        "id": "https://short-pepper.biz/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -570,37 +570,37 @@
     "name": "Invalid credentialSubject.passportNumber: empty string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "88a741e2-6e9b-40bc-917a-4da3c732c95d",
+      "id": "1abf6cfe-2aba-4e02-8126-a65ef7bf60ff",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://abandoned-rim.biz"
+        "id": "https://total-waist.com"
       },
-      "issuanceDate": "2025-01-05T10:03:36.529Z",
+      "issuanceDate": "2025-04-17T01:09:39.737Z",
+      "expirationDate": "2025-12-22T20:50:54.032Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "updatable": true,
-      "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:WLq21k5lpBC3kdzxLXBk7OhL4dV7TKuXhM7ur4qLZm",
-        "name": "Marguerite West",
-        "birthDate": 20250710,
-        "passportNumber": "",
-        "nationality": "Bhutan",
-        "expiryDate": 20250721,
-        "publicAddress": "0xee759f3ad86a1b1c6ffffaecbebe9dad81f0ff7f"
-      },
-      "expirationDate": "2025-11-01T12:09:41.100Z",
-      "credentialStatus": {
-        "id": "https://frizzy-cork.com/",
-        "type": "CredentialStatusList2021"
-      },
       "subjectPosition": "index",
-      "merklizationRootPosition": "value",
-      "version": 4785753176868772
+      "merklizationRootPosition": "none",
+      "version": 2263673797840183,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:iHOsQJuxtHaL3IJqIHLwx26Va6SCykmTdWZd0QeN3v",
+        "name": "Cody Schimmel",
+        "birthDate": 20250711,
+        "passportNumber": "",
+        "nationality": "Heard Island and McDonald Islands",
+        "expiryDate": 20250717,
+        "publicAddress": "0x0eccda4cfb2e5cbefecfcc0e2feb0dc184e989e4"
+      },
+      "credentialStatus": {
+        "id": "https://acceptable-stool.org/",
+        "type": "CredentialStatusList2021"
+      }
     },
     "expectedValid": false
   },
@@ -608,113 +608,113 @@
     "name": "Invalid credentialSubject.passportNumber: spaces in between",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "c828e6bd-689c-44a2-b245-19eeaae9582f",
+      "id": "2a0e2001-c304-4aba-a629-7d74f94853a3",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://steep-widow.net/"
+        "id": "https://general-instance.name"
       },
-      "issuanceDate": "2025-02-13T19:16:17.662Z",
-      "expirationDate": "2026-04-02T19:10:25.580Z",
+      "issuanceDate": "2024-12-11T00:30:42.767Z",
+      "expirationDate": "2025-11-20T21:53:29.997Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "version": 3036128878524496,
+      "subjectPosition": "index",
+      "merklizationRootPosition": "index",
+      "version": 5862529186071888,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:L8SETcY36QqVMAuH55LKIvOyEZnma62sF8MFt8Gnz4",
-        "name": "Joy Champlin",
-        "birthDate": 20250712,
+        "id": "did:receptor:redbelly:mainnet:h9hxkrpwujR3vAEcD4C95WaS4k6MdvXIhBouP8w3F1",
+        "name": "Natasha Harris",
+        "birthDate": 20250714,
         "passportNumber": "QWER 12345",
-        "nationality": "Sint Maarten",
-        "expiryDate": 20250720,
-        "publicAddress": "0x4aa36af181bad889ee0750c7fc2e0a56a1ab44cb"
+        "nationality": "Afghanistan",
+        "expiryDate": 20250717,
+        "publicAddress": "0xb91f74ad535af39ad54fbffaeae7077ca1d683fd"
       },
       "credentialStatus": {
-        "id": "https://aggressive-wilderness.org/",
+        "id": "https://rewarding-duster.net/",
         "type": "CredentialStatusList2021"
-      },
-      "merklizationRootPosition": "value"
+      }
     },
     "expectedValid": false
   },
   {
     "name": "Invalid credentialSubject.passportNumber: Too short (5 characters)",
     "data": {
-      "credentialStatus": {
-        "id": "https://radiant-steak.biz",
-        "type": "CredentialStatusList2021"
-      },
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "01a5b274-e9af-4af6-aa59-c3e1ec650b23",
+      "id": "8dd1a926-f108-4c9d-bf31-5215d500fbd4",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://well-made-brochure.com"
+        "id": "https://carefree-peony.net/"
       },
-      "issuanceDate": "2025-02-04T11:20:10.283Z",
+      "issuanceDate": "2025-04-20T08:06:37.066Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
+      "version": 569667959686988,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:G3rgXpmtJi7Rc8qmeR1Hdtq4uCgGNrktRoqoMiEZog",
-        "name": "Howard Bosco",
-        "birthDate": 20250708,
+        "id": "did:receptor:redbelly:mainnet:9ooRpNk78INosB6TDjXEFOV01ehqpcrZI9mhwQvoqR",
+        "name": "Kristen Kovacek",
+        "birthDate": 20250715,
         "passportNumber": "ABC12",
-        "nationality": "Lesotho",
-        "expiryDate": 20250720,
-        "publicAddress": "0xf24ba13a6abbb4c1a6f6daeda57bfffaef59ff8a"
+        "nationality": "Jersey",
+        "expiryDate": 20250721,
+        "publicAddress": "0xf9cf24ddc4d39dfaea6eaedb69dbaf5ba6ffaa64"
       },
-      "expirationDate": "2026-02-21T03:11:55.446Z",
-      "subjectPosition": "value",
+      "expirationDate": "2026-07-07T06:02:43.061Z",
+      "credentialStatus": {
+        "id": "https://warped-trench.org/",
+        "type": "CredentialStatusList2021"
+      },
+      "subjectPosition": "index",
       "merklizationRootPosition": "none",
-      "version": 3399871863015680,
-      "updatable": false
+      "updatable": true
     },
     "expectedValid": false
   },
   {
     "name": "Invalid credentialSubject.passportNumber: Too long (10 characters)",
     "data": {
+      "credentialStatus": {
+        "id": "https://thick-hydrolyse.net",
+        "type": "CredentialStatusList2021"
+      },
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "3333289a-5956-49c8-8bca-e95953661770",
+      "id": "e91309e0-f269-4062-882a-fbbc94c38540",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://scented-digit.org"
+        "id": "https://spirited-plain.info/"
       },
-      "issuanceDate": "2025-03-26T10:35:50.946Z",
-      "expirationDate": "2025-11-27T12:44:48.478Z",
+      "issuanceDate": "2024-09-27T20:29:41.075Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "none",
-      "version": 5835504915291569,
-      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:N7p5IAdUVYwQ6BuNvqURc4pSck8kwwtZ6THzDDAyeX",
-        "name": "Frank Johnson",
+        "id": "did:receptor:redbelly:testnet:H4X6Ci5q06jaXuUhWovJXVkqCbeSjkYRwA8lKPY2jf",
+        "name": "Walter Walter",
         "birthDate": 20250714,
         "passportNumber": "1234567890",
-        "nationality": "Andorra",
+        "nationality": "Sudan",
         "expiryDate": 20250721,
-        "publicAddress": "0x105a17005703bf7afacb2cf00fcad53d5d9b2048"
+        "publicAddress": "0xe83f0757c23f4cb5b8ee05200aad71307ae3bf59"
       },
-      "credentialStatus": {
-        "id": "https://sweet-yin.org",
-        "type": "CredentialStatusList2021"
-      }
+      "expirationDate": "2026-04-30T02:02:02.425Z",
+      "subjectPosition": "none",
+      "merklizationRootPosition": "none",
+      "version": 7136918464439089,
+      "updatable": false
     },
     "expectedValid": false
   },
@@ -722,35 +722,35 @@
     "name": "Invalid credentialSubject.passportNumber: Contains special characters",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "699186ad-0cec-4666-805c-d65e69071ec0",
+      "id": "7d05b6eb-c81f-4fdb-8ed9-f8b7346b298a",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://phony-minor.net"
+        "id": "https://naughty-relative.info/"
       },
-      "issuanceDate": "2025-05-14T05:24:37.407Z",
-      "expirationDate": "2025-11-27T11:35:48.472Z",
+      "issuanceDate": "2025-02-24T17:30:25.955Z",
+      "expirationDate": "2025-08-14T05:44:59.054Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
+      "subjectPosition": "none",
       "merklizationRootPosition": "index",
-      "version": 5180842396317615,
+      "version": 8878531086364023,
       "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:PxFA1hnAZTABblNN4loI1ta9UXwjT9ugXBNAHa4xIV",
-        "name": "Dwayne Will",
-        "birthDate": 20250707,
+        "id": "did:receptor:redbelly:testnet:bC3wJrzW5KpLq8ujmky5rIRwMkLUm00y3fBPCk0Q5b",
+        "name": "Clara Weimann",
+        "birthDate": 20250709,
         "passportNumber": "!@#4567",
-        "nationality": "Latvia",
-        "expiryDate": 20250721,
-        "publicAddress": "0x6eb1fde84e9e6fde1f2fa80dd2e31ac5cc98bd8c"
+        "nationality": "Virgin Islands, British",
+        "expiryDate": 20250720,
+        "publicAddress": "0x6e9c54d5f918eea6d5edcdaa2bc1dfe6ba0e32fd"
       },
       "credentialStatus": {
-        "id": "https://perky-lay.com/",
+        "id": "https://salty-testing.biz/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -760,37 +760,37 @@
     "name": "Invalid credentialSubject.nationality: spaces in between",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "0c5d5559-adec-4268-959d-adbc6f271daf",
+      "id": "027190a0-8524-4951-98fa-1b1b98de86b6",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://illiterate-netsuke.name/"
+        "id": "https://infatuated-lyre.net"
       },
-      "issuanceDate": "2024-09-12T04:09:29.664Z",
-      "expirationDate": "2026-06-03T00:02:26.848Z",
+      "issuanceDate": "2024-10-12T08:13:22.260Z",
+      "expirationDate": "2026-03-01T02:46:48.030Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "index",
-      "merklizationRootPosition": "value",
-      "version": 8629133320283237,
-      "updatable": false,
+      "merklizationRootPosition": "none",
+      "version": 2571031404556260,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:it6I4KJDckveu6w2Bj46A4GOplpVXxN6RQ2Bk21vaq",
-        "name": "Sabrina Doyle",
-        "birthDate": 20250713,
-        "passportNumber": "ENJ7JqK",
+        "id": "did:receptor:redbelly:testnet:noj4ALUS0cryI3dUQyvDAGJsguz3gNAF1iGU3sMdus",
+        "name": "Doyle Hirthe",
+        "birthDate": 20250710,
+        "passportNumber": "KlKEc8b",
         "nationality": "Martha's vineyard",
         "expiryDate": 20250721,
-        "publicAddress": "0xab1fa55b32f0ba3cfe33d1afdabc1eb8f4ebac73"
+        "publicAddress": "0xdcedc2f5183fd1bcf7a4c4221f4e0dd931d6fb9c"
       },
       "credentialStatus": {
-        "id": "https://dark-sonata.biz/",
+        "id": "https://merry-finger.net/",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "updatable": true
     },
     "expectedValid": false
   },
@@ -798,37 +798,37 @@
     "name": "Invalid credentialSubject.nationality: empty string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "9b757b18-fec2-4110-8488-2bd1c701c594",
+      "id": "124a5ae4-03d6-439c-963d-c87c0ec084dc",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://distorted-tooth.info/"
+        "id": "https://whole-soup.net/"
       },
-      "issuanceDate": "2025-05-13T17:02:50.521Z",
-      "expirationDate": "2025-12-09T01:09:27.748Z",
+      "issuanceDate": "2025-01-05T15:10:33.205Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "merklizationRootPosition": "index",
-      "version": 3419480661991939,
-      "updatable": true,
+      "merklizationRootPosition": "none",
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:hFZVH8RaMVn4nMhpx0YLhUcxamUc6DDABHEfdiiRhg",
-        "name": "Owen Sipes Sr.",
-        "birthDate": 20250714,
-        "passportNumber": "1APKljX",
+        "id": "did:receptor:redbelly:mainnet:NOqTI1bo6OsPUmm7E07brrGYLx5Gc2jY7brvEXQSn8",
+        "name": "Lawrence Bosco",
+        "birthDate": 20250712,
+        "passportNumber": "3Jjg1fC",
         "nationality": "",
-        "expiryDate": 20250719,
-        "publicAddress": "0xcbeafba2b53b1a9abfdc4a71fc72eecb5e61a74c"
+        "expiryDate": 20250720,
+        "publicAddress": "0x77ff74aee3eee2143cb203549db189f0a6ef96cc"
       },
+      "expirationDate": "2026-02-23T10:50:14.561Z",
       "credentialStatus": {
-        "id": "https://funny-bonfire.org/",
+        "id": "https://critical-approach.net/",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "subjectPosition": "none",
+      "version": 1004825991612471,
+      "updatable": false
     },
     "expectedValid": false
   },
@@ -836,75 +836,75 @@
     "name": "Invalid credentialSubject.nationality: trailing space",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "67e362fe-9309-4a42-8d6a-f6c785349520",
+      "id": "a925a79a-cfe5-4ac7-8f4e-d5b93c782793",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://informal-yeast.info/"
+        "id": "https://sniveling-cinder.biz/"
       },
-      "issuanceDate": "2025-03-03T00:21:15.492Z",
-      "expirationDate": "2025-11-03T17:14:26.210Z",
+      "issuanceDate": "2024-10-18T22:38:28.470Z",
+      "expirationDate": "2026-01-20T01:31:05.203Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
       "merklizationRootPosition": "none",
-      "version": 5485066280268298,
-      "updatable": true,
+      "version": 3118345460427655,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:NFj4iiLM4DgfV29NcRcU5v6QlHR9g4ddvDR8Qt4E3S",
-        "name": "Miss Irene Davis",
-        "birthDate": 20250715,
-        "passportNumber": "GZooK0V",
+        "id": "did:receptor:redbelly:mainnet:MnrcvfVywKs7TtV2yc8rHU9GwRQ735owGI62GPxHf8",
+        "name": "Karl Morar",
+        "birthDate": 20250713,
+        "passportNumber": "RrZ4A4Q",
         "nationality": "CA ",
-        "expiryDate": 20250717,
-        "publicAddress": "0x6b1cc1b448f1aff05adf0d1a74edabf05d2dfdde"
+        "expiryDate": 20250718,
+        "publicAddress": "0x8acd63d109f63a22be2daefa67ef728daf4dbba8"
       },
       "credentialStatus": {
-        "id": "https://runny-extent.biz/",
+        "id": "https://lumpy-monocle.name",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "subjectPosition": "index",
+      "updatable": false
     },
     "expectedValid": false
   },
   {
     "name": "Invalid credentialSubject.nationality: leading space",
     "data": {
-      "credentialStatus": {
-        "id": "https://powerful-pulse.com/",
-        "type": "CredentialStatusList2021"
-      },
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "7e7d8907-c98a-42f4-8216-8b351c4064a1",
+      "id": "1d18afd3-e25d-48d7-bf8c-0df78545e880",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://ugly-secret.name/"
+        "id": "https://damaged-operating.com"
       },
-      "issuanceDate": "2024-07-31T06:26:57.147Z",
+      "issuanceDate": "2025-01-26T22:24:01.561Z",
+      "expirationDate": "2025-10-30T22:31:01.130Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:iDM7qmFqNQ8SzXsf6a1FhNRHfxYmXeOc7I05m4jVUx",
-        "name": "Ronnie Dietrich",
-        "birthDate": 20250708,
-        "passportNumber": "Kh91Ll",
-        "nationality": " California",
-        "expiryDate": 20250718,
-        "publicAddress": "0x1ee5eeacbdda9f759d2f0ebdd0ea61c8b5ea0be2"
-      },
-      "expirationDate": "2026-07-10T12:48:49.629Z",
       "subjectPosition": "value",
-      "merklizationRootPosition": "none",
-      "version": 3602984150753462,
-      "updatable": true
+      "merklizationRootPosition": "index",
+      "version": 5101035500782726,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:BucOIMRQR6hH8C5Y55jhlghcVwd1SIESVS4W4M14Cm",
+        "name": "Mr. Leland Friesen",
+        "birthDate": 20250712,
+        "passportNumber": "107PbUe",
+        "nationality": " California",
+        "expiryDate": 20250719,
+        "publicAddress": "0xd15f9ae71ff1cbedd26befdfdf0eee41385e27f1"
+      },
+      "credentialStatus": {
+        "id": "https://fussy-sock.net",
+        "type": "CredentialStatusList2021"
+      }
     },
     "expectedValid": false
   },
@@ -912,37 +912,37 @@
     "name": "Invalid credentialSubject.nationality: hyphen not allowed",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "cb3434e0-6f75-42ab-854e-7781908ca82c",
+      "id": "e2d0cffc-b195-43ad-ac00-06bdb4e4ec09",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://lazy-grandpa.info/"
+        "id": "https://showy-airmail.name"
       },
-      "issuanceDate": "2024-09-20T14:47:39.725Z",
-      "expirationDate": "2025-12-01T19:48:05.369Z",
+      "issuanceDate": "2024-11-29T11:54:25.805Z",
+      "expirationDate": "2026-05-13T16:11:12.742Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "merklizationRootPosition": "none",
-      "version": 7862399109166846,
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "version": 4714063718363206,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:7SXH8dpM0NoNNzZgDQEgzhLrsPkEs33nT1wbLx8wCg",
-        "name": "Frank Frami V",
+        "id": "did:receptor:redbelly:testnet:Zrok2uytbUQboIWIYGQtP15SB7xPGn7VdeRcd4adLf",
+        "name": "Dr. Christy Cormier",
         "birthDate": 20250712,
-        "passportNumber": "x4clMf",
+        "passportNumber": "EmhVHJ",
         "nationality": "New-York",
-        "expiryDate": 20250717,
-        "publicAddress": "0x702b6aab8aefea1cd127f4dae5fc4bf8a0bf4252"
+        "expiryDate": 20250718,
+        "publicAddress": "0xdcfc8fe92f74defb4fbd1ac66958521fdee695fb"
       },
       "credentialStatus": {
-        "id": "https://monumental-discourse.net/",
+        "id": "https://impolite-hippodrome.com",
         "type": "CredentialStatusList2021"
-      },
-      "updatable": false
+      }
     },
     "expectedValid": false
   },
@@ -950,35 +950,35 @@
     "name": "Invalid credentialSubject.nationality: numbers not allowed",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "12179a81-afd2-4a59-b074-aca6247e3bd7",
+      "id": "9b328354-9121-41c7-b4bd-3e36447e89ca",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://bitter-following.net/"
+        "id": "https://rowdy-soup.info/"
       },
-      "issuanceDate": "2024-08-15T23:44:09.067Z",
+      "issuanceDate": "2025-05-08T01:59:29.702Z",
+      "expirationDate": "2026-02-02T07:35:29.481Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "index",
-      "merklizationRootPosition": "value",
-      "version": 2751941283739697,
-      "updatable": true,
+      "merklizationRootPosition": "none",
+      "version": 8583115058368796,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:152f3eIMFsVQnvjdCEq1SrWWVdCHFOo8woI1gGqNvo",
-        "name": "Miss Mattie Predovic DVM",
-        "birthDate": 20250707,
-        "passportNumber": "sryBmT",
+        "id": "did:receptor:redbelly:mainnet:2l7c5TQ1u6oDHdASdVSuDh8Z6eqGYuiFXkLjAMpgKM",
+        "name": "Dr. Wilson Swaniawski IV",
+        "birthDate": 20250712,
+        "passportNumber": "oRJaohR",
         "nationality": "1234",
-        "expiryDate": 20250718,
-        "publicAddress": "0xbea1dde8af4fdc4f4f447f7c05d4a3efdb52daea"
+        "expiryDate": 20250717,
+        "publicAddress": "0xf0a370bdb0bb08af71a720bab8ed1c8eadfea9cf"
       },
-      "expirationDate": "2026-05-15T11:39:43.584Z",
       "credentialStatus": {
-        "id": "https://scientific-plumber.info",
+        "id": "https://zealous-antelope.biz",
         "type": "CredentialStatusList2021"
       }
     },
@@ -988,37 +988,37 @@
     "name": "Invalid birthDate: Too short",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "09bbb857-dd9d-4396-b571-5f6f55441a7a",
+      "id": "9cf1ab85-36c5-4010-9afa-44c020aebd68",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://mammoth-representation.org/"
+        "id": "https://far-angle.name/"
       },
-      "issuanceDate": "2024-08-04T04:29:24.624Z",
-      "expirationDate": "2026-02-26T16:05:59.762Z",
+      "issuanceDate": "2024-08-04T12:15:55.615Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
       "merklizationRootPosition": "none",
-      "version": 1224350367150181,
+      "version": 7127140800983409,
       "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:htgXb7Yv6iyLvyylqHI8epdf8wFKzdFPx1PiHxhpgS",
-        "name": "Natalie Koss III",
+        "id": "did:receptor:redbelly:testnet:0xEpkath05XixoScIlZGJisu15qOB5iJH2bcDKRMmJ",
+        "name": "Luke Ward",
         "birthDate": 10101,
-        "passportNumber": "CTAeso",
-        "nationality": "United States Minor Outlying Islands",
-        "expiryDate": 20250719,
-        "publicAddress": "0xdf841a1e14e11fd8f9eeaf7ee7ffae4179a0ebcc"
+        "passportNumber": "zfzpDkB",
+        "nationality": "Bouvet Island",
+        "expiryDate": 20250720,
+        "publicAddress": "0x6e71acce2e1bb8df95b178b837a78b4dcd607b71"
       },
+      "expirationDate": "2026-01-06T04:31:24.009Z",
       "credentialStatus": {
-        "id": "https://hungry-ice-cream.net/",
+        "id": "https://buttery-lawmaker.info/",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "subjectPosition": "index"
     },
     "expectedValid": false
   },
@@ -1026,75 +1026,75 @@
     "name": "Invalid birthDate: Too long",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "81eb280b-7981-496b-b49d-a909c1b6ee29",
+      "id": "bfe8d560-fdf6-4b71-8d56-bc5420597008",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://trusting-dime.net"
+        "id": "https://stark-stock.info"
       },
-      "issuanceDate": "2024-12-23T07:15:13.286Z",
+      "issuanceDate": "2025-05-21T20:35:27.548Z",
+      "expirationDate": "2026-05-08T02:16:44.711Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "merklizationRootPosition": "none",
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "version": 6804302832284917,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:tGAcMeyQX09ARWHFHpMADozbqFt2UsdSJRYnFFAi55",
-        "name": "Eleanor Kertzmann",
+        "id": "did:receptor:redbelly:mainnet:VhXP0Gb20LTGjEKE3F2vIXRZLznyFyb4f7EfwvL8vD",
+        "name": "Lucia Dietrich",
         "birthDate": 199901011,
-        "passportNumber": "PQdCQw",
-        "nationality": "France",
-        "expiryDate": 20250719,
-        "publicAddress": "0xa0eb87cf7f86aec1aeae36138bcb5a007a32ecfa"
+        "passportNumber": "rDPqDAr",
+        "nationality": "Seychelles",
+        "expiryDate": 20250717,
+        "publicAddress": "0xfa061dd4cbaf91ce63f5b7be1c3b35ab0d46bdc9"
       },
-      "expirationDate": "2025-08-23T21:06:40.273Z",
       "credentialStatus": {
-        "id": "https://political-birth.com/",
+        "id": "https://antique-representation.biz",
         "type": "CredentialStatusList2021"
-      },
-      "version": 7622639838416884
+      }
     },
     "expectedValid": false
   },
   {
     "name": "Invalid publicAddress: Too short",
     "data": {
+      "credentialStatus": {
+        "id": "https://boiling-baseboard.org",
+        "type": "CredentialStatusList2021"
+      },
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "91a975d2-6e6d-4d73-83cb-8fb9dd8c794e",
+      "id": "a2eb93a3-444e-408f-806b-d269876527b7",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://majestic-hovel.org"
+        "id": "https://true-academics.com"
       },
-      "issuanceDate": "2025-07-16T13:17:54.938Z",
-      "expirationDate": "2026-01-05T06:24:31.486Z",
+      "issuanceDate": "2025-05-03T04:46:48.606Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "index",
-      "version": 4688917566784927,
-      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:5uC1jK94xnHnBo1r7T0IqkTiX1mNZQnOJMlJZeyJAK",
-        "name": "Dominic Padberg",
-        "birthDate": 20250712,
-        "passportNumber": "2MxCogH",
-        "nationality": "Timor-Leste",
-        "expiryDate": 20250721,
+        "id": "did:receptor:redbelly:mainnet:7LtqBbpobsJVvCN8bEwWZ7jtIvvcvDxWnySsF1kkGE",
+        "name": "Gerald Ortiz",
+        "birthDate": 20250714,
+        "passportNumber": "uJuH5zy",
+        "nationality": "Saint Vincent and the Grenadines",
+        "expiryDate": 20250720,
         "publicAddress": "0x123"
       },
-      "credentialStatus": {
-        "id": "https://gleaming-tuber.biz",
-        "type": "CredentialStatusList2021"
-      }
+      "expirationDate": "2026-03-09T03:47:46.179Z",
+      "subjectPosition": "value",
+      "merklizationRootPosition": "none",
+      "version": 739343930225865,
+      "updatable": false
     },
     "expectedValid": false
   },
@@ -1102,37 +1102,37 @@
     "name": "Invalid publicAddress: Contains non-hex characters",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "301b318c-7efe-4b2f-b736-4174d7f1e5ca",
+      "id": "9dacb93c-dc86-4555-b348-d01cdf0a858e",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://ignorant-signature.org/"
+        "id": "https://overcooked-maintainer.info"
       },
-      "issuanceDate": "2024-12-08T06:33:31.858Z",
-      "expirationDate": "2026-05-18T16:54:52.851Z",
+      "issuanceDate": "2024-12-23T05:45:21.820Z",
+      "expirationDate": "2025-07-25T03:13:25.941Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "index",
+      "version": 4442057739523292,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:4LmWoHmBT7bh9HdorRAsTr2NFPug1ChqB1qGbRMjzy",
-        "name": "Cameron Weber",
-        "birthDate": 20250710,
-        "passportNumber": "Up5laC",
-        "nationality": "Iran",
+        "id": "did:receptor:redbelly:testnet:DWMMfZS6V3RwkLB0j5XnvSHM9JjyZcVpG5kRrdsQAH",
+        "name": "Miss Melanie Wilkinson",
+        "birthDate": 20250708,
+        "passportNumber": "5MOob5",
+        "nationality": "Bolivia",
         "expiryDate": 20250718,
         "publicAddress": "0xGHIJKL7890abcdef1234567890abcdef12345678"
       },
       "credentialStatus": {
-        "id": "https://dependent-ghost.com/",
+        "id": "https://busy-promise.com/",
         "type": "CredentialStatusList2021"
-      },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "value",
-      "version": 2822630619876205,
-      "updatable": false
+      }
     },
     "expectedValid": false
   },
@@ -1140,37 +1140,37 @@
     "name": "Invalid publicAddress: Missing 0x prefix",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "2c75a163-41aa-42a8-bd34-5db868571780",
+      "id": "284f4d19-c87f-452d-bc30-8f1ea3668ee3",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://oval-hierarchy.net"
+        "id": "https://growing-airbus.name"
       },
-      "issuanceDate": "2025-06-27T17:13:13.445Z",
+      "issuanceDate": "2024-11-17T20:12:53.948Z",
+      "expirationDate": "2026-01-16T12:31:33.802Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "index",
+      "version": 8299059227154923,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:6okzhH1rOiDVhA6SuFxhyB9wuEBT7BUbEOB4l8PbIw",
-        "name": "Earl Thiel",
-        "birthDate": 20250715,
-        "passportNumber": "KX4X02",
-        "nationality": "Djibouti",
-        "expiryDate": 20250720,
+        "id": "did:receptor:redbelly:testnet:Awfcmjbvz3XCnCQLIpIGvyrvilQdLX3bIp6MYQv1uH",
+        "name": "Mrs. Kayla Reilly",
+        "birthDate": 20250713,
+        "passportNumber": "L4Cccjr",
+        "nationality": "South Africa",
+        "expiryDate": 20250718,
         "publicAddress": "1234567890abcdef1234567890abcdef12345678"
       },
-      "expirationDate": "2025-12-03T00:54:29.995Z",
       "credentialStatus": {
-        "id": "https://impractical-litter.org/",
+        "id": "https://stained-steak.org/",
         "type": "CredentialStatusList2021"
-      },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "index",
-      "version": 8651862100280033
+      }
     },
     "expectedValid": false
   },
@@ -1178,35 +1178,35 @@
     "name": "Invalid publicAddress: Uppercase 0X prefix",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "7d34e735-9abb-4fbf-abde-0e09d7e1efbe",
+      "id": "04c7584b-eadf-435a-b4b0-c791df26947c",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://dense-newsstand.info"
+        "id": "https://old-resource.info/"
       },
-      "issuanceDate": "2025-02-15T02:26:55.497Z",
-      "expirationDate": "2026-04-18T20:45:08.093Z",
+      "issuanceDate": "2024-12-31T12:40:57.025Z",
+      "expirationDate": "2026-06-06T00:49:44.567Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "index",
-      "version": 2180481428010778,
-      "updatable": false,
+      "subjectPosition": "index",
+      "merklizationRootPosition": "none",
+      "version": 1003762059200150,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:Ju3cmwZ3szir6w62LPhSQgDG88sDaNPs7OEdm16sgh",
-        "name": "Francis Stehr",
-        "birthDate": 20250707,
-        "passportNumber": "OPMjqa",
-        "nationality": "Argentina",
+        "id": "did:receptor:redbelly:mainnet:MKt9UCwurqGj1oWwfLniJmZurXhpZVYFjfafXNI20V",
+        "name": "Jim Cassin",
+        "birthDate": 20250716,
+        "passportNumber": "m7n7AA",
+        "nationality": "Morocco",
         "expiryDate": 20250718,
         "publicAddress": "0XABCDEF1234567890ABCDEF1234567890ABCDEF12"
       },
       "credentialStatus": {
-        "id": "https://oblong-airport.info",
+        "id": "https://thorny-accompanist.biz/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -1216,37 +1216,37 @@
     "name": "Valid publicAddress: Mixed case (allowed in Ethereum)",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld",
-      "id": "54e6e5e2-d5b8-45af-977e-27f04f3568a1",
+      "id": "e2fb093b-07e0-4b3c-8444-032ea9c8101f",
       "type": [
         "VerifiableCredential",
         "PassportCredential"
       ],
       "issuer": {
-        "id": "https://rare-pneumonia.net/"
+        "id": "https://young-overheard.name/"
       },
-      "issuanceDate": "2025-05-10T06:45:47.617Z",
-      "expirationDate": "2025-12-08T23:51:28.009Z",
+      "issuanceDate": "2024-09-29T07:57:58.690Z",
+      "expirationDate": "2025-11-11T08:15:46.874Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json",
         "type": "JsonSchemaValidator2018"
       },
-      "merklizationRootPosition": "none",
-      "updatable": false,
+      "subjectPosition": "index",
+      "merklizationRootPosition": "value",
+      "version": 4502794758570009,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:PFXhkt09lCSSE5YpGTak9i7A30EGsH9AH5odGgJLFm",
-        "name": "Tony Robel-VonRueden PhD",
-        "birthDate": 20250716,
-        "passportNumber": "R0hIxj",
-        "nationality": "Gambia",
-        "expiryDate": 20250718,
+        "id": "did:receptor:redbelly:testnet:a4uhSp5ULVExmkVmCa1gIVXNe317qrGHWOmzOVF1hE",
+        "name": "Amy Altenwerth-Mitchell",
+        "birthDate": 20250711,
+        "passportNumber": "xLdNHP",
+        "nationality": "Jamaica",
+        "expiryDate": 20250717,
         "publicAddress": "0xAbCdEf1234567890ABCDEF1234567890abcdef12"
       },
       "credentialStatus": {
-        "id": "https://expert-embarrassment.org/",
+        "id": "https://slushy-cinder.net/",
         "type": "CredentialStatusList2021"
-      },
-      "subjectPosition": "none",
-      "version": 849068363623342
+      }
     },
     "expectedValid": true
   }
