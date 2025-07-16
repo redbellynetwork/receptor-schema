@@ -1,0 +1,415 @@
+[
+  {
+    "name": "Valid ProofOfAddressCredential",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld",
+      "id": "0447699e-1381-45dc-8613-04f25fa3f403",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddressCredential"
+      ],
+      "issuer": {
+        "id": "https://nice-sundae.com"
+      },
+      "issuanceDate": "2024-11-28T11:48:05.107Z",
+      "expirationDate": "2026-04-25T02:17:04.854Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://altruistic-promise.com/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 6064772150826761
+      },
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:5gw8kp28myGcevSBNUV6W5tGtW4u477g32JLtN0I8s",
+        "street": "Salisbury Road",
+        "city": "Robertoview",
+        "postCode": "51524",
+        "country": "NER"
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "value",
+      "revNonce": 8694937398880743,
+      "version": 558254703018336
+    },
+    "expectedValid": true
+  },
+  {
+    "name": "Missing Required Field: country",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld",
+      "id": "50cf673b-1e55-4638-8d48-3e8d6e2c0619",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddressCredential"
+      ],
+      "issuer": {
+        "id": "https://polite-waterspout.net/"
+      },
+      "issuanceDate": "2024-08-18T01:30:42.760Z",
+      "expirationDate": "2026-01-07T20:58:05.425Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://paltry-flu.name/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 8334935571059593
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "none",
+      "revNonce": 6106722265037736,
+      "version": 1225500796002907,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:o5MjQ2zYUwKZk9OLpv2mkuaOkjKbVWKHqCrsq5dVUn",
+        "street": "Streich Mission",
+        "city": "Lake Alene",
+        "postCode": "79793"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: city",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld",
+      "id": "4769c5af-95e3-421e-8940-af4f97b88d12",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddressCredential"
+      ],
+      "issuer": {
+        "id": "https://talkative-aircraft.com"
+      },
+      "issuanceDate": "2024-08-04T18:02:10.568Z",
+      "expirationDate": "2025-12-01T19:52:22.581Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://narrow-importance.com",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 7361000252403460
+      },
+      "subjectPosition": "value",
+      "revNonce": 4803461355050459,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:fEtw6eyig17nij9PGkftNO4BDGiXeqeazWxZrg94mf",
+        "street": "Marks Avenue",
+        "postCode": "43750",
+        "country": "CYM"
+      },
+      "merklizationRootPosition": "value",
+      "version": 819340317976329,
+      "updatable": true
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: street",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld",
+      "id": "7475f832-08a9-4a5a-89e9-2cd1216cd964",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddressCredential"
+      ],
+      "issuer": {
+        "id": "https://new-diagram.info/"
+      },
+      "issuanceDate": "2025-06-28T08:17:48.870Z",
+      "expirationDate": "2026-03-21T18:56:17.289Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://our-doorpost.info",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 1121232957917168
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "value",
+      "revNonce": 3130800373508223,
+      "version": 7352010676309398,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:EeWt3uCaFGmF8Lep4TGNGn2twyjeVmMMMNMvjq5E1G",
+        "city": "VonRuedenburgh",
+        "postCode": "86669",
+        "country": "IRL"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: postCode",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld",
+      "id": "0532bfec-5728-4beb-94c7-fe652c1c03bc",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddressCredential"
+      ],
+      "issuer": {
+        "id": "https://immediate-wheel.net/"
+      },
+      "issuanceDate": "2024-11-26T23:24:45.985Z",
+      "expirationDate": "2026-05-16T12:09:31.392Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://shallow-subsidy.info/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 5772166726909930
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "value",
+      "revNonce": 8049003917636768,
+      "version": 1711333213848490,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:49XLtaZiVAEQlahyyf15vIIGWxe0oIv7LRh6oS2Xfd",
+        "street": "W 10th Street",
+        "city": "Jessycaland",
+        "country": "NAM"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Wrong Data Type: postCode as number",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld",
+      "id": "4a2a6981-5d24-4923-9db7-8579d89bad81",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddressCredential"
+      ],
+      "issuer": {
+        "id": "https://nifty-slime.net/"
+      },
+      "issuanceDate": "2025-04-25T07:21:01.241Z",
+      "expirationDate": "2025-08-31T06:46:03.185Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://unwelcome-scorpion.info",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 4003204922368427
+      },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "revNonce": 6760290471467275,
+      "version": 7411084784260116,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:GIYztwtd55MLtXM06Wy7sInuvBwPA6KzVj8qDBnMxX",
+        "street": "Gottlieb Glen",
+        "city": "Keller",
+        "postCode": 12345,
+        "country": "PRI"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Wrong Data Type: city as number",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld",
+      "id": "400a7549-145d-419a-8dd5-312e8812df1e",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddressCredential"
+      ],
+      "issuer": {
+        "id": "https://giving-seagull.biz/"
+      },
+      "issuanceDate": "2024-09-04T21:10:41.455Z",
+      "expirationDate": "2025-09-29T01:18:47.580Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://unwilling-creature.com/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 8417193991123807
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "value",
+      "revNonce": 1161263283487943,
+      "version": 5618762639858138,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:0LuyvghpVh05hNhDADSTjp6W9KGxsqTponEWPHrAtZ",
+        "street": "N Division Street",
+        "city": 9876,
+        "postCode": "21608",
+        "country": "HMD"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Malformed Context: undefined",
+    "data": {
+      "id": "eb7863d8-b733-45f8-a995-20a9616822d5",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddressCredential"
+      ],
+      "issuer": {
+        "id": "https://reasonable-relative.biz"
+      },
+      "issuanceDate": "2024-08-22T19:46:18.543Z",
+      "expirationDate": "2025-12-16T11:41:35.764Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://able-summary.com",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 7172886364503584
+      },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "none",
+      "revNonce": 2080072715592043,
+      "version": 2114599529554092,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:wW1DZUmKRtQuXS11FYvlYPu4TQShFHFLOcvfeXdzw8",
+        "street": "E 6th Avenue",
+        "city": "North Dawson",
+        "postCode": "80773",
+        "country": "BLZ"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Invalid postCode: empty string",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld",
+      "id": "cc3afc61-31cc-4561-8a2f-e7da7d33659e",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddressCredential"
+      ],
+      "issuer": {
+        "id": "https://ornery-freight.com/"
+      },
+      "issuanceDate": "2025-01-08T01:08:17.297Z",
+      "expirationDate": "2025-07-20T12:58:16.844Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://smoggy-polyester.com/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 6533748433918125
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "index",
+      "revNonce": 3767441974817479,
+      "version": 5035021071055275,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:2Uoh2oC3Eok07TDBbDC1MNQuZCcXkUCzaCzj0md9Av",
+        "street": "Manor Drive",
+        "city": "Turcottefort",
+        "postCode": "",
+        "country": "DOM"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Invalid postCode: alphanumeric",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld",
+      "id": "dcee8a57-0483-4030-9c1f-0a57cd7c5e8d",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddressCredential"
+      ],
+      "issuer": {
+        "id": "https://trivial-dish.net/"
+      },
+      "issuanceDate": "2024-07-22T07:04:56.047Z",
+      "expirationDate": "2025-07-31T12:09:53.171Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://memorable-lender.net/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 6356126132377974
+      },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "index",
+      "revNonce": 3073092632961616,
+      "version": 7641631601372861,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:EsnukolywF6g0n2lS0sODWgv4fxhq4AEbrnyZuQfU5",
+        "street": "York Road",
+        "city": "New Ebonyboro",
+        "postCode": "123AB",
+        "country": "BHR"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Invalid country: whitespace only",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld",
+      "id": "563aefda-42e7-4620-b508-2ee4565f9026",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddressCredential"
+      ],
+      "issuer": {
+        "id": "https://inexperienced-edge.name"
+      },
+      "issuanceDate": "2024-08-19T20:06:08.451Z",
+      "expirationDate": "2025-10-09T10:13:08.148Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://friendly-lava.name/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 6359766159147746
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "none",
+      "revNonce": 4467629795766289,
+      "version": 2001957553953950,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:4Ms1MDKAVXwcvHMmH8gfDil7GHu6lzTsY5tdhFClbV",
+        "street": "Riverside",
+        "city": "Boehmboro",
+        "postCode": "65215",
+        "country": "   "
+      }
+    },
+    "expectedValid": false
+  }
+]

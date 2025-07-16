@@ -4,35 +4,35 @@ import { faker } from '@faker-js/faker';
 import jsf from 'json-schema-faker';
 
 const amlCtfSchema = JSON.parse(
-  fs.readFileSync('./schemas/json/AMLCTFCredential.json', 'utf-8')
+  fs.readFileSync('./schemas/json/AML & CTF Check.json', 'utf-8')
 );
 
 const dlSchema = JSON.parse(
-  fs.readFileSync('./schemas/json/DriversLicenceCredential.json', 'utf-8')
+  fs.readFileSync('./schemas/json/Drivers Licence.json', 'utf-8')
 );
 
 const kyc1by1schema = JSON.parse(
-  fs.readFileSync('./schemas/json/KYC1By1Credential.json', 'utf-8')
+  fs.readFileSync('./schemas/json/Essential ID.json', 'utf-8')
 );
 
 const nationalIdSchema = JSON.parse(
-  fs.readFileSync('./schemas/json/NationalIdCredential.json', 'utf-8')
+  fs.readFileSync('./schemas/json/National ID.json', 'utf-8')
 );
 
 const passportSchema = JSON.parse(
-  fs.readFileSync('./schemas/json/PassportCredential.json', 'utf-8')
+  fs.readFileSync('./schemas/json/Passport.json', 'utf-8')
 );
 
 const optimav1Schema = JSON.parse(
-  fs.readFileSync('./schemas/json/OptimaV1Credential.json', 'utf-8')
+  fs.readFileSync('./schemas/json/Optima V1.json', 'utf-8')
 );
 
 const proofOfAddressSchema = JSON.parse(
-  fs.readFileSync('./schemas/json/ProofOfAddressCredential.json', 'utf-8')
+  fs.readFileSync('./schemas/json/Proof of Address.json', 'utf-8')
 );
 
 const wholesaleInvestorSchema = JSON.parse(
-  fs.readFileSync('./schemas/json/WholesaleInvestorCredential.json', 'utf-8')
+  fs.readFileSync('./schemas/json/AU Sophisticated Wholesale Investor.json', 'utf-8')
 );
 
 const yyyymmdd = function (date: Date) {
@@ -57,7 +57,7 @@ function generateAMLCTFCredential(callback?: (data: any) => void): any {
   ])}:${faker.string.alphanumeric(42)}`;
 
   data['@context'] =
-    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AMLCTFCredential.jsonld';
+    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld';
 
   data.credentialSubject.id = did;
   data.credentialSubject.amlCheckStatus = faker.helpers.arrayElement([
@@ -96,14 +96,14 @@ function generateDriversLicenceCredential(callback?: (data: any) => void): any {
   ])}:${faker.string.alphanumeric(42)}`;
 
   data['@context'] =
-    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/DriversLicence.jsonld';
+    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld';
   data.id = faker.string.uuid();
   data.type = ['VerifiableCredential', 'DriversLicenceCredential'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
   data.credentialSchema = {
-    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/DriversLicenceCredential.json',
+    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json',
     type: 'JsonSchemaValidator2018',
   };
   data.credentialStatus = {
@@ -145,7 +145,7 @@ function generateKYC1By1Credential(callback?: (data: any) => void): any {
   ])}:${faker.string.alphanumeric(42)}`;
 
   data['@context'] =
-    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/KYC1By1Credential.jsonld';
+    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Essential%20ID.jsonld';
   data.id = faker.string.uuid();
   data.type = ['VerifiableCredential', 'KYC1By1Credential'];
   data.issuanceDate = faker.date.past().toISOString();
@@ -157,7 +157,7 @@ function generateKYC1By1Credential(callback?: (data: any) => void): any {
     revocationNonce: faker.number.int(),
   };
   data.credentialSchema = {
-    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/KYC1By1Credential.json',
+    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Essential%20ID.json',
     type: 'JsonSchemaValidator2018',
   };
   data.subjectPosition = faker.helpers.arrayElement(['none', 'index', 'value']);
@@ -199,14 +199,14 @@ function generateNationalIdCredential(callback?: (data: any) => void): any {
   ])}:${faker.string.alphanumeric(42)}`;
 
   data['@context'] =
-    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalId.jsonld';
+    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/National%20ID.jsonld';
   data.id = faker.string.uuid();
   data.type = ['VerifiableCredential', 'NationalIdCredential'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
   data.credentialSchema = {
-    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalIdCredential.json',
+    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/National%20ID.json',
     type: 'JsonSchemaValidator2018',
   };
   data.credentialStatus = {
@@ -255,7 +255,7 @@ function generatePassportCredential(callback?: (data: any) => void): any {
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
   data.credentialSchema = {
-    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/PassportCredential.json',
+    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Passport.json',
     type: 'JsonSchemaValidator2018',
   };
   data.credentialStatus = {
@@ -293,7 +293,7 @@ function generateOptimaV1Credential(callback?: (data: any) => void): any {
   const data = jsf.generate(optimav1Schema) as any;
   data['@context'] = [
     'https://www.w3.org/ns/credentials/v2',
-    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/OptimaV1Credential.jsonld',
+    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/OptimaV1.jsonld',
   ];
   data.id = faker.string.uuid();
   data.type = ['VerifiableCredential', 'OptimaV1Credential'];
@@ -319,7 +319,7 @@ function generateProofOfAddressCredential(callback?: (data: any) => void): any {
   ])}:${faker.string.alphanumeric(42)}`;
 
   data['@context'] =
-    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddressCredential.jsonld';
+    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld';
   data.id = faker.string.uuid();
   data.type = ['VerifiableCredential', 'ProofOfAddressCredential'];
   data.issuanceDate = faker.date.past().toISOString();
@@ -331,7 +331,7 @@ function generateProofOfAddressCredential(callback?: (data: any) => void): any {
     revocationNonce: faker.number.int(),
   };
   data.credentialSchema = {
-    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddressCredential.json',
+    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json',
     type: 'JsonSchemaValidator2018',
   };
   data.subjectPosition = faker.helpers.arrayElement(['none', 'index', 'value']);
@@ -375,7 +375,7 @@ function generateWholesaleInvestorCredentials(
   const contentSize = (bytes / (1024 * 1024)).toFixed(1) + 'MB';
 
   data['@context'] =
-    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/WholesaleInvestor.jsonld';
+    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AU%20Sophisticated%20Wholesale%20Investor.jsonld';
   data.id = faker.string.uuid();
   data.type = ['VerifiableCredential', 'WholesaleInvestorCredential'];
   data.issuanceDate = faker.date.past().toISOString();
@@ -387,7 +387,7 @@ function generateWholesaleInvestorCredentials(
     revocationNonce: faker.number.int(),
   };
   data.credentialSchema = {
-    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/WholesaleInvestorCredential.json',
+    id: 'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AU%20Sophisticated%20Wholesale%20Investor.json',
     type: 'JsonSchemaValidator2018',
   };
   data.subjectPosition = faker.helpers.arrayElement(['none', 'index', 'value']);
@@ -1801,14 +1801,14 @@ const wholesaleInvestorTestScenarios = [
 ];
 
 const testObject = {
-  AMLCTFCredential: amlCtfTestScenarios,
-  DriversLicenceCredential: dLTestScenarios,
-  NationalIdCredential: nationalIdTestScenarios,
-  KYC1By1Credential: kyc1By1TestScenarios,
-  PassportCredential: passportTestScenarios,
-  OptimaV1Credential: optimaV1TestScenarios,
-  ProofOfAddressCredential: proofOfAddressTestScenarios,
-  WholesaleInvestorCredential: wholesaleInvestorTestScenarios,
+  "AML & CTF Check": amlCtfTestScenarios,
+  "Drivers Licence": dLTestScenarios,
+  "National ID": nationalIdTestScenarios,
+  "Essential ID": kyc1By1TestScenarios,
+  Passport: passportTestScenarios,
+  "Optima V1": optimaV1TestScenarios,
+  "Proof of Address": proofOfAddressTestScenarios,
+  "AU Sophisticated Wholesale Investor": wholesaleInvestorTestScenarios,
 };
 
 if (!fs.existsSync('./test/data')) {
