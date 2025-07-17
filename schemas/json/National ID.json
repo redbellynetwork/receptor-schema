@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "National ID",
+  "description": "National ID Credential",
   "type": "object",
   "$metadata": {
     "uris": {

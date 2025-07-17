@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Passport",
+  "description": "Passport Credential",
   "type": "object",
   "$metadata": {
     "uris": {

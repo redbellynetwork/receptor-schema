@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "AU Sophisticated Wholesale Investor",
+  "description": "AU Sophisticated Wholesale Investor Credential",
   "type": "object",
   "$metadata": {
     "uris": {
