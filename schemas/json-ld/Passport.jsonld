@@ -6,14 +6,14 @@
         "id": "@id",
         "type": "@type",
         "Passport": {
-          "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld#Passport",
+          "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json-ld/Passport.jsonld#Passport",
           "@context": {
             "@version": 1.1,
             "@protected": true,
             "id": "@id",
             "type": "@type",
             "xsd": "http://www.w3.org/2001/XMLSchema#",
-            "passport-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/passport.md#",
+            "passport-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/feature/PROD-3840/vc-naming/credentials/passport.md#",
             "name": {
               "@id": "passport-vocab:name",
               "@type": "xsd:string"

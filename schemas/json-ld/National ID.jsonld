@@ -6,13 +6,13 @@
       "id": "@id",
       "type": "@type",
       "National%20ID": {
-        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/National%20ID.jsonld#National%20ID",
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json-ld/National%20ID.jsonld#National%20ID",
         "@context": {
           "@version": 1.1,
           "@protected": true,
           "id": "@id",
           "type": "@type",
-          "nid-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/nationalId.md#",
+          "nid-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/feature/PROD-3840/vc-naming/credentials/nationalId.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
           "name": {
             "@id": "nid-vocab:name",

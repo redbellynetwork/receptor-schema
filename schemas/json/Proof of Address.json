@@ -5,8 +5,8 @@
   "type": "object",
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld",
-      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Proof%20of%20Address.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json-ld/Proof%20of%20Address.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json/Proof%20of%20Address.json"
     }
   },
   "required": [

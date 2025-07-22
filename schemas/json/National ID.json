@@ -5,8 +5,8 @@
   "type": "object",
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/National%20ID.jsonld",
-      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/National%20ID.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json-ld/National%20ID.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json/National%20ID.json"
     }
   },
   "required": [
