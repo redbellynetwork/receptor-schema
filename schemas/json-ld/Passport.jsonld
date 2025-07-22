@@ -5,8 +5,8 @@
         "@protected": true,
         "id": "@id",
         "type": "@type",
-        "PassportCredential": {
-          "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld#PassportCredential",
+        "Passport": {
+          "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld#Passport",
           "@context": {
             "@version": 1.1,
             "@protected": true,

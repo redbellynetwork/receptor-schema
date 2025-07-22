@@ -5,8 +5,8 @@
         "@protected": true,
         "id": "@id",
         "type": "@type",
-        "OptimaV1Credential": {
-          "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Optima%20V1.jsonld#OptimaV1Credential",
+        "Optima V1": {
+          "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Optima%20V1.jsonld#Optima%20V1",
           "@context": {
             "@version": 1.1,
             "@protected": true,
