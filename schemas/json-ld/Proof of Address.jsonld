@@ -6,13 +6,13 @@
       "id": "@id",
       "type": "@type",
       "Proof of Address": {
-        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json-ld/Proof%20of%20Address.jsonld#Proof%20of%20Address",
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld#Proof%20of%20Address",
         "@context": {
           "@version": 1.1,
           "@protected": true,
           "id": "@id",
           "type": "@type",
-          "poa-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/feature/PROD-3840/vc-naming/credentials/ProofOfAddressCredential.md#",
+          "poa-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/ProofOfAddressCredential.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
           "country": {
             "@id": "poa-vocab:country",

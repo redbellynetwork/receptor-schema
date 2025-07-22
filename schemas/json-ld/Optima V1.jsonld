@@ -6,13 +6,13 @@
         "id": "@id",
         "type": "@type",
         "Optima V1": {
-          "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json-ld/Optima%20V1.jsonld#Optima%20V1",
+          "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Optima%20V1.jsonld#Optima%20V1",
           "@context": {
             "@version": 1.1,
             "@protected": true,
             "id": "@id",
             "type": "@type",
-            "optima-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/feature/PROD-3840/vc-naming/credentials/optimaV1Credential.md#",
+            "optima-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/optimaV1Credential.md#",
             "xsd": "http://www.w3.org/2001/XMLSchema#",
             "publicAddress": {
               "@id": "optima-vocab:publicAddress",

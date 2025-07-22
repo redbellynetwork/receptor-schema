@@ -6,14 +6,14 @@
       "id": "@id",
       "type": "@type",
       "Drivers Licence": {
-        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json-ld/Drivers%20Licence.jsonld#Drivers%20Licence",
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld#Drivers%20Licence",
         "@context": {
           "@version": 1.1,
           "@protected": true,
           "id": "@id",
           "type": "@type",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
-          "driversLicence-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/feature/PROD-3840/vc-naming/credentials/driversLicence.md#",
+          "driversLicence-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/driversLicence.md#",
           "name": {
             "@id": "driversLicence-vocab:name",
             "@type": "xsd:string"
