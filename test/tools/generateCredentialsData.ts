@@ -98,7 +98,7 @@ function generateDriversLicenceCredential(callback?: (data: any) => void): any {
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'DriversLicenceCredential'];
+  data.type = ['VerifiableCredential', 'Drivers Licence'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
@@ -137,7 +137,7 @@ function generateDriversLicenceCredential(callback?: (data: any) => void): any {
   return data;
 }
 
-function generateKYC1By1Credential(callback?: (data: any) => void): any {
+function generateEssentialIDCredential(callback?: (data: any) => void): any {
   const data = jsf.generate(kyc1by1schema) as any;
   const did = `did:receptor:redbelly:${faker.helpers.arrayElement([
     'testnet',
@@ -147,7 +147,7 @@ function generateKYC1By1Credential(callback?: (data: any) => void): any {
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Essential%20ID.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'KYC1By1Credential'];
+  data.type = ['VerifiableCredential', 'Essential ID'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
@@ -201,7 +201,7 @@ function generateNationalIdCredential(callback?: (data: any) => void): any {
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/National%20ID.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'NationalIdCredential'];
+  data.type = ['VerifiableCredential', 'National ID'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
@@ -250,7 +250,7 @@ function generatePassportCredential(callback?: (data: any) => void): any {
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'PassportCredential'];
+  data.type = ['VerifiableCredential', 'Passport'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
@@ -296,7 +296,7 @@ function generateOptimaV1Credential(callback?: (data: any) => void): any {
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/OptimaV1.jsonld',
   ];
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'OptimaV1Credential'];
+  data.type = ['VerifiableCredential', 'Optima V1'];
   data.validFrom = faker.date.past().toISOString();
   data.validUntil = faker.date.future().toISOString();
   data.issuer = faker.internet.url();
@@ -321,7 +321,7 @@ function generateProofOfAddressCredential(callback?: (data: any) => void): any {
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'ProofOfAddressCredential'];
+  data.type = ['VerifiableCredential', 'Proof of Address'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
@@ -377,7 +377,7 @@ function generateWholesaleInvestorCredentials(
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AU%20Sophisticated%20Wholesale%20Investor.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'AUSophisticatedWholesaleInvestorCredential'];
+  data.type = ['VerifiableCredential', 'AU Sophisticated Wholesale Investor'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
@@ -416,7 +416,7 @@ function generateWholesaleInvestorCredentials(
 
 const amlCtfTestScenarios = [
   {
-    name: 'Valid AMLCTFCredential',
+    name: 'Valid AML & CTF Check',
     data: generateAMLCTFCredential(),
     expectedValid: true,
   },
@@ -564,7 +564,7 @@ const amlCtfTestScenarios = [
 
 const dLTestScenarios = [
   {
-    name: 'Valid DriversLicenceCredential',
+    name: 'Valid Drivers Licence',
     data: generateDriversLicenceCredential(),
     expectedValid: true,
   },
@@ -819,162 +819,162 @@ const dLTestScenarios = [
   },
 ];
 
-const kyc1By1TestScenarios = [
+const essentialTestScenarios = [
   {
-    name: 'Valid KYC1By1Credential',
-    data: generateKYC1By1Credential(),
+    name: 'Valid Essential ID',
+    data: generateEssentialIDCredential(),
     expectedValid: true,
   },
   {
     name: 'Missing Required Field',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       delete data.credentialSubject.referenceId;
     }),
     expectedValid: false,
   },
   {
     name: 'Wrong Data Type',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.birthDate = 'not_a_date';
     }),
     expectedValid: false,
   },
   {
     name: 'Malformed Context: undefined',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data['@context'] = undefined;
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid value in id',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.id = 'invalid_value';
     }),
     expectedValid: false,
   },
   {
     name: 'Null Values',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.country = null;
     }),
     expectedValid: false,
   },
   {
     name: 'Missing id',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       delete data.credentialSubject.id;
     }),
     expectedValid: false,
   },
   {
     name: 'Leading/Trailing Spaces',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.country = ' USA ';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.id: empty string',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.id = '';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.name: empty',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.name = '';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.referenceId: leading spaces',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.referenceId = ' QWER12345';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.referenceId: trailing spaces',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.referenceId = 'QWER12345 ';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.referenceId: empty string',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.referenceId = '';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.referenceId: spaces in between',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.referenceId = 'QWER 12345';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.country: spaces in between',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.country = "Martha's vineyard";
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.country: empty string',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.country = '';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.country: trailing space',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.country = 'CA ';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.country: leading space',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.country = ' California';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.country: hyphen not allowed',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.country = 'New-York';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.country: numbers not allowed',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.country = '1234';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid birthDate: Too short',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.birthDate = -2240524800;
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid publicAddress: Too short',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.publicAddress = '0x123';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid publicAddress: Contains non-hex characters',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.publicAddress =
         '0xGHIJKL7890abcdef1234567890abcdef12345678';
     }),
@@ -982,7 +982,7 @@ const kyc1By1TestScenarios = [
   },
   {
     name: 'Invalid publicAddress: Missing 0x prefix',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.publicAddress =
         '1234567890abcdef1234567890abcdef12345678';
     }),
@@ -990,7 +990,7 @@ const kyc1By1TestScenarios = [
   },
   {
     name: 'Invalid publicAddress: Uppercase 0X prefix',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.publicAddress =
         '0XABCDEF1234567890ABCDEF1234567890ABCDEF12';
     }),
@@ -998,7 +998,7 @@ const kyc1By1TestScenarios = [
   },
   {
     name: 'Valid publicAddress: Mixed case (allowed in Ethereum)',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.publicAddress =
         '0xAbCdEf1234567890ABCDEF1234567890abcdef12';
     }),
@@ -1006,42 +1006,42 @@ const kyc1By1TestScenarios = [
   },
   {
     name: 'Invalid credentialSubject.documentType: spaces in between',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.documentType = 'ID CARD';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.documentType: empty string',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.documentType = '';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.documentType: trailing space',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.documentType = 'PASSPORT ';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.documentType: leading space',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.documentType = ' PASSPORT';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.documentType: hyphen not allowed',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.documentType = 'ID-CARD';
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.documentType: numbers not allowed',
-    data: generateKYC1By1Credential((data) => {
+    data: generateEssentialIDCredential((data) => {
       data.credentialSubject.documentType = '1234';
     }),
     expectedValid: false,
@@ -1050,7 +1050,7 @@ const kyc1By1TestScenarios = [
 
 const nationalIdTestScenarios = [
   {
-    name: 'Valid NationalIdCredential',
+    name: 'Valid National ID',
     data: generateNationalIdCredential(),
     expectedValid: true,
   },
@@ -1314,7 +1314,7 @@ const nationalIdTestScenarios = [
 
 const passportTestScenarios = [
   {
-    name: 'Valid PassportCredential',
+    name: 'Valid Passport',
     data: generatePassportCredential(),
     expectedValid: true,
   },
@@ -1613,7 +1613,7 @@ const passportTestScenarios = [
 
 const optimaV1TestScenarios = [
   {
-    name: 'Valid OptimaV1Credential',
+    name: 'Valid Optima V1',
     data: generateOptimaV1Credential(),
     expectedValid: true,
   },
@@ -1681,7 +1681,7 @@ const optimaV1TestScenarios = [
 
 const proofOfAddressTestScenarios = [
   {
-    name: 'Valid ProofOfAddressCredential',
+    name: 'Valid Proof of Address',
     data: generateProofOfAddressCredential(),
     expectedValid: true,
   },
@@ -1759,7 +1759,7 @@ const proofOfAddressTestScenarios = [
 
 const wholesaleInvestorTestScenarios = [
   {
-    name: 'Valid WholesaleInvestorCredential',
+    name: 'Valid Au Sophisticated Wholesale Investor',
     data: generateWholesaleInvestorCredentials(),
     expectedValid: true,
   },
@@ -1804,7 +1804,7 @@ const testObject = {
   "AML & CTF Check": amlCtfTestScenarios,
   "Drivers Licence": dLTestScenarios,
   "National ID": nationalIdTestScenarios,
-  "Essential ID": kyc1By1TestScenarios,
+  "Essential ID": essentialTestScenarios,
   Passport: passportTestScenarios,
   "Optima V1": optimaV1TestScenarios,
   "Proof of Address": proofOfAddressTestScenarios,

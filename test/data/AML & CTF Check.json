@@ -1,36 +1,30 @@
 [
   {
-    "name": "Valid AMLCTFCredential",
+    "name": "Valid AML & CTF Check",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "proident in elit",
-      "type": [
-        "cupidatat ea cillum"
-      ],
-      "issuer": "http://wxJTwipfckecsUBL.cnOqdKsNZaQ8H5qZAQ9c",
-      "issuanceDate": "1914-03-03T08:58:03.0Z",
-      "expirationDate": "1891-12-30T23:30:36.0Z",
+      "id": "anim Lorem consectetur qui deserunt",
+      "type": "do nisi magna esse Duis",
+      "issuer": "http://DuRuCyZiQhEykPHwaJmMxQjbiObYSmQd.mgdeKOnFJ6bEbM1RCrlTW.oc6JorWhrFzEo2-t4baz625oMw",
+      "issuanceDate": "1930-02-03T04:10:42.0Z",
+      "expirationDate": "1965-04-22T05:46:53.0Z",
       "credentialSchema": {
-        "id": "https://OHOLoLEnYcHyqrNDSPkJnDEJXmek.wmS+LKQ7smuX,r-Bz5lgmOsBGZhhbeiunnvWh+ahh7FGety+7i0PlrasDK1bq1UnBr",
-        "type": "non consequat qui"
+        "id": "http://ucVVVpjrmxxKmQUfGcl.jdLzeGbheNupUTs,-fz,YOXQy1,wo,qNF9g6BzrOsH4rlTYxGuHaICVwYzTwtI6fxXXpuDvb,mQvk,+uAWuEaOB3+hF6X",
+        "type": "Duis dolore mollit"
       },
       "credentialStatus": {
-        "id": "https://tfDBSBdOgEzXcpBOhFMrZwtKLmPFAmx.tjY3hgulu9Sb,",
-        "revocationNonce": -68815714,
-        "type": "ut"
+        "id": "http://RAxknXORG.mnvIYUOwc4J76YoxLd",
+        "revocationNonce": 7093710,
+        "type": "dolor eu anim qui"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "none",
-      "revNonce": 37705664,
-      "version": -28706964,
-      "updatable": false,
+      "revNonce": 44356303,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:bdQjAFGdq6K5Eg3V9PBWWNeCBDa7X62ZtQMVsZwUF0",
-        "amlCheckStatus": "passed",
+        "id": "did:receptor:redbelly:testnet:FoHrqGSxnoZ4dRV8s8U1LXlHj2G716EhRl7hEd7dFe",
+        "amlCheckStatus": "failed",
         "pepStatus": "failed",
         "sanctionsCheck": "passed",
-        "adverseMediaStatus": "failed",
-        "monitoringStatus": "inactive"
+        "adverseMediaStatus": "passed",
+        "monitoringStatus": "active"
       }
     },
     "expectedValid": true
@@ -39,36 +33,30 @@
     "name": "Missing Required Field",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "sed",
-      "type": [
-        "officia aliquip non",
-        "ad commodo",
-        "aliquip pariatur consectetur laborum sunt",
-        "proident aliquip non quis",
-        "ut adipisicing laboris esse"
-      ],
+      "id": "cillum do in enim quis",
+      "type": "ipsum do",
       "issuer": {
-        "id": "https://VBzwEHcqodrwdk.vokVhsstbmVAd,LpOc7twkUB8TZdBnzIQVFlxRVs19gDhJkZmfkPhU6R6kvZBfw"
+        "id": "http://uMIiBptQYokVcunobpSeKjPSyv.fljhowGu-sXUVxIS5H2RKqxIiSHHkpY14FRR+4bO1r"
       },
-      "issuanceDate": "1899-11-11T04:04:33.0Z",
-      "expirationDate": "1935-10-29T15:38:54.0Z",
+      "issuanceDate": "1901-10-25T05:29:45.0Z",
+      "expirationDate": "1964-01-20T17:18:34.0Z",
       "credentialSchema": {
-        "id": "https://dyShsDvjoUrQOCKLsa.oxeh9D5JoWfoNPVdk2UrQzmVxl2Gfmi12aWGvEvuLO+lg.X9P1",
-        "type": "dolore do aliquip"
+        "id": "https://GXasgOuoqu.ifcmUnw",
+        "type": "qui consectetur magna"
       },
       "credentialStatus": {
-        "id": "http://iNQFzuGzvqSwGIamcMvcED.gejUaaqNUgRUxFgdDmOtnEktiTQYoMWnxej.h+LknAOar",
-        "revocationNonce": 97764053,
-        "type": "amet exercitation do"
+        "id": "http://pRckUtYfGQLxfZgJTiOLIVhCTxk.vaTVwafCpM",
+        "revocationNonce": 22945363,
+        "type": "aliquip dolore ut id"
       },
       "subjectPosition": "value",
-      "merklizationRootPosition": "none",
-      "revNonce": 15818391,
-      "version": -7995940,
+      "merklizationRootPosition": "index",
+      "revNonce": 12087982,
+      "version": 31749121,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:wIwzi6aD7KqmB6bqTfaiNWBxkWcQLlrvm7U8MjeXA8",
-        "pepStatus": "failed",
+        "id": "did:receptor:redbelly:mainnet:gARdPoPJXfvnvguZf8xova4OkQO51Y3pQuXkCIjaBK",
+        "pepStatus": "passed",
         "sanctionsCheck": "passed",
         "adverseMediaStatus": "passed",
         "monitoringStatus": "active"
@@ -80,32 +68,35 @@
     "name": "Wrong Data Type",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "id",
+      "id": "elit ex nisi Lorem aute",
       "type": [
-        "culpa quis",
-        "incididunt",
-        "eiusmod ad amet occaecat"
+        "laborum dolor eiusmod sed",
+        "dolor anim aliqua",
+        "qui in do",
+        "consequat laborum do"
       ],
-      "issuer": "https://HWOxmLpCDxFMlWrTAlAFOntGxYQpEwyMV.xyrmLt3n2d465fVRa-+",
-      "issuanceDate": "1968-09-17T23:11:34.0Z",
-      "expirationDate": "1895-12-06T02:07:01.0Z",
+      "issuer": {
+        "id": "https://KhRrBUzlvnXegvdI.xtYL22nnRz.WhypGxuILEB4p8FShN1NsX3z"
+      },
+      "issuanceDate": "1958-01-16T05:33:28.0Z",
+      "expirationDate": "1933-06-27T20:56:01.0Z",
       "credentialSchema": {
-        "id": "http://glshDrjaoqUMHwhuhGmcWolidh.gjqsgtoGtr12TOk7gTVnHig1E0uzotqlaBcPemFz,mm",
-        "type": "et deserunt mollit exercitation"
+        "id": "https://lnEHyzvligYjWqTJeVOI.bvBVmtvCGtrDKxVj81Dvdshv,UWx1m",
+        "type": "est labore enim in"
       },
       "credentialStatus": {
-        "id": "http://GhAPrxgEhnSQSblkCLgCdUlSoump.ohxqFRyTXKc",
-        "revocationNonce": -6556848,
-        "type": "culpa minim irure"
+        "id": "http://LXHyLJWTKwJ.xwxhfxHGJbEJWYcYZmBZ7HJSlgwSqM5kAjJe4",
+        "revocationNonce": -32412458,
+        "type": "amet ad"
       },
-      "subjectPosition": "index",
-      "updatable": false,
+      "merklizationRootPosition": "index",
+      "version": -13118323,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:ToDD27allUdfhSIFaw0DNcAzFtlxdkdranmXjUHKHU",
+        "id": "did:receptor:redbelly:testnet:UwsqABwYKWflyrLFQ3mwepel4F6QZn8b4niIh3sJ53",
         "amlCheckStatus": 12345,
-        "pepStatus": "failed",
-        "sanctionsCheck": "passed",
-        "adverseMediaStatus": "failed",
+        "pepStatus": "passed",
+        "sanctionsCheck": "failed",
+        "adverseMediaStatus": "passed",
         "monitoringStatus": "active"
       }
     },
@@ -114,34 +105,32 @@
   {
     "name": "Malformed Context: undefined",
     "data": {
-      "id": "eu sunt dolor",
-      "type": [
-        "anim aliqua incididunt dolore",
-        "ex sit"
-      ],
+      "id": "amet",
+      "type": [],
       "issuer": {
-        "id": "http://PxfUhnvdczwEPEMhZeEgnOeAWttjQmG.nbG9nOZBLJujJbpX9+kCo2jJKq4ZQ9RKOY"
+        "id": "http://cHAxFjCQurSdMRBRiFZbRAXzIONuhWVs.yiavtKsgdMZQYVry.z.YZpv-vCNxwjhuF-kXmNgGnHPRU1LNHUtMcVmI6f4"
       },
-      "issuanceDate": "1963-03-21T09:15:40.0Z",
-      "expirationDate": "1965-10-13T04:06:46.0Z",
+      "issuanceDate": "1968-08-09T04:34:41.0Z",
+      "expirationDate": "1914-10-14T11:22:51.0Z",
       "credentialSchema": {
-        "id": "http://AJCuePyYPlhHUBJrCLjKJOgxqzJegsJt.isyjOSssPWlCBsA5e1cf0Px9cy6V",
-        "type": "voluptate commodo adipisicing"
+        "id": "https://q.xmrZr2oBuSN71mFvFHtY8D8aRcPxYemtgcJH72TIUvEqay1ypBz9u7m",
+        "type": "dolor Duis nostrud"
       },
       "credentialStatus": {
-        "id": "https://MvJETvOwojAJdBhxjJaeQknVR.wabAP.UG0.TASb,wY3EnRO5l.6L2drHBEHnQIznA",
-        "revocationNonce": -1531705,
-        "type": "tempor deserunt amet velit ut"
+        "id": "http://uGztbKsRXsmt.nieOHI4wjPoq-Uvb-T8+RZbFHTLPGwgsP",
+        "revocationNonce": 88676219,
+        "type": "in"
       },
-      "merklizationRootPosition": "index",
-      "version": 64170711,
+      "subjectPosition": "index",
+      "merklizationRootPosition": "value",
+      "version": 8575874,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:i3muwedhPOB0G6HCHO81m1qW0NIvC1yzsIkiCiANZY",
-        "amlCheckStatus": "failed",
-        "pepStatus": "failed",
+        "id": "did:receptor:redbelly:testnet:w1nf0c7LTpRUFoSa0yhJS0U38cMNSf2aWwzwq97BJZ",
+        "amlCheckStatus": "passed",
+        "pepStatus": "passed",
         "sanctionsCheck": "passed",
         "adverseMediaStatus": "failed",
-        "monitoringStatus": "active"
+        "monitoringStatus": "inactive"
       }
     },
     "expectedValid": false
@@ -150,25 +139,31 @@
     "name": "Invalid URL in id",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "magna",
-      "type": "mollit",
-      "issuer": "https://dsUJKGOtsioNRFnCxHlSzvSRTLoRpwi.lsjaDsRXF0l7mY.q3Pyhb.1PcYIDnb1.c5YOoYUPcq4vX8l4pmmA5caZ-ED3ECk,2",
-      "issuanceDate": "1942-03-07T01:12:08.0Z",
-      "expirationDate": "1943-01-23T17:37:59.0Z",
+      "id": "Lorem",
+      "type": [],
+      "issuer": {
+        "id": "https://evqQatCJrMnHsKyKjK.pdgD6iAcuwhrLmfQtn8GUUahrdZIUJ9hA8"
+      },
+      "issuanceDate": "1915-12-16T13:26:14.0Z",
+      "expirationDate": "1938-12-07T14:34:56.0Z",
       "credentialSchema": {
-        "id": "http://OOwlfzxKcWgMFLMC.ptxe",
-        "type": "dolore adipisicing"
+        "id": "http://tSmpylPYJeUooiYSASBToAD.xkkEHqI3E+lqZg",
+        "type": "ullamco"
       },
       "credentialStatus": {
-        "id": "http://ryNa.wbeNT1r4DLne,T6pDNebR",
-        "revocationNonce": -3723592,
-        "type": "commodo elit mollit eiusmod"
+        "id": "https://QcMVraSpAwanxyNjlKWqRZp.jyQFXJLgL3EA4Yc+0lqPrmZsId-Pxt",
+        "revocationNonce": -72819362,
+        "type": "cillum Lorem ut"
       },
-      "subjectPosition": "value",
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "revNonce": -85212639,
+      "version": 86016230,
+      "updatable": false,
       "credentialSubject": {
         "id": "not_a_url",
         "amlCheckStatus": "passed",
-        "pepStatus": "passed",
+        "pepStatus": "failed",
         "sanctionsCheck": "passed",
         "adverseMediaStatus": "passed",
         "monitoringStatus": "active"
@@ -180,101 +175,30 @@
     "name": "Extreme Values",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "enim Excepteur Duis pariatur",
-      "type": "dolor qui",
+      "id": "sit nulla",
+      "type": "dolore occaecat et aliqua",
       "issuer": {
-        "id": "https://VGKbhKdBBULovbBPqYfpWFA.ceG1SUhbCXSe.Ucd"
+        "id": "https://ZGXs.aizZrrScebQiQWfzfdCRiM"
       },
-      "issuanceDate": "1932-10-23T07:56:57.0Z",
-      "expirationDate": "1934-10-16T04:13:04.0Z",
+      "issuanceDate": "1937-08-29T08:36:28.0Z",
+      "expirationDate": "1899-11-13T10:22:27.0Z",
       "credentialSchema": {
-        "id": "https://sgsjQJdmJltrfEi.xtgE5nQlIjWaKLPpkGm5M",
-        "type": "sunt"
+        "id": "http://s.zwdnP2d8P.2fCyLomf++LCMC9GOaHCaGN",
+        "type": "nostrud cupidatat"
       },
       "credentialStatus": {
-        "id": "https://OhmDVotZomOufKFQMreYxU.adYw3fq,4A3BHjfM,iE3QMuV4NXA44uJ6sAoqqbwD9w0ce2ej8Qt-",
-        "revocationNonce": -88174747,
-        "type": "proident eu"
+        "id": "http://BjghwtOIpxUAZd.xtxOXiAOgCZ7uEM1Arl.CjAEGDBs7svaNIL",
+        "revocationNonce": -89431211,
+        "type": "in dolor consectetur adipisicing ut"
       },
-      "subjectPosition": "none",
+      "subjectPosition": "value",
       "merklizationRootPosition": "index",
-      "revNonce": -4787927,
-      "version": -23367534,
-      "updatable": false,
-      "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:CoXQGLftzIwe2miLomKlMa3SvgMdrsQA1g6oqLMO5Q",
-        "amlCheckStatus": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "pepStatus": "failed",
-        "sanctionsCheck": "failed",
-        "adverseMediaStatus": "failed",
-        "monitoringStatus": "inactive"
-      }
-    },
-    "expectedValid": false
-  },
-  {
-    "name": "Unusual Characters",
-    "data": {
-      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "velit ex",
-      "type": [
-        "cupidatat qui ut sunt",
-        "elit cillum",
-        "est consectetur proident cillum do",
-        "sit elit proident"
-      ],
-      "issuer": "http://gyZRJK.blIHYmPa6cOLEscOZfPgieR5yX8U",
-      "issuanceDate": "1946-04-18T11:03:03.0Z",
-      "expirationDate": "1958-04-08T21:34:40.0Z",
-      "credentialSchema": {
-        "id": "https://grSBxYroErPhHc.zzxFyR5yp67uiDUNwmk5if1+v1E8MK0NpRQtcXdp2aP",
-        "type": "velit"
-      },
-      "credentialStatus": {
-        "id": "https://Op.elztKLP6FOdcNZNpeAjLO9,-OJIsMvE9jlMLOGopMwSddpGfWaR0nJY",
-        "revocationNonce": 7026927,
-        "type": "dolor in deserunt"
-      },
+      "revNonce": -82708575,
+      "version": 19316526,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:BeS4uoRSb2r55SV70LnuFNdejMEcs2PWd0V0JuJ8Fr",
-        "amlCheckStatus": "💥🔥🚀",
-        "pepStatus": "passed",
-        "sanctionsCheck": "passed",
-        "adverseMediaStatus": "failed",
-        "monitoringStatus": "active"
-      }
-    },
-    "expectedValid": false
-  },
-  {
-    "name": "Empty Fields",
-    "data": {
-      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "in ipsum",
-      "type": "aliquip",
-      "issuer": {
-        "id": "https://DFx.sbgnUtz79NOWrav+fsZicJNVZ.vWFECqRz8BXhMAe7jhAAUvTYT-dkvAmZrtyrfzD.1zi"
-      },
-      "issuanceDate": "1891-10-26T11:30:40.0Z",
-      "expirationDate": "1938-04-05T19:55:40.0Z",
-      "credentialSchema": {
-        "id": "https://WxmHKcExCsq.qalRGm7gRzLr+s1ELh01-UAeFwwraXvMdioJygpRMQlns",
-        "type": "id voluptate labore officia ut"
-      },
-      "credentialStatus": {
-        "id": "https://eAdM.nxiuEhB+w+.G.YpbiHGjm2gJNhWE+86-Vumhnbipa5+Q,tg8-vx35h0HU8K",
-        "revocationNonce": 56199702,
-        "type": "consequat laborum in et"
-      },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "index",
-      "revNonce": -8471216,
-      "version": 76888846,
-      "updatable": false,
-      "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:Ah1pszLTVgIOtxo2V5eGDENAkOQKoXyCu4ly1xnf2f",
-        "amlCheckStatus": "",
+        "id": "did:receptor:redbelly:testnet:boP46JyFOWNf9U1NVDNSnGLxRq7uvQMICGNo7qmiaA",
+        "amlCheckStatus": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         "pepStatus": "passed",
         "sanctionsCheck": "passed",
         "adverseMediaStatus": "passed",
@@ -284,35 +208,112 @@
     "expectedValid": false
   },
   {
+    "name": "Unusual Characters",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
+      "id": "consectetur irure deserunt amet",
+      "type": [
+        "magna velit",
+        "pariatur",
+        "Lorem sed labore anim nisi"
+      ],
+      "issuer": {
+        "id": "http://GRNlsYcPCGYYXfprXfeSFZnLQl.iuzQfEtjBAntqy2QIgPiCuXT.qwRkAgFTc4pUlXY"
+      },
+      "issuanceDate": "1955-05-07T20:59:08.0Z",
+      "expirationDate": "1951-08-26T03:10:56.0Z",
+      "credentialSchema": {
+        "id": "https://PWsAKyTMUfjRfxHGqfwtKmLjRRMAlZtxJ.jrUl628,8+v0wOK2A+kaErxhNW,cK1M0P0Q",
+        "type": "velit consectetur adipisicing"
+      },
+      "credentialStatus": {
+        "id": "http://xVBvFuxIOmlnbxOlqpPTvuahrbgaB.pgmP-",
+        "revocationNonce": 12865870,
+        "type": "pariatur consequat sit est"
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "none",
+      "revNonce": -5539377,
+      "version": -55909174,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:P64fVtwHmb0GGou25wsSu7IumOAMe5d7dgfgchGZHp",
+        "amlCheckStatus": "💥🔥🚀",
+        "pepStatus": "failed",
+        "sanctionsCheck": "passed",
+        "adverseMediaStatus": "failed",
+        "monitoringStatus": "inactive"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Empty Fields",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
+      "id": "sint in fugiat",
+      "type": [],
+      "issuer": {
+        "id": "http://nEQUDbUzbFbshAIVQ.qvdmime4MZVpzlJOgOCNbnqubIhbdhhsaQsGt1NBbArzPvc9HOFUO84"
+      },
+      "issuanceDate": "1908-04-08T14:42:06.0Z",
+      "expirationDate": "1954-05-17T07:04:39.0Z",
+      "credentialSchema": {
+        "id": "http://OaTEAv.sccyE--ExopPhMUygrFmDQU0ZxzA-3e14xf8qaYA9IiQSLrBdDq.FszFQjplikms-WFcfe0",
+        "type": "adipisicing labore sit aute ex"
+      },
+      "credentialStatus": {
+        "id": "https://LFlouVyxcdlqqgdpjXcLbSnbGuTu.jxLxFHvWSEX+eMM0roN-pXKrOTSVjOzB83yoM1yUo",
+        "revocationNonce": 88623603,
+        "type": "ea occaecat Duis"
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "index",
+      "revNonce": -71803411,
+      "version": -53621233,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:Desjy6TmDkSePyLo7Q6ZgwAFjlJ9J8pXOm5vtK5oLr",
+        "amlCheckStatus": "",
+        "pepStatus": "passed",
+        "sanctionsCheck": "passed",
+        "adverseMediaStatus": "failed",
+        "monitoringStatus": "active"
+      }
+    },
+    "expectedValid": false
+  },
+  {
     "name": "Null Values",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "Ut nostrud aliqua",
-      "type": "in incididunt",
-      "issuer": {
-        "id": "http://WCUsmH.ieeuP-xJTLrWei6QTclqmaW9hGPG"
-      },
-      "issuanceDate": "1944-08-14T16:24:52.0Z",
-      "expirationDate": "1944-03-01T01:14:32.0Z",
+      "id": "non ullamco et Ut ex",
+      "type": [
+        "enim Ut in",
+        "Duis labore non veniam adipisicing",
+        "ea",
+        "elit voluptate irure"
+      ],
+      "issuer": "http://vWamNVjVtDDiCKj.fdUzgGbC6zbd.VeEb+tQZM00A-QokPKCxCg",
+      "issuanceDate": "1908-01-30T01:22:38.0Z",
+      "expirationDate": "1923-10-31T09:26:01.0Z",
       "credentialSchema": {
-        "id": "http://zbKUVOTAqkPISb.lbRuURtUTIEGXTzVjHZjzgsykKrQw+vOPk",
-        "type": "minim ex"
+        "id": "http://aKfLPWCAHZpioHIgtXOPZFFGFxfkvWeny.tyhttwnYqTWZttxrWcmjqo18QfUnHGmlRlMJJFBz-OaZK,5bYuJbpMpZWwwqh",
+        "type": "dolore voluptate reprehenderit tempor"
       },
       "credentialStatus": {
-        "id": "https://UTiWcBLvxEnSPUXNYuWcJnaXzKF.ghfeE-LIWJkB+ixe1KRRdQJBiH.-lT0j5b8",
-        "revocationNonce": -19832847,
-        "type": "ullamco occaecat sint veniam"
+        "id": "http://QDSUfn.otvPfTyXb4Qszts,1yOzYJGU,76Cpze5aBXVkN1",
+        "revocationNonce": 36173821,
+        "type": "esse officia ut aliquip"
       },
-      "subjectPosition": "index",
       "merklizationRootPosition": "none",
-      "revNonce": -25752685,
-      "version": 62690633,
+      "version": -18902824,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:KTcuyLS5YuuUC481ywIfljuRe4lBL3GmJMYPc9ZeRr",
+        "id": "did:receptor:redbelly:testnet:o7cH1c6Eeqer9WdtQTKeESPXi7DOEAWEPzB8fHAsAl",
         "amlCheckStatus": null,
         "pepStatus": "passed",
-        "sanctionsCheck": "failed",
+        "sanctionsCheck": "passed",
         "adverseMediaStatus": "passed",
         "monitoringStatus": "active"
       }
@@ -323,29 +324,35 @@
     "name": "Array Instead of String",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "ad sint aliqua non mollit",
-      "type": "fugiat in labore",
-      "issuer": {
-        "id": "http://LIJoFzUfXbcURsO.nywKdXDaLT6Sd3moUHTl1ju0eR,wtbup0czsGoHVQ.Q37Ve3YhEq4eo"
-      },
-      "issuanceDate": "1953-05-13T07:10:56.0Z",
-      "expirationDate": "1929-02-28T16:59:41.0Z",
+      "id": "consectetur et",
+      "type": [
+        "eu et fugiat officia",
+        "Lorem quis velit Duis reprehenderit"
+      ],
+      "issuer": "https://ulgpuWjLUrVNVHIfNGTBrDXKUq.hopLDX9yTIR1,ipHwUEhogpH+VuSmaYsNF9VTNz3ZSh9N",
+      "issuanceDate": "1895-06-21T10:38:21.0Z",
+      "expirationDate": "1893-04-12T14:29:23.0Z",
       "credentialSchema": {
-        "id": "https://UkuKmPobQLjq.uwogHeenMBQiAuStZu5WHumVbneezmiLRL0QDuSm1xpO",
-        "type": "in laborum qui ipsum"
+        "id": "https://CIgkWgLnQInhDgRZs.jvajm-gH+",
+        "type": "eu nisi voluptate adipisicing"
       },
       "credentialStatus": {
-        "id": "https://LfRjFUkfGyGFtvYkZuNzhRnGOm.hnbzh6wO0z-9Je7r9zyCOeWZPS",
-        "revocationNonce": -41057380,
-        "type": "cupidatat"
+        "id": "http://cLGEwDclYcsJTrIvpHiftgJ.iihrh+Uk-MLHYgrcoVyTdKIS29ZA9x4cz-p2vJ,xsjggOn2C8GkC1uhPa",
+        "revocationNonce": 12861310,
+        "type": "nulla Excepteur ut laboris"
       },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "index",
+      "revNonce": 80088055,
+      "version": -24866248,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:P8SaxB3aFU8A7MLWpK69GoxZ9QK7bIUES2U3pXsP1k",
+        "id": "did:receptor:redbelly:testnet:tsVoYl9HihmiofJypW2Uua8G2lsU1sqcZdbhEOQygV",
         "amlCheckStatus": [
           "pass",
           "fail"
         ],
-        "pepStatus": "failed",
+        "pepStatus": "passed",
         "sanctionsCheck": "failed",
         "adverseMediaStatus": "passed",
         "monitoringStatus": "active"
@@ -357,37 +364,35 @@
     "name": "Incorrect Enum Value",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "voluptate Lorem",
+      "id": "adipisicing ut eiusmod anim id",
       "type": [
-        "veniam reprehenderit",
-        "veniam",
-        "esse in labore tempor"
+        "tempor"
       ],
       "issuer": {
-        "id": "http://MdNhdsuUUtvCmDuZacxUfqyYBHJmEf.zndH0PmJZb6IYrHyU9+QncgUB8xDVmvI8W.JcEZaOicyGSI8.dPGWoWBV5iDT1"
+        "id": "http://OjxUnXYgYOpyhkDJk.qedjhEFIygC11Iyoz.ngHOZilSvhw9oW3y0Jczx4"
       },
-      "issuanceDate": "1944-08-09T06:34:42.0Z",
-      "expirationDate": "1965-07-31T23:22:47.0Z",
+      "issuanceDate": "1918-01-16T19:44:07.0Z",
+      "expirationDate": "1953-09-23T14:57:05.0Z",
       "credentialSchema": {
-        "id": "http://LQiabOBnwnhvTHvRjnSawTfoHFBSOJmM.qotPwLnsqPfzc20MnfQ4yCWgRDAm805PU92dH",
-        "type": "ut ut labore dolor"
+        "id": "http://WirVVvhdhJQCMp.ozpZTNtqh9E7DOq5tGvPP9xnaJlgoDYoiUdEP2c,ua2WF8ceug0oZ3s",
+        "type": "in ut voluptate in eiusmod"
       },
       "credentialStatus": {
-        "id": "https://WqBMwbWbVqRNzdq.jnshGgU.47tizlS,liG9Tv+xAbpaX,JRNpFl9kmWtxoILe3c.-clGsFulS",
-        "revocationNonce": 34166394,
-        "type": "quis"
+        "id": "http://DewQiPwdGhtYKD.kviLIYog8gvlLtvEDSzYOQ9j8,OLmNtNiGD,ZnFzG7kiG",
+        "revocationNonce": 96803244,
+        "type": "mollit elit et est nostrud"
       },
       "subjectPosition": "none",
-      "merklizationRootPosition": "none",
-      "revNonce": -8695480,
-      "version": -84754774,
+      "merklizationRootPosition": "value",
+      "revNonce": -81683732,
+      "version": 40740712,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:tLpfBP31ulOcjde0MMoOnkTrnbHouPKAD9O3OwcrAM",
+        "id": "did:receptor:redbelly:testnet:vTAeBxrQsCGNBxKFgGU9QAf2x9AyzuPTXSEmPaA8IH",
         "amlCheckStatus": "maybe",
         "pepStatus": "failed",
-        "sanctionsCheck": "failed",
-        "adverseMediaStatus": "failed",
+        "sanctionsCheck": "passed",
+        "adverseMediaStatus": "passed",
         "monitoringStatus": "active"
       }
     },
@@ -397,35 +402,36 @@
     "name": "Injection Attack (XSS)",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "culpa laboris",
+      "id": "in do culpa quis minim",
       "type": [
-        "cupidatat est",
-        "magna aliquip laboris eu velit"
+        "ea sit aliqua id",
+        "adipisicing qui sint",
+        "et aliqua sit ea"
       ],
-      "issuer": "http://TsWfQyrPzC.rqyK0P3OBY0LHIRY69WbZub1YMqYf8uhOJmgzGXI78lSbvNCEbuScHLYqzXPAaKMYacvnVK",
-      "issuanceDate": "1968-11-07T06:52:05.0Z",
-      "expirationDate": "1903-06-11T09:24:22.0Z",
+      "issuer": "https://iCcnXR.fpreUOGreDeLTiTQ4uKdXbmb+,ADkFLC5eA",
+      "issuanceDate": "1963-05-15T23:09:42.0Z",
+      "expirationDate": "1900-11-21T06:26:08.0Z",
       "credentialSchema": {
-        "id": "https://MA.mugaaI",
-        "type": "qui Lorem mollit nostrud"
+        "id": "https://bTYovMqPWyLAyRoqGsgcpIzXk.enrTyG-fA3cGIK3rKZv.KWzZOcITqlHyGFbmsQCCMVgcrjgoSxHkzQz6FOxJ5UM1IEm",
+        "type": "aliquip esse do"
       },
       "credentialStatus": {
-        "id": "https://qeaQynKwHXZrZYNSencYHVZfgXkWl.nhjwRK0fKETIY5ukL9,,WUma5-mbocekDuJFVht9Xkwm6JOxCkDBp1q2TYDX8ikG-",
-        "revocationNonce": 96335256,
-        "type": "in Ut esse ipsum officia"
+        "id": "https://Y.ulglim+df7dTMWcCydFZLsFlpyZ-Euyl4kx0KHMRjIRswA",
+        "revocationNonce": 12467594,
+        "type": "cupidatat ut irure nostrud eu"
       },
       "subjectPosition": "index",
-      "merklizationRootPosition": "value",
-      "revNonce": 25990108,
-      "version": 83849923,
+      "merklizationRootPosition": "index",
+      "revNonce": 24153938,
+      "version": -37454241,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:BSCu5KzUAEKw7KDyUNbEhLyMcnZP86F8k6QxZnIi0R",
+        "id": "did:receptor:redbelly:testnet:wsHrG6EuoyaSO3ozeNhtcewn1GcqlNPpalipx7vp15",
         "amlCheckStatus": "<script>alert('XSS')</script>",
         "pepStatus": "failed",
         "sanctionsCheck": "failed",
         "adverseMediaStatus": "failed",
-        "monitoringStatus": "active"
+        "monitoringStatus": "inactive"
       }
     },
     "expectedValid": false
@@ -434,30 +440,36 @@
     "name": "Missing id",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "officia anim occaecat eiusmod in",
-      "type": "sunt reprehenderit",
-      "issuer": "https://dXUCXhLovns.teK-TzSgZOWu57XsiqHjBY",
-      "issuanceDate": "1918-09-07T11:56:40.0Z",
-      "expirationDate": "1910-07-26T02:54:36.0Z",
+      "id": "voluptate in aliqua Duis",
+      "type": [
+        "Ut",
+        "eu officia sit culpa",
+        "dolor eiusmod"
+      ],
+      "issuer": {
+        "id": "https://Cl.ucoQyw3tP5bW0+-zKqY-G2s5.J3PJUpOfJEe9Sj7R25PBSnWMK,gadA6MC8gO"
+      },
+      "issuanceDate": "1896-07-07T01:02:45.0Z",
+      "expirationDate": "1965-10-21T01:55:04.0Z",
       "credentialSchema": {
-        "id": "http://sjYlGG.etfCSkLkGlJOSPGGUnV2gW9ZMqF1eBg0dERyT",
-        "type": "laboris adipisicing exercitation aliquip"
+        "id": "https://CdEJRQgfkroLsFazzQGCIbLCbfYTda.okEZeN79xmlnR-yA.IktXivGYV1lBB6.oX+wxyZtHnDqAP5XdD+fq3bJFepBIzCZsG",
+        "type": "sit nisi laborum cillum"
       },
       "credentialStatus": {
-        "id": "https://MHKcgKfIlebnifaLFiYZSZEgRB.dujfu6rPUuVwVquSEOMDfnwUGFTuhLvKLhBYybHJA.10zWf5j.GgYBkj3j",
-        "revocationNonce": -86266822,
-        "type": "id consequat sit"
+        "id": "https://x.qqxxHlHEBzLAjZxwT4xmHTlM2o9tZM9Fv.djLioDBr3tomotlQXejFg.CyHhMDp-tqm..uplLzezQbiq",
+        "revocationNonce": -69858642,
+        "type": "cupidatat tempor dolore anim sit"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "index",
-      "revNonce": 18791761,
-      "version": -88605545,
-      "updatable": false,
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "revNonce": 68203193,
+      "version": 43947237,
+      "updatable": true,
       "credentialSubject": {
         "amlCheckStatus": "passed",
         "pepStatus": "passed",
         "sanctionsCheck": "passed",
-        "adverseMediaStatus": "passed",
+        "adverseMediaStatus": "failed",
         "monitoringStatus": "active"
       }
     },
@@ -467,37 +479,31 @@
     "name": "Leading/Trailing Spaces",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "occaecat proident in Lorem",
-      "type": [
-        "laboris mollit",
-        "enim",
-        "enim mollit"
-      ],
-      "issuer": {
-        "id": "http://JlFZXBdJqPgrrRcHvnMCiYvMetIW.bliTD8bacEZ.RJtsuXvJhUM20HAIL1LX7HXJ39lSNL"
-      },
-      "issuanceDate": "1958-02-01T17:24:52.0Z",
-      "expirationDate": "1941-04-25T09:02:04.0Z",
+      "id": "tempor cillum cupidatat",
+      "type": [],
+      "issuer": "http://eZTmpOIqUnvassELtuIWW.mvRtTmtAJDUl",
+      "issuanceDate": "1936-06-14T07:17:22.0Z",
+      "expirationDate": "1925-03-19T03:05:16.0Z",
       "credentialSchema": {
-        "id": "http://LrHgKGXMyS.xlasABI2Mq9CTlnC7.YV",
-        "type": "in sed proident magna"
+        "id": "https://YP.alvE.N2hdxQuBr",
+        "type": "laboris Lorem quis"
       },
       "credentialStatus": {
-        "id": "http://cPcmySZWifsdzyJewlio.dzhdGayxBxXv,OKZRy1lvs3tI9JPo3gq5IWym-f+qI6,JUzcgVBX4tO",
-        "revocationNonce": -69996613,
-        "type": "velit eu nisi officia"
+        "id": "https://rlOcFae.qubzbrAfzSIPDx5eSMcTg1sN9WK8Oj2qEgj3tylHhcQvbL0lRtPr5mbL8W",
+        "revocationNonce": 11027968,
+        "type": "anim"
       },
-      "subjectPosition": "index",
+      "subjectPosition": "value",
       "merklizationRootPosition": "value",
-      "revNonce": -82623634,
-      "version": -67251354,
-      "updatable": false,
+      "revNonce": -40347003,
+      "version": 96073273,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:lQQwPcui7Zvgxu2w3gjGIfz8tdW4wGdpNw7XpD3BFF",
+        "id": "did:receptor:redbelly:mainnet:5aINaZGCpB7rfxaGioNiJWnZT7j2glQajPxeWKBsf6",
         "amlCheckStatus": " pass ",
         "pepStatus": "failed",
         "sanctionsCheck": "failed",
-        "adverseMediaStatus": "passed",
+        "adverseMediaStatus": "failed",
         "monitoringStatus": "active"
       }
     },
@@ -507,33 +513,34 @@
     "name": "Invalid credentialSubject.id: invalid string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "sed labore laboris in Lorem",
-      "type": "laboris irure laborum incididunt",
+      "id": "officia",
+      "type": "non",
       "issuer": {
-        "id": "http://RMgUJDvSTwK.qkjseOWPoMj+ess9FTkReZIlaBwlw"
+        "id": "http://KcvX.rbpqjcXsvgc93qN"
       },
-      "issuanceDate": "1907-10-23T16:51:47.0Z",
-      "expirationDate": "1930-01-29T09:09:24.0Z",
+      "issuanceDate": "1896-11-20T02:53:56.0Z",
+      "expirationDate": "1921-09-22T05:16:50.0Z",
       "credentialSchema": {
-        "id": "https://THBhpyNzXukNGy.wzAJpOesCT,UXntYBoKpZA",
-        "type": "cillum mollit officia"
+        "id": "http://WQTYrSxSZZFpiSZyiy.ofckogGD+-X0TjycfUhkRlrYt5Lh",
+        "type": "incididunt commodo cupidatat sunt"
       },
       "credentialStatus": {
-        "id": "http://neBbIaDEcrhVKewfxkHegi.imotj4wiJJEWgZf",
-        "revocationNonce": 68093777,
-        "type": "anim ut consequat Excepteur"
+        "id": "http://NmdSvSqBmTLexJpjmnBgDYOIsocPz.rzyoxVdSe-+ACuJUrOw+tBhWcMo31xUj5YhgaMig2x",
+        "revocationNonce": -13044619,
+        "type": "reprehenderit"
       },
-      "subjectPosition": "index",
-      "revNonce": -8329765,
-      "version": -23411029,
+      "subjectPosition": "none",
+      "merklizationRootPosition": "index",
+      "revNonce": 75685776,
+      "version": 11966849,
       "updatable": false,
       "credentialSubject": {
         "id": "did:In-valid string:redbelly",
-        "amlCheckStatus": "failed",
+        "amlCheckStatus": "passed",
         "pepStatus": "passed",
         "sanctionsCheck": "failed",
-        "adverseMediaStatus": "passed",
-        "monitoringStatus": "active"
+        "adverseMediaStatus": "failed",
+        "monitoringStatus": "inactive"
       }
     },
     "expectedValid": false
@@ -542,34 +549,30 @@
     "name": "Invalid credentialSubject.id: empty string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTL%20Check.jsonld",
-      "id": "dolore",
-      "type": [
-        "est dolor ex exercitation",
-        "dolore aliqua amet",
-        "labore officia culpa",
-        "cupidatat"
-      ],
+      "id": "mollit Lorem",
+      "type": "occaecat cupidatat elit mollit",
       "issuer": {
-        "id": "http://nJw.qjcI91FIqGajMaVhubLsGc72nckvqfa1.5h9JBoMwYpEE,DjgrKGqsKR6KuMSy"
+        "id": "http://grOoHYCDGqXZmQVeUzwvYjNDNEPzOKrZd.msjBA3-.TpCcYbpoKbFufyiOug7.qSd9rwjcs-BQM,htbth6mHs9gU38jE"
       },
-      "issuanceDate": "1913-11-02T09:40:17.0Z",
-      "expirationDate": "1932-09-12T21:52:20.0Z",
+      "issuanceDate": "1950-03-22T21:36:12.0Z",
+      "expirationDate": "1908-11-01T10:40:08.0Z",
       "credentialSchema": {
-        "id": "https://ECIuZzRbsFbWcfFkpIwKGOZCAZZHiG.uxKkLHwZtyIZQlRE2IwZTcIpwQ9q2rIrwTeOX,vZeCDKdEtNdVd,5mm",
-        "type": "Ut minim deserunt"
+        "id": "https://kKtIwloJCYkzZSUgOlvIUq.pkY64NXKHewayMGL03GhywLQMNuLRjYwbXXoCscfDDXk-8t,6Jzx,R9blMuSIIV9L2-Uc",
+        "type": "Lorem dolore consequat laborum"
       },
       "credentialStatus": {
-        "id": "http://kWJWFjQf.xhkiC.+bmvF6PGVvrVrWJQbCwt3uIrHaQIUzSFR0,D",
-        "revocationNonce": 18022147,
-        "type": "Lorem ut ut velit labore"
+        "id": "http://UJQOwokrfgER.zgzIcFJdTOT",
+        "revocationNonce": 42587710,
+        "type": "pariatur dolor anim sit"
       },
+      "merklizationRootPosition": "index",
       "credentialSubject": {
         "id": "",
-        "amlCheckStatus": "passed",
-        "pepStatus": "failed",
-        "sanctionsCheck": "passed",
+        "amlCheckStatus": "failed",
+        "pepStatus": "passed",
+        "sanctionsCheck": "failed",
         "adverseMediaStatus": "failed",
-        "monitoringStatus": "inactive"
+        "monitoringStatus": "active"
       }
     },
     "expectedValid": false
