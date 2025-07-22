@@ -6,7 +6,7 @@
       "id": "@id",
       "type": "@type",
       "ProofOfAddressCredential": {
-        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Proof%20of%20Address.jsonld#ProofOfAddressCredential",
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json-ld/Proof%20of%20Address.jsonld#ProofOfAddressCredential",
         "@context": {
           "@version": 1.1,
           "@protected": true,

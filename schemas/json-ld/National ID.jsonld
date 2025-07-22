@@ -6,7 +6,7 @@
       "id": "@id",
       "type": "@type",
       "NationalIDCredential": {
-        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/National%20ID.jsonld#NationalIDCredential",
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json-ld/National%20ID.jsonld#NationalIDCredential",
         "@context": {
           "@version": 1.1,
           "@protected": true,

@@ -5,8 +5,8 @@
   "type": "object",
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Optima%20V1.jsonld",
-      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Optima%20V1.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json-ld/Optima%20V1.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json/Optima%20V1.json"
     }
   },
   "required": [
