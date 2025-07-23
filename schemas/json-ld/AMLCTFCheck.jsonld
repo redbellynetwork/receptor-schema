@@ -5,8 +5,8 @@
       "@protected": true,
       "id": "@id",
       "type": "@type",
-      "AML & CTF Check": {
-        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AML%20&%20CTF%20Check.jsonld#AML%20&%20CTF%20Check",
+      "AMLCTFCheck": {
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AMLCTFCheck.jsonld#AMLCTFCheck",
         "@context": {
           "@version": 1.1,
           "@protected": true,

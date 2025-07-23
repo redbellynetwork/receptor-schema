@@ -1,0 +1,219 @@
+[
+  {
+    "name": "Valid Au Sophisticated Wholesale Investor",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld",
+      "id": "22e74cc3-0951-4165-b10e-425991b1f4e8",
+      "type": [
+        "VerifiableCredential",
+        "AU Sophisticated Wholesale Investor"
+      ],
+      "issuer": {
+        "id": "https://phony-effector.name/"
+      },
+      "issuanceDate": "2025-03-24T14:01:09.156Z",
+      "expirationDate": "2025-08-04T20:58:39.882Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://skeletal-polyester.org",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 2361978730672434
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "value",
+      "revNonce": 5423100270557246,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:uJieWsitn5bsXVePwSVlLGiG2rorNfuthtXVYcYiSn",
+        "accountantCertification": "IPA",
+        "accountantMembershipNumber": "14fcc20c-723d-4cb2-8438-a1207c541f78",
+        "accountantEmail": "Ramon20@yahoo.com"
+      },
+      "version": 4305065257825285
+    },
+    "expectedValid": true
+  },
+  {
+    "name": "Missing Required Field: id",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld",
+      "id": "4038beb4-48bd-4431-8656-66035e4f8fab",
+      "type": [
+        "VerifiableCredential",
+        "AU Sophisticated Wholesale Investor"
+      ],
+      "issuer": {
+        "id": "https://valuable-premier.net"
+      },
+      "issuanceDate": "2024-12-19T18:16:57.895Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://sizzling-expansion.name",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 7603377559956498
+      },
+      "credentialSubject": {
+        "accountantCertification": "CPA",
+        "accountantMembershipNumber": "d11ead94-3ed8-4935-b856-01a20986d5b3",
+        "accountantEmail": "Arvilla_Jast@hotmail.com"
+      },
+      "expirationDate": "2026-03-21T00:14:42.416Z",
+      "subjectPosition": "value",
+      "merklizationRootPosition": "value",
+      "revNonce": 5957728220452933,
+      "version": 6640316341741600,
+      "updatable": true
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: accountantMembershipNumber",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld",
+      "id": "33891c6c-06ac-4cc6-bf43-918594d34dcd",
+      "type": [
+        "VerifiableCredential",
+        "AU Sophisticated Wholesale Investor"
+      ],
+      "issuer": {
+        "id": "https://these-bowler.com/"
+      },
+      "issuanceDate": "2024-09-03T21:06:38.459Z",
+      "expirationDate": "2026-06-21T03:03:45.013Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://suburban-defendant.net",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 3888014426562840
+      },
+      "merklizationRootPosition": "none",
+      "version": 2472488204991960,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:2MNZnhDTAAOGJkrTz0EJ8fRc4eZMyMIHML5gaLPTFt",
+        "accountantCertification": "CA",
+        "accountantEmail": "Geovany_Sauer@gmail.com"
+      },
+      "subjectPosition": "value",
+      "revNonce": 1788036734136848,
+      "updatable": true
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: accountantCertification",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld",
+      "id": "772492a5-58e5-4ebb-a3b2-30c4715ee573",
+      "type": [
+        "VerifiableCredential",
+        "AU Sophisticated Wholesale Investor"
+      ],
+      "issuer": {
+        "id": "https://upbeat-pine.net/"
+      },
+      "issuanceDate": "2025-07-20T16:39:15.675Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://fatherly-commercial.info",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 4372935717260101
+      },
+      "merklizationRootPosition": "value",
+      "revNonce": 3903875752592075,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:sn95In25J6QWpB6H17Sjx2euPISNcpVZDe4x4Bds9p",
+        "accountantMembershipNumber": "e0742496-a861-448e-8748-872c8fffefb5",
+        "accountantEmail": "Layne66@hotmail.com"
+      },
+      "expirationDate": "2026-07-14T22:55:39.530Z",
+      "subjectPosition": "value",
+      "version": 644628931881598,
+      "updatable": true
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: accountantEmail",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld",
+      "id": "e0c97da4-b731-4469-b6c0-d65c9113fb4a",
+      "type": [
+        "VerifiableCredential",
+        "AU Sophisticated Wholesale Investor"
+      ],
+      "issuer": {
+        "id": "https://unkempt-defendant.org/"
+      },
+      "issuanceDate": "2025-01-15T05:17:33.552Z",
+      "expirationDate": "2026-05-14T12:41:09.833Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://hopeful-quit.info/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 5109371135907195
+      },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "none",
+      "revNonce": 3068047864070393,
+      "version": 193494111201538,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:bcFMBNGcy66caN624XfcPvICGx2my4TUBOcYhlTkcf",
+        "accountantCertification": "CPA",
+        "accountantMembershipNumber": "14adf9ac-22cf-4311-a185-0396f91b9296"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Malformed Context: undefined",
+    "data": {
+      "id": "4f51bb6e-7d2b-43af-943a-79c9f51d9587",
+      "type": [
+        "VerifiableCredential",
+        "AU Sophisticated Wholesale Investor"
+      ],
+      "issuer": {
+        "id": "https://concrete-configuration.net/"
+      },
+      "issuanceDate": "2024-10-06T18:06:26.469Z",
+      "expirationDate": "2026-05-21T03:03:51.167Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://corny-pile.name",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 8364330342560459
+      },
+      "subjectPosition": "index",
+      "merklizationRootPosition": "index",
+      "revNonce": 5360945999170485,
+      "version": 8918994945963707,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:h3xTUY18R9qWdBydjgi3pZWRHZKnOOVFo0wsOeEYg3",
+        "accountantCertification": "CA",
+        "accountantMembershipNumber": "d9d92102-f007-4259-82de-f2466823696c",
+        "accountantEmail": "Jade26@yahoo.com"
+      }
+    },
+    "expectedValid": false
+  }
+]
