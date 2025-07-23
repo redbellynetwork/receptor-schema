@@ -293,7 +293,7 @@ function generateOptimaV1Credential(callback?: (data: any) => void): any {
   const data = jsf.generate(optimav1Schema) as any;
   data['@context'] = [
     'https://www.w3.org/ns/credentials/v2',
-    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/OptimaV1.jsonld',
+    'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Optima%20V1.jsonld',
   ];
   data.id = faker.string.uuid();
   data.type = ['VerifiableCredential', 'Optima V1'];

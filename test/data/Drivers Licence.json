@@ -3,38 +3,38 @@
     "name": "Valid Drivers Licence",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "a8d95dae-fcf4-460a-952f-734480d71c03",
+      "id": "9cc8a9e2-b74d-4bce-a848-cb207b33f7a0",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://competent-conversation.name"
+        "id": "https://neighboring-derby.org"
       },
-      "issuanceDate": "2025-03-11T21:59:59.009Z",
+      "issuanceDate": "2025-07-07T14:00:25.075Z",
+      "expirationDate": "2026-02-07T12:42:17.632Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "merklizationRootPosition": "value",
+      "subjectPosition": "value",
+      "merklizationRootPosition": "index",
+      "revNonce": 730186420215172,
+      "version": 2049637067856290,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:4Ycy2l3ZQSF7AJ4o6r6LBWNfV6vCZL33uqRCSCD25W",
-        "name": "Curtis Bode",
-        "licenceNumber": "d80b1fa7-920c-4441-8010-56823dde646a",
-        "country": "Rhode Island",
-        "birthDate": 20250719,
+        "id": "did:receptor:redbelly:mainnet:ZGJSXwMzAIdYpMYPhgiCKoKxzkDdVzi4PYRwQoZ5ls",
+        "name": "Emilio Gerhold",
+        "licenceNumber": "05c2098f-6709-480c-b14e-b7656279d202",
+        "country": "California",
+        "birthDate": 20250721,
         "expiryDate": 20250727,
-        "publicAddress": "0x0cc5f3bb86ba7a41fbabbeeec7d4acef1de4d3b2"
+        "publicAddress": "0x9e4de21be7b93a35fbef4eeb5e71abe1aa6fbdf0"
       },
-      "expirationDate": "2026-02-01T02:11:18.126Z",
       "credentialStatus": {
-        "id": "https://tame-apricot.biz/",
+        "id": "https://unripe-pilot.com",
         "type": "CredentialStatusList2021"
-      },
-      "subjectPosition": "index",
-      "revNonce": 3465355067001049,
-      "version": 595530817264279,
-      "updatable": false
+      }
     },
     "expectedValid": true
   },
@@ -42,114 +42,114 @@
     "name": "Missing Required Field",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "0878d380-47f7-468f-9bd8-aa2706258922",
+      "id": "e82ea06c-9a62-4525-987d-ea379f8ee380",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://putrid-embossing.info/"
+        "id": "https://cloudy-bookcase.name"
       },
-      "issuanceDate": "2024-09-28T22:12:19.808Z",
-      "expirationDate": "2025-10-10T01:36:03.871Z",
+      "issuanceDate": "2024-12-15T17:53:53.698Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "merklizationRootPosition": "none",
-      "revNonce": 4785623872654757,
-      "version": 3878366602266963,
+      "subjectPosition": "none",
+      "version": 2041613475460878,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:iQkypMwcv1ti2qEuzuRuqvOFKyFa2hPQS6yf1DTkT5",
-        "name": "Mr. Fredrick Rippin",
-        "country": "Connecticut",
-        "birthDate": 20250721,
-        "expiryDate": 20250724,
-        "publicAddress": "0xb53b69d08709b69ecda9d534892e921fe08faa11"
+        "id": "did:receptor:redbelly:mainnet:PhRrKFvCyqrmDcyFJ1JnpB5X9veF8BzNBR6nf69OG6",
+        "name": "Karl Collins",
+        "country": "New Jersey",
+        "birthDate": 20250718,
+        "expiryDate": 20250728,
+        "publicAddress": "0x553462ac1bda6e130fbf87bdffd7fba48e4794ff"
       },
+      "expirationDate": "2026-05-10T21:15:00.987Z",
       "credentialStatus": {
-        "id": "https://orderly-bog.name/",
+        "id": "https://juicy-bend.biz",
         "type": "CredentialStatusList2021"
       },
-      "updatable": true
+      "merklizationRootPosition": "none",
+      "revNonce": 6287080481727921
     },
     "expectedValid": false
   },
   {
     "name": "Wrong Data Type",
     "data": {
+      "credentialStatus": {
+        "id": "https://broken-newsstand.name/",
+        "type": "CredentialStatusList2021"
+      },
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "1eb84e23-6acf-4900-a06b-574dfdcc6428",
+      "id": "c930aa36-da5b-46f1-aeff-248abd656adc",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://victorious-import.info"
+        "id": "https://frequent-stay.biz/"
       },
-      "issuanceDate": "2025-03-04T20:17:09.440Z",
-      "expirationDate": "2026-04-29T06:18:27.356Z",
+      "issuanceDate": "2024-07-26T18:47:40.387Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "version": 1907175913399082,
-      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:2zzfJ2fvC2GJLYMnZB5Cv9lY36uJRc19Nlj8lzU78L",
-        "name": "Harvey O'Hara",
-        "licenceNumber": "0f79d48e-130f-4416-9a1e-b73b9c52fe76",
-        "country": "Minnesota",
+        "id": "did:receptor:redbelly:mainnet:bIqNaQy8tlUrhIX8xt6JVvpS8RMakW6VZtvhSAUVHc",
+        "name": "Rosemarie Cummings",
+        "licenceNumber": "b23037bb-d9fa-4c1d-8f5b-904ad45165e2",
+        "country": "Arizona",
         "birthDate": "not_a_date",
         "expiryDate": 20250726,
-        "publicAddress": "0x37cd9dfb4f6f4a5bd398bc1e7bcbbdb5bbb978af"
+        "publicAddress": "0xa6d92fb40bda90eda0dbc44a2e6b33fffd3e8b09"
       },
-      "credentialStatus": {
-        "id": "https://precious-brief.name/",
-        "type": "CredentialStatusList2021"
-      },
-      "merklizationRootPosition": "none",
-      "revNonce": 8177221940214674
+      "expirationDate": "2026-01-14T12:31:10.769Z",
+      "subjectPosition": "value",
+      "merklizationRootPosition": "index",
+      "revNonce": 2403700551358574,
+      "version": 4970867606109974,
+      "updatable": true
     },
     "expectedValid": false
   },
   {
     "name": "Malformed Context: undefined",
     "data": {
-      "credentialStatus": {
-        "id": "https://linear-impact.info",
-        "type": "CredentialStatusList2021"
-      },
-      "id": "de07d308-a965-4e83-ac15-cfeb40ef5662",
+      "id": "4ca88344-edc8-47f7-907f-d2117c758806",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://elegant-junior.name"
+        "id": "https://agitated-plain.com/"
       },
-      "issuanceDate": "2025-05-12T12:10:27.283Z",
+      "issuanceDate": "2025-03-17T09:33:03.525Z",
+      "expirationDate": "2025-12-05T12:33:54.920Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:i5XYoTnMfvHkl6nEBDLUYFioYhbcu6LrUeV3ebfSAb",
-        "name": "Daniel Bernhard",
-        "licenceNumber": "1fddf64d-d5af-4df8-88aa-b1d15c8d6764",
-        "country": "Florida",
-        "birthDate": 20250717,
-        "expiryDate": 20250725,
-        "publicAddress": "0x5ede8e5ee1eb3c6e7de7c3adc7ad3fca28a3dc7c"
-      },
-      "expirationDate": "2026-02-03T02:12:57.317Z",
       "subjectPosition": "index",
       "merklizationRootPosition": "none",
-      "revNonce": 1713270149547604,
-      "version": 412925007846686,
-      "updatable": true
+      "revNonce": 8415496758333772,
+      "version": 5446459569848109,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:lXPI1BZEZErv4D9Pth6ysoT3eKp9aWzdQQqXXcjNtl",
+        "name": "Alejandro O'Kon",
+        "licenceNumber": "784433e6-bd2e-488e-93ca-f42726925a3c",
+        "country": "California",
+        "birthDate": 20250717,
+        "expiryDate": 20250727,
+        "publicAddress": "0x2b61bbefad460ae1b9bceec9b9bc2dba8a794eb7"
+      },
+      "credentialStatus": {
+        "id": "https://diligent-baritone.biz",
+        "type": "CredentialStatusList2021"
+      }
     },
     "expectedValid": false
   },
@@ -157,36 +157,36 @@
     "name": "Invalid URL in id",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "8fa1a101-e869-4af8-b89d-706a5695ed45",
+      "id": "970a5a0a-a636-4ebe-9ff5-b8013741f55a",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://different-forage.info/"
+        "id": "https://handy-middle.org/"
       },
-      "issuanceDate": "2025-02-05T20:17:42.334Z",
-      "expirationDate": "2026-06-09T07:53:07.518Z",
+      "issuanceDate": "2025-02-16T12:15:50.898Z",
+      "expirationDate": "2025-11-17T17:43:37.140Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "merklizationRootPosition": "index",
-      "revNonce": 702426210970850,
-      "version": 962215083214996,
-      "updatable": false,
+      "subjectPosition": "index",
+      "merklizationRootPosition": "none",
+      "revNonce": 2260916631031209,
+      "version": 2553888019220262,
+      "updatable": true,
       "credentialSubject": {
         "id": "not_a_url",
-        "name": "Ms. Courtney Stoltenberg",
-        "licenceNumber": "be7c07e9-8296-4102-89b1-eb6fa4c64f19",
-        "country": "Oklahoma",
-        "birthDate": 20250721,
-        "expiryDate": 20250727,
-        "publicAddress": "0xbf4a12f002ce7c8e1ddbb682edbe0fc11d1d65fb"
+        "name": "Clyde Beatty",
+        "licenceNumber": "e5cd723c-2f78-47fe-9253-3a4c21676020",
+        "country": "Massachusetts",
+        "birthDate": 20250714,
+        "expiryDate": 20250724,
+        "publicAddress": "0x6f3ead38edb1eabcdbaace479ce41c0c5eacfbad"
       },
       "credentialStatus": {
-        "id": "https://primary-kick.org/",
+        "id": "https://short-cricket.com/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -196,36 +196,36 @@
     "name": "Null Values",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "36972b86-619a-4940-bc59-f88bc92f3cf3",
+      "id": "805f1ae1-52ec-4478-b3b5-6144856adbcd",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://wobbly-flame.net/"
+        "id": "https://extra-large-intellect.biz"
       },
-      "issuanceDate": "2025-07-19T21:48:56.705Z",
-      "expirationDate": "2026-02-06T05:12:45.865Z",
+      "issuanceDate": "2024-09-11T16:56:17.855Z",
+      "expirationDate": "2026-01-12T04:57:57.445Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
+      "subjectPosition": "value",
       "merklizationRootPosition": "value",
-      "revNonce": 5033284655540649,
-      "version": 4965481359712700,
-      "updatable": false,
+      "revNonce": 3537988003232170,
+      "version": 4854556737806057,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:dV57UTZLRAsYshxwRk2bC72SQVC589MgsXBv6yJCTn",
-        "name": "Mr. Ellis Schowalter",
-        "licenceNumber": "81594bb0-0946-43dd-977f-ba8206b0b14e",
+        "id": "did:receptor:redbelly:mainnet:TDIDByGVp7ooAoy4FZjjbocC5EL3nX2azz6rmyj0Ak",
+        "name": "Elisa Ondricka",
+        "licenceNumber": "d5a8e2cb-1045-4dd9-9d4b-b60a978c9c79",
         "country": null,
-        "birthDate": 20250718,
-        "expiryDate": 20250726,
-        "publicAddress": "0xf9c84c3adc6eea5b3cfafae0fafef8c529fe51dc"
+        "birthDate": 20250719,
+        "expiryDate": 20250728,
+        "publicAddress": "0xb01c8a8c4cddc15ac0c3b4b2aae730ebba1cf27c"
       },
       "credentialStatus": {
-        "id": "https://rosy-sailor.com",
+        "id": "https://speedy-straw.info/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -235,36 +235,36 @@
     "name": "Incorrect Enum Value",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "d8368c5b-77d0-429b-bad5-30861ddc0bae",
+      "id": "8dabe2f6-3be9-4e2d-8abc-4ce1e6c501fa",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://ripe-hovercraft.biz"
+        "id": "https://utter-technologist.name/"
       },
-      "issuanceDate": "2025-07-05T03:09:07.578Z",
-      "expirationDate": "2025-09-27T22:10:43.025Z",
+      "issuanceDate": "2024-11-11T23:58:45.456Z",
+      "expirationDate": "2025-09-30T07:30:40.079Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "maybe",
-      "merklizationRootPosition": "value",
-      "revNonce": 8066687731348438,
-      "version": 5176032191121637,
+      "merklizationRootPosition": "index",
+      "revNonce": 3340210707350248,
+      "version": 7953346178477139,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:CYu1uGMFdVfo9VrUIIMqzd3TV6UsVKwXnAfQeygSc5",
-        "name": "Roberta Bartoletti",
-        "licenceNumber": "22e02ead-0cf8-44e1-8499-979be95da5a6",
-        "country": "Alabama",
-        "birthDate": 20250719,
-        "expiryDate": 20250724,
-        "publicAddress": "0x4cfe0dba64bcc567e45db20d34dcbeffe77496ca"
+        "id": "did:receptor:redbelly:testnet:sDMV7cb3zOfuw0NHZmVVGrRs9I282nc00oCe7HdPeH",
+        "name": "Daryl Leannon",
+        "licenceNumber": "4ad14bb4-cdac-4119-a58e-cec7b5fde6ce",
+        "country": "Kentucky",
+        "birthDate": 20250717,
+        "expiryDate": 20250726,
+        "publicAddress": "0xdaa1a8e0e9af14b50ee44ebabeccbcfdec7ca56c"
       },
       "credentialStatus": {
-        "id": "https://incomplete-longboat.org",
+        "id": "https://superior-doorpost.net",
         "type": "CredentialStatusList2021"
       }
     },
@@ -274,37 +274,37 @@
     "name": "Missing id",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "0e3eb019-5696-4e24-9656-030db694107a",
+      "id": "c560d214-2942-437f-a321-fc2321f050e5",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://tedious-director.name"
+        "id": "https://damaged-excess.biz/"
       },
-      "issuanceDate": "2025-02-16T17:10:41.641Z",
-      "expirationDate": "2026-05-28T02:43:21.552Z",
+      "issuanceDate": "2025-06-25T17:30:55.937Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
+      "version": 8013470339235187,
+      "credentialSubject": {
+        "name": "Katrina Gislason",
+        "licenceNumber": "b35ae42f-b125-4bfc-8bff-8d8fabb65aa2",
+        "country": "Delaware",
+        "birthDate": 20250713,
+        "expiryDate": 20250723,
+        "publicAddress": "0x4dcbbcc27fbcc878f0aeb68c5dcf45fa3cbeedb4"
+      },
+      "expirationDate": "2025-10-31T22:54:14.679Z",
+      "credentialStatus": {
+        "id": "https://scented-sanity.net/",
+        "type": "CredentialStatusList2021"
+      },
       "subjectPosition": "none",
       "merklizationRootPosition": "index",
-      "revNonce": 4280760784739235,
-      "version": 8908011081763330,
-      "updatable": true,
-      "credentialSubject": {
-        "name": "Paulette Williamson",
-        "licenceNumber": "d63ff801-4b5f-421e-9b00-c05e214a9e0d",
-        "country": "Oklahoma",
-        "birthDate": 20250712,
-        "expiryDate": 20250725,
-        "publicAddress": "0xdbc7be6bbdad558ee5d1a7b3cbb3d4c26e8fdedd"
-      },
-      "credentialStatus": {
-        "id": "https://physical-railway.name/",
-        "type": "CredentialStatusList2021"
-      }
+      "revNonce": 4706932334156112,
+      "updatable": false
     },
     "expectedValid": false
   },
@@ -312,38 +312,38 @@
     "name": "Leading/Trailing Spaces",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "64ada35d-06d3-4a18-a96c-44f9b7f756aa",
+      "id": "4ebcbd00-8ae8-4a03-b087-b1f1cc0d204b",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://blond-concentration.biz"
+        "id": "https://rigid-planula.org/"
       },
-      "issuanceDate": "2025-07-06T18:34:47.716Z",
+      "issuanceDate": "2025-04-19T14:52:34.046Z",
+      "expirationDate": "2025-09-21T00:57:59.388Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "updatable": true,
+      "subjectPosition": "none",
+      "merklizationRootPosition": "none",
+      "revNonce": 5219242620897134,
+      "version": 1551504626738733,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:W7HrH6telv3LAmo9cLL7nIlnVqesZA3te3R9J9QN0H",
-        "name": "Mr. Lewis Orn-Cummings",
-        "licenceNumber": "cc24b7c7-ca76-4ddf-a052-d1ea519815d4",
+        "id": "did:receptor:redbelly:mainnet:cACFTYFFv4Rj93bDmlA5DXOJXtfLwAZJTsQkdjKorB",
+        "name": "Dr. Willie Collins",
+        "licenceNumber": "9a4f3b7c-ecae-49ec-8388-78fb6fbdb719",
         "country": " NSW ",
         "birthDate": 20250715,
         "expiryDate": 20250726,
-        "publicAddress": "0x1fd50f78bcbbfad02d376970bdf5b76df3cbcabb"
+        "publicAddress": "0x2abf091aecf411f8d3ddd4eba44d3b071e51beba"
       },
-      "expirationDate": "2026-06-18T00:51:36.952Z",
       "credentialStatus": {
-        "id": "https://roasted-fledgling.com",
+        "id": "https://left-creator.com",
         "type": "CredentialStatusList2021"
-      },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "index",
-      "revNonce": 1768616732877137,
-      "version": 3347980080695858
+      }
     },
     "expectedValid": false
   },
@@ -351,38 +351,38 @@
     "name": "Invalid credentialSubject.id: invalid string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "ec669a13-e1c5-45d4-b275-b150b0d735e1",
+      "id": "dfa649f9-97aa-4189-adb2-249bc4f3c42d",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://made-up-conversation.name"
+        "id": "https://trained-piglet.org"
       },
-      "issuanceDate": "2025-04-06T18:16:03.744Z",
-      "expirationDate": "2026-01-24T15:03:39.475Z",
+      "issuanceDate": "2024-12-23T02:47:50.985Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "value",
-      "revNonce": 2649265245425611,
-      "version": 4360597399842008,
-      "updatable": true,
+      "subjectPosition": "index",
+      "merklizationRootPosition": "none",
+      "version": 7758271493484011,
       "credentialSubject": {
         "id": "did:In-valid string:redbelly",
-        "name": "Tabitha Mayer",
-        "licenceNumber": "28ead063-50a2-4d5d-aff1-64478b04337a",
-        "country": "Oregon",
-        "birthDate": 20250720,
-        "expiryDate": 20250725,
-        "publicAddress": "0x6af54932b4c0a49b5efb8ebadba788fa5e0e40b9"
+        "name": "Dr. Dennis Waters",
+        "licenceNumber": "7cd495c3-ed1a-4d5f-bbba-5c02aaa92c88",
+        "country": "New Hampshire",
+        "birthDate": 20250719,
+        "expiryDate": 20250728,
+        "publicAddress": "0xc6abdd8dbf724b58bcdc73ceafcfcffbf1bbce78"
       },
+      "expirationDate": "2025-09-29T23:57:36.953Z",
       "credentialStatus": {
-        "id": "https://kaleidoscopic-birdcage.net/",
+        "id": "https://critical-platypus.org/",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "revNonce": 2555062247567123,
+      "updatable": true
     },
     "expectedValid": false
   },
@@ -390,36 +390,36 @@
     "name": "Invalid credentialSubject.id: empty string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "ebc0a87a-1977-42ea-99dd-27a2671d7dd2",
+      "id": "7c163f28-459b-4538-bd8e-a7703392b695",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://bare-massage.org/"
+        "id": "https://pleased-sightseeing.org"
       },
-      "issuanceDate": "2025-07-12T09:26:44.014Z",
-      "expirationDate": "2025-09-16T08:10:49.731Z",
+      "issuanceDate": "2025-05-03T09:00:59.123Z",
+      "expirationDate": "2026-02-09T19:28:53.970Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "none",
       "merklizationRootPosition": "index",
-      "revNonce": 8836124191355273,
-      "version": 1680495173639493,
-      "updatable": true,
+      "revNonce": 2335950366401099,
+      "version": 6927846491014916,
+      "updatable": false,
       "credentialSubject": {
         "id": "",
-        "name": "Carmen Nitzsche",
-        "licenceNumber": "41873247-d6ad-4936-9656-45454df578c5",
+        "name": "Charlene Greenholt",
+        "licenceNumber": "14950bc8-85d4-4296-80c3-e27981ee28ae",
         "country": "Maine",
-        "birthDate": 20250720,
-        "expiryDate": 20250726,
-        "publicAddress": "0x6b371d033b09db52a466dcfdafec40fbfe16420c"
+        "birthDate": 20250718,
+        "expiryDate": 20250727,
+        "publicAddress": "0x85d335ce17ed93b6dfee9dc7edaf8bdc2d3b5bee"
       },
       "credentialStatus": {
-        "id": "https://negative-heartache.com",
+        "id": "https://impure-arcade.name",
         "type": "CredentialStatusList2021"
       }
     },
@@ -429,36 +429,36 @@
     "name": "Invalid credentialSubject.name: empty",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "89e5b131-0b19-4546-9a47-a8f56c4bfafa",
+      "id": "e5d5335b-43c8-4d9a-ad22-6c0b1d6f25ec",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://unselfish-best-seller.name/"
+        "id": "https://agitated-ectoderm.info"
       },
-      "issuanceDate": "2024-12-22T22:21:27.994Z",
-      "expirationDate": "2026-07-05T16:05:06.125Z",
+      "issuanceDate": "2025-05-29T00:13:41.758Z",
+      "expirationDate": "2026-04-12T09:59:51.329Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "value",
-      "revNonce": 8474516112709337,
-      "version": 2605566913810836,
+      "subjectPosition": "value",
+      "merklizationRootPosition": "index",
+      "revNonce": 3328118795688196,
+      "version": 6830122712057311,
       "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:93XOVEzfL7ojUplR3OUZRvXMesWTi0waTvEnrdNt1l",
+        "id": "did:receptor:redbelly:testnet:iJVy7MKbpiXDcK5Hab5ArsoHA8dW1iGJSZ29WQenQa",
         "name": "",
-        "licenceNumber": "df53de38-cbb8-481a-88aa-3c0fe966ca8c",
-        "country": "Utah",
-        "birthDate": 20250715,
-        "expiryDate": 20250723,
-        "publicAddress": "0xd3dcb85744ff8fabd332e8b424a09fa37f9a7fc1"
+        "licenceNumber": "40f5e7bb-4a2a-4a14-9974-a374ebedf053",
+        "country": "Oregon",
+        "birthDate": 20250723,
+        "expiryDate": 20250728,
+        "publicAddress": "0xad1fb313b1d3c3a4ab96f8afa1edfaaada3f33f0"
       },
       "credentialStatus": {
-        "id": "https://glaring-swine.net",
+        "id": "https://superficial-handle.name/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -468,38 +468,38 @@
     "name": "Invalid credentialSubject.licenceNumber: leading spaces",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "a56fe528-70e9-4da1-be44-19b6ce7d6d8d",
+      "id": "205035ef-3338-4774-9d50-c015b83779e3",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://stark-permafrost.name"
+        "id": "https://gripping-emergent.name"
       },
-      "issuanceDate": "2024-09-05T12:59:29.805Z",
-      "expirationDate": "2026-02-03T22:20:28.855Z",
+      "issuanceDate": "2024-09-09T20:40:24.029Z",
+      "expirationDate": "2026-05-31T05:53:34.955Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
       "merklizationRootPosition": "index",
-      "revNonce": 1755643291128163,
-      "version": 6585587829769631,
+      "version": 635380471279413,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:Gxt4W8jd3lThG7CeJxFLv3ln8goyl7QibnTDxnDhVm",
-        "name": "Anne Walker",
+        "id": "did:receptor:redbelly:mainnet:GjNL7vwzMoIMjPoEWhAa5BnJoKFBsvX38H08EuE1R9",
+        "name": "Eddie Barton",
         "licenceNumber": " QWER12345",
-        "country": "California",
-        "birthDate": 20250719,
-        "expiryDate": 20250724,
-        "publicAddress": "0xaaee9e5fddb5ad31afd9658dea30e4066fa9db7b"
+        "country": "Washington",
+        "birthDate": 20250718,
+        "expiryDate": 20250727,
+        "publicAddress": "0xbd701ab98b3427361d9fad70a39a1dd7abe8cbda"
       },
       "credentialStatus": {
-        "id": "https://squeaky-gym.com",
+        "id": "https://warped-sauerkraut.name/",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "subjectPosition": "value",
+      "revNonce": 5757611553043842
     },
     "expectedValid": false
   },
@@ -507,38 +507,38 @@
     "name": "Invalid credentialSubject.licenceNumber: trailing spaces",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "57ca6830-9fc9-4506-a5f0-e66d71141276",
+      "id": "0e6cf574-2d2a-4f5b-88d7-95ad45822c03",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://cooperative-grandson.net"
+        "id": "https://impure-laughter.name"
       },
-      "issuanceDate": "2025-05-09T11:14:56.919Z",
-      "expirationDate": "2025-12-28T12:51:31.223Z",
+      "issuanceDate": "2025-07-20T17:48:34.229Z",
+      "expirationDate": "2026-04-10T00:41:22.537Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "index",
-      "revNonce": 4069138285138949,
-      "version": 5832498525993835,
-      "updatable": true,
+      "subjectPosition": "none",
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:2Q5pImB40do7c5htrJamVazHSUUKUBW2kZpiYIINDL",
-        "name": "Maureen Simonis",
+        "id": "did:receptor:redbelly:testnet:fhsRDQsPnJL1Bl0QTm1Eojwf35PHbOimCQJQEb7nQM",
+        "name": "Eileen Tremblay",
         "licenceNumber": "QWER12345 ",
-        "country": "Florida",
-        "birthDate": 20250714,
-        "expiryDate": 20250725,
-        "publicAddress": "0xd1ea5ec71b44d9b3d701a56842dadcd8d65800af"
+        "country": "Colorado",
+        "birthDate": 20250716,
+        "expiryDate": 20250727,
+        "publicAddress": "0x531e6da40a63a6fc6a0eddb2115f75fd9aa2a56b"
       },
       "credentialStatus": {
-        "id": "https://rapid-chainstay.org",
+        "id": "https://willing-help.info",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "merklizationRootPosition": "value",
+      "revNonce": 7557336039436607,
+      "version": 1986582604528761,
+      "updatable": false
     },
     "expectedValid": false
   },
@@ -546,38 +546,38 @@
     "name": "Invalid credentialSubject.licenceNumber: empty string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "ecac2bbd-b735-45dd-b908-1c58815e0823",
+      "id": "17209aad-af14-4f40-8b1d-061d71b2b5ed",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://miserly-bathhouse.net/"
+        "id": "https://deficient-farmer.biz"
       },
-      "issuanceDate": "2025-01-11T10:58:31.274Z",
+      "issuanceDate": "2024-12-27T22:50:45.768Z",
+      "expirationDate": "2026-05-19T07:30:04.220Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "revNonce": 7200217185498558,
-      "version": 5075437227456570,
+      "subjectPosition": "value",
+      "merklizationRootPosition": "none",
+      "version": 6869785164410475,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:UBwnPQMOULrMCSySASjcHnfnDhRc4zC9l4BfFv4WrJ",
-        "name": "Danny Marks",
+        "id": "did:receptor:redbelly:testnet:WuziJ9IlXrsNreG3NZQmhjleW8YRbFBg8GnH3x4Rdn",
+        "name": "Muriel Harris I",
         "licenceNumber": "",
-        "country": "South Carolina",
-        "birthDate": 20250716,
-        "expiryDate": 20250724,
-        "publicAddress": "0xccc4b9ad0e58eda4a43c23d0ff085ebdfd04fa06"
+        "country": "Maine",
+        "birthDate": 20250721,
+        "expiryDate": 20250728,
+        "publicAddress": "0xe833d4b21abd9eac1a946b8dfaf6fc4b2bc54bfc"
       },
-      "expirationDate": "2026-06-22T06:39:35.006Z",
       "credentialStatus": {
-        "id": "https://muddy-hierarchy.info",
+        "id": "https://young-colonialism.net",
         "type": "CredentialStatusList2021"
       },
-      "merklizationRootPosition": "value",
-      "updatable": true
+      "revNonce": 7176846162805089
     },
     "expectedValid": false
   },
@@ -585,36 +585,36 @@
     "name": "Invalid credentialSubject.licenceNumber: spaces in between",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "c9343f18-b72d-4220-b060-9596a2013963",
+      "id": "682cc06c-e1d4-4174-9541-6ca49c522ce9",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://insignificant-piglet.biz"
+        "id": "https://medium-igloo.org/"
       },
-      "issuanceDate": "2024-10-23T23:52:26.871Z",
-      "expirationDate": "2026-03-17T17:09:51.404Z",
+      "issuanceDate": "2024-09-28T18:42:05.019Z",
+      "expirationDate": "2025-09-12T04:08:23.515Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "index",
-      "revNonce": 5431188758610276,
-      "version": 4020239798676309,
+      "subjectPosition": "value",
+      "merklizationRootPosition": "none",
+      "revNonce": 6379991561933844,
+      "version": 9003110107201901,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:itLBegsPYBWBIiv1flyqeg0z26Cb5a2Rt2R7V5P0ms",
-        "name": "Saul Wilderman",
+        "id": "did:receptor:redbelly:testnet:rgXwNmGJQtLSWWqFaIIvaV43yat8mL2K1ZuZ6DYyRp",
+        "name": "Johanna Towne",
         "licenceNumber": "QWER 12345",
-        "country": "Washington",
-        "birthDate": 20250718,
-        "expiryDate": 20250727,
-        "publicAddress": "0xc5c59da200a719cf3eccfd5cee7b19bfdcf8d5fb"
+        "country": "Nebraska",
+        "birthDate": 20250713,
+        "expiryDate": 20250724,
+        "publicAddress": "0xbaee7b6d3b7baace0f54e22acfbbac6a0f6eaa41"
       },
       "credentialStatus": {
-        "id": "https://staid-cardboard.net/",
+        "id": "https://stingy-bakeware.name/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -624,36 +624,36 @@
     "name": "Invalid credentialSubject.country: spaces in between",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "56e5a2cb-1953-4ee0-8118-f51ce135a936",
+      "id": "f66c9139-6bc6-4150-9387-decfdb93ea87",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://quarrelsome-tinderbox.biz"
+        "id": "https://worst-pronoun.info/"
       },
-      "issuanceDate": "2025-06-03T03:03:21.147Z",
-      "expirationDate": "2026-02-04T23:25:31.109Z",
+      "issuanceDate": "2024-07-23T20:09:18.098Z",
+      "expirationDate": "2025-08-26T08:19:07.905Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "index",
-      "merklizationRootPosition": "index",
-      "revNonce": 8305022270203249,
-      "version": 2040348418276579,
-      "updatable": true,
+      "merklizationRootPosition": "none",
+      "revNonce": 1616719048398703,
+      "version": 8893746147501208,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:MaGU2CtBblGcwfVT8UGEW5tJIgFG0FmoqlWHj88tBE",
-        "name": "Dora Moen",
-        "licenceNumber": "3d6e4c6a-d545-424b-97a2-82e1eb42d77a",
+        "id": "did:receptor:redbelly:mainnet:JL38JcytGEjhdexwgG7FYy6Uue4eheQiTtNKg1RtCp",
+        "name": "Miss Cristina Boyle",
+        "licenceNumber": "31c86b42-8953-4602-8377-ebf1eadd9eb3",
         "country": "Martha's vineyard",
-        "birthDate": 20250715,
-        "expiryDate": 20250724,
-        "publicAddress": "0xca96f76e9e3d9dde5adddf8562cbae6ef5e7adce"
+        "birthDate": 20250719,
+        "expiryDate": 20250727,
+        "publicAddress": "0x3ddeac1ae306e7f8bebef2a02cff40d06a8d42ed"
       },
       "credentialStatus": {
-        "id": "https://political-complication.name",
+        "id": "https://tricky-editor.info/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -663,36 +663,36 @@
     "name": "Invalid credentialSubject.country: empty string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "78ba35f6-38a5-4ea8-be23-64b807a1dc83",
+      "id": "94082d2b-2c61-4ce7-9b17-bee4917ed0dd",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://black-seafood.org/"
+        "id": "https://skeletal-conservation.net/"
       },
-      "issuanceDate": "2025-04-10T13:47:55.569Z",
-      "expirationDate": "2026-01-23T22:41:56.457Z",
+      "issuanceDate": "2025-01-25T20:41:54.559Z",
+      "expirationDate": "2026-01-29T20:27:45.493Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "index",
-      "revNonce": 7450516919808344,
-      "version": 3332857197319705,
-      "updatable": true,
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "revNonce": 750677523098369,
+      "version": 4328017961686380,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:GR2kNYhtuJCB9cqMMeD69LtIZYlJvGkKZSgF2lR0ZC",
-        "name": "Mandy Tillman Sr.",
-        "licenceNumber": "3ead72bb-8e71-4777-883a-86f359d0cd90",
+        "id": "did:receptor:redbelly:testnet:u2lawtHDf9ZFPKAA7w8HcoofO5VXBdRmOnk1czEZrZ",
+        "name": "Dr. Eleanor Zulauf",
+        "licenceNumber": "2f9c861c-9e66-496c-b1e7-55265ecfd6ce",
         "country": "",
-        "birthDate": 20250722,
-        "expiryDate": 20250725,
-        "publicAddress": "0x0cafe1992e8ecd9ca8c2acb709694c9fc0c29aa6"
+        "birthDate": 20250719,
+        "expiryDate": 20250728,
+        "publicAddress": "0x057bec2c10bc5bf4bfcbe989f98002943cbd5e70"
       },
       "credentialStatus": {
-        "id": "https://aware-seafood.name/",
+        "id": "https://weekly-technologist.name",
         "type": "CredentialStatusList2021"
       }
     },
@@ -702,36 +702,36 @@
     "name": "Invalid credentialSubject.country: trailing space",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "86832ebb-77f7-4010-b1c9-c52f6fadd7ed",
+      "id": "4e2f91ca-82af-4fe0-af2b-98be13516d5e",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://burdensome-majority.org"
+        "id": "https://near-iridescence.biz/"
       },
-      "issuanceDate": "2024-10-05T02:41:22.486Z",
-      "expirationDate": "2026-01-07T10:01:39.332Z",
+      "issuanceDate": "2024-08-12T19:14:36.808Z",
+      "expirationDate": "2025-12-25T09:19:43.756Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
+      "subjectPosition": "value",
       "merklizationRootPosition": "value",
-      "revNonce": 4928333218291199,
-      "version": 4533276331124191,
-      "updatable": false,
+      "revNonce": 2936986577232186,
+      "version": 4760546095754321,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:CTIQb6QmqxNGqS4cqsWkCJPZDFLyCadpc93shnxAxj",
-        "name": "Kelvin Bayer",
-        "licenceNumber": "002c1a6d-59ea-4375-a745-c4d268237dda",
+        "id": "did:receptor:redbelly:mainnet:uqtBkt2NG3qmOT882FtbNOiVGgki2REk6ArDOcRtOI",
+        "name": "Jeannette Kozey",
+        "licenceNumber": "2666781d-0778-428a-a607-8b4a0c2beb44",
         "country": "CA ",
         "birthDate": 20250716,
-        "expiryDate": 20250726,
-        "publicAddress": "0x445dbb5b37a75157218cbd993a4de1d9efa881d0"
+        "expiryDate": 20250724,
+        "publicAddress": "0xf5e76947efbf9adcce48fa6c0b9e1d460e6aadff"
       },
       "credentialStatus": {
-        "id": "https://wrathful-fireplace.org",
+        "id": "https://unconscious-ocelot.net/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -741,36 +741,36 @@
     "name": "Invalid credentialSubject.country: leading space",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "3f6b01c4-64c0-47a6-aa3f-f8b9c85dcf58",
+      "id": "68a78e3c-8589-4499-9f2d-2f5f4b2f7c69",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://quick-collectivization.name"
+        "id": "https://measly-juggernaut.name"
       },
-      "issuanceDate": "2025-03-28T09:13:59.084Z",
-      "expirationDate": "2026-03-23T01:48:55.373Z",
+      "issuanceDate": "2024-09-12T20:52:00.052Z",
+      "expirationDate": "2026-06-06T12:06:32.615Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
+      "subjectPosition": "index",
       "merklizationRootPosition": "value",
-      "revNonce": 7437675643556981,
-      "version": 3998348678282421,
-      "updatable": true,
+      "revNonce": 7644033099575597,
+      "version": 2377268770466645,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:Y8ErpzuqRxXXuLlJMMDG6jiHNXB6u40xpWcmNP3zcO",
-        "name": "Willie Pouros",
-        "licenceNumber": "deb23a6e-ea60-411e-8c7d-505330a0f441",
+        "id": "did:receptor:redbelly:mainnet:CAQrxNeyDtMYXrwhz2IsEW1HX4Gtl6TDBc6t85ymcb",
+        "name": "Edgar Fritsch",
+        "licenceNumber": "e1b18687-92e1-4b05-8b75-2cda8b72e82c",
         "country": " California",
-        "birthDate": 20250722,
-        "expiryDate": 20250725,
-        "publicAddress": "0x3ebece1fc77c6edb6f7a198e00dd7c42e4ceda1b"
+        "birthDate": 20250723,
+        "expiryDate": 20250727,
+        "publicAddress": "0x3ef8e4fb57fac1ba6c15d42df0a5d93f1ba039b1"
       },
       "credentialStatus": {
-        "id": "https://flustered-zebra.biz/",
+        "id": "https://wee-fold.org/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -780,38 +780,38 @@
     "name": "Invalid credentialSubject.country: hyphen not allowed",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "d6baf122-9578-4552-b56b-1bef5ce8eaaf",
+      "id": "aa91ca59-76b2-47df-88f2-ca09edeef536",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://silky-chapel.org"
+        "id": "https://severe-tooth.name/"
       },
-      "issuanceDate": "2025-07-17T20:55:56.003Z",
-      "expirationDate": "2026-04-21T21:56:19.429Z",
+      "issuanceDate": "2025-03-15T03:49:16.314Z",
+      "expirationDate": "2025-11-17T13:22:41.450Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "index",
-      "revNonce": 8129369637717964,
-      "updatable": false,
+      "subjectPosition": "value",
+      "merklizationRootPosition": "none",
+      "revNonce": 618030582555730,
+      "version": 8936093838637542,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:BfEapIzhNdERPlK9Kp6UyWrq0WocJjAxIy7J0faGLu",
-        "name": "Monica Feeney",
-        "licenceNumber": "3404f2ab-eab8-49c0-8330-7016783989de",
+        "id": "did:receptor:redbelly:mainnet:mL2Fm994miBdJp9XrpyBBxQWRan30rxWniJm3Qjxed",
+        "name": "Mr. Taylor VonRueden",
+        "licenceNumber": "e6676665-839f-4089-80ed-5ae6fe992527",
         "country": "New-York",
-        "birthDate": 20250718,
-        "expiryDate": 20250725,
-        "publicAddress": "0xe62d5bbabb4fa8cecfeb19cee009bee8e9caa87e"
+        "birthDate": 20250716,
+        "expiryDate": 20250727,
+        "publicAddress": "0x3bfeffdc4f94e3f5deeeb1ffe0add45dfec237bc"
       },
       "credentialStatus": {
-        "id": "https://pessimistic-haircut.org",
+        "id": "https://hasty-testimonial.info/",
         "type": "CredentialStatusList2021"
-      },
-      "version": 8361745797858968
+      }
     },
     "expectedValid": false
   },
@@ -819,38 +819,38 @@
     "name": "Invalid credentialSubject.country: numbers not allowed",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "f02d0a91-2de9-49a3-a31b-9318b4f01576",
+      "id": "6156fdbb-58ae-4ecb-b81b-ff1ef8a52ce6",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://criminal-angle.org"
+        "id": "https://frail-depot.name/"
       },
-      "issuanceDate": "2025-03-24T03:42:46.002Z",
+      "issuanceDate": "2025-03-12T17:15:41.745Z",
+      "expirationDate": "2025-08-27T08:03:39.414Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "revNonce": 2907989010407476,
+      "subjectPosition": "none",
+      "revNonce": 5372834128325949,
+      "version": 6749387260394469,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:U0reAoHK9eQ921qyw4Q99cHpUBGJSIqI238Qb9GcIV",
-        "name": "Nick Kutch",
-        "licenceNumber": "c9554018-676a-43dd-83ac-f28aa7205d9e",
+        "id": "did:receptor:redbelly:testnet:lpVWpOa0JpInZNYcSPCdbjinftrC9V1LwW470otru0",
+        "name": "Irving Jaskolski",
+        "licenceNumber": "b6b62d7a-7192-441d-8c30-730c6878aecd",
         "country": "1234",
-        "birthDate": 20250715,
+        "birthDate": 20250723,
         "expiryDate": 20250724,
-        "publicAddress": "0x5cfdebd29b1b601007aad75567f0fcaaae98f62a"
+        "publicAddress": "0xdf3b03ff9e9ca1bed6dad287faacf0452f1659dd"
       },
-      "expirationDate": "2025-11-08T06:16:35.833Z",
       "credentialStatus": {
-        "id": "https://moral-valley.com",
+        "id": "https://suburban-catalyst.com",
         "type": "CredentialStatusList2021"
       },
       "merklizationRootPosition": "index",
-      "version": 766207123017699,
-      "updatable": true
+      "updatable": false
     },
     "expectedValid": false
   },
@@ -858,36 +858,36 @@
     "name": "Invalid birthDate: Too short",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "ac4ef9fc-6c1a-4d5b-a2fa-175397373c0f",
+      "id": "28e42fbb-1797-4131-a149-d2f9ee057a9f",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://impartial-conservation.biz"
+        "id": "https://sinful-platter.biz"
       },
-      "issuanceDate": "2025-06-17T11:22:05.783Z",
-      "expirationDate": "2026-02-22T10:02:05.187Z",
+      "issuanceDate": "2024-09-16T15:42:48.604Z",
+      "expirationDate": "2025-12-14T04:39:38.552Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "merklizationRootPosition": "index",
-      "revNonce": 7655722876153520,
-      "version": 352799120536895,
-      "updatable": false,
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "revNonce": 6568081526343636,
+      "version": 558964283976862,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:NW4g6YNE0t4SD8NPAbd7LATRDP6fCXht8Or5uh1zp1",
-        "name": "Randall Wolff",
-        "licenceNumber": "f1437a17-606c-47b3-82c4-73a1942c1cbb",
-        "country": "Tennessee",
+        "id": "did:receptor:redbelly:testnet:QOw02pySHOuLj5FllbcwXrDweWet8kWOlJRC3xopYd",
+        "name": "Ramona Schoen",
+        "licenceNumber": "6ffc1e0c-3437-45d9-80ff-49773eac6030",
+        "country": "Ohio",
         "birthDate": 10101,
-        "expiryDate": 20250725,
-        "publicAddress": "0x40d4f43da20de30f63ab27ab8f72ea2aee4a71c2"
+        "expiryDate": 20250728,
+        "publicAddress": "0xb6fe42e9d52b152061a2e2efb2b43d1ceb4dfb01"
       },
       "credentialStatus": {
-        "id": "https://close-backbone.com/",
+        "id": "https://trained-entry.info",
         "type": "CredentialStatusList2021"
       }
     },
@@ -897,38 +897,38 @@
     "name": "Invalid birthDate: Too long",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "ec7ae0c2-62fd-4719-acdb-a0a5f03ba9d0",
+      "id": "e96588ee-72c8-420f-bbfb-daae2731ffda",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://cute-pillow.net/"
+        "id": "https://private-wear.org"
       },
-      "issuanceDate": "2025-02-22T21:07:25.419Z",
+      "issuanceDate": "2024-08-29T03:41:00.406Z",
+      "expirationDate": "2026-03-07T13:45:50.369Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "revNonce": 1670313314673620,
-      "updatable": false,
+      "subjectPosition": "value",
+      "merklizationRootPosition": "index",
+      "revNonce": 7426793120219731,
+      "version": 811053763199833,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:myFPnT9YfU5cDWRjXkmgvsHdGkra4LkvEGopOjwhQh",
-        "name": "Ashley Torp",
-        "licenceNumber": "6fc679a6-0f26-4e0d-a489-e889586fc0f2",
-        "country": "Rhode Island",
+        "id": "did:receptor:redbelly:mainnet:T9JEjWkEEJpYA4G6BqsejRWIYiblhI1Wtz6ahFoQrr",
+        "name": "Ms. Shari Lemke V",
+        "licenceNumber": "56c4d8c9-5846-4618-a486-52ddc17c2b62",
+        "country": "Florida",
         "birthDate": 199901011,
-        "expiryDate": 20250725,
-        "publicAddress": "0x601adb76b1be65ccad78ec83e7b2e92caef7bfc3"
+        "expiryDate": 20250727,
+        "publicAddress": "0x688d9f886d84b1a7a4cbbc91cb9bac1f9efcd16d"
       },
-      "expirationDate": "2026-04-12T12:25:02.280Z",
       "credentialStatus": {
-        "id": "https://tangible-anticodon.name",
+        "id": "https://exotic-ad.name",
         "type": "CredentialStatusList2021"
-      },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "value",
-      "version": 4361784710425897
+      }
     },
     "expectedValid": false
   },
@@ -936,36 +936,36 @@
     "name": "Invalid publicAddress: Too short",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "16ad4ac2-e850-4cec-b50d-429aaf01971a",
+      "id": "2af9e286-3185-45ee-8e23-d35d451172de",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://sneaky-order.net/"
+        "id": "https://anguished-bump.info/"
       },
-      "issuanceDate": "2024-11-26T20:06:24.347Z",
-      "expirationDate": "2025-10-23T02:16:47.579Z",
+      "issuanceDate": "2024-10-20T18:32:07.584Z",
+      "expirationDate": "2026-04-13T07:49:12.564Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
+      "subjectPosition": "index",
       "merklizationRootPosition": "none",
-      "revNonce": 8471737234087484,
-      "version": 4516279277490652,
-      "updatable": false,
+      "revNonce": 3553999055656651,
+      "version": 1654531688350694,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:PEBJ7EXFB7iBgkdEKk6Nnf0bLyHVfhfdQ5towGUKp8",
-        "name": "Faith Windler",
-        "licenceNumber": "4a192fdc-8647-47da-a462-1be5f0e66b8f",
-        "country": "Arkansas",
-        "birthDate": 20250717,
-        "expiryDate": 20250726,
+        "id": "did:receptor:redbelly:mainnet:LaDlvzURNFeCpL0bREeVx4YjqD77NM0O2b9unhy5p3",
+        "name": "Jan Macejkovic",
+        "licenceNumber": "d62fb41c-bcfc-4eb0-a83f-5b97882d8d99",
+        "country": "Florida",
+        "birthDate": 20250715,
+        "expiryDate": 20250725,
         "publicAddress": "0x123"
       },
       "credentialStatus": {
-        "id": "https://gummy-shoulder.net/",
+        "id": "https://spiffy-season.biz/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -975,38 +975,38 @@
     "name": "Invalid publicAddress: Contains non-hex characters",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "2e9a2d1c-473a-476b-88d9-3c165c65ad86",
+      "id": "423d8f95-16c2-44b1-a356-f99255354225",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://blank-heartache.org/"
+        "id": "https://drab-flint.com/"
       },
-      "issuanceDate": "2025-06-29T10:58:26.506Z",
-      "expirationDate": "2025-12-17T16:02:35.811Z",
+      "issuanceDate": "2024-11-18T14:07:14.576Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "none",
-      "revNonce": 5879574604410810,
-      "version": 3283859697870879,
-      "updatable": false,
+      "subjectPosition": "value",
+      "merklizationRootPosition": "value",
+      "version": 8799433555523469,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:Rfq6C0guOEk7cZ4oKFEXC199MAN2yxG8X60gy0jToW",
-        "name": "Mrs. Barbara Kreiger Sr.",
-        "licenceNumber": "c2174d46-db0e-4b04-a6c3-487830be3ed2",
-        "country": "Rhode Island",
-        "birthDate": 20250720,
-        "expiryDate": 20250722,
+        "id": "did:receptor:redbelly:testnet:LGh2nZolOLrhe71YPBUW9JYBNJbjo1vVrudVAJecXC",
+        "name": "Dr. Bernard Fahey",
+        "licenceNumber": "85ad2f2a-b0c8-4c1f-a770-9a33ae8f5799",
+        "country": "Arkansas",
+        "birthDate": 20250723,
+        "expiryDate": 20250728,
         "publicAddress": "0xGHIJKL7890abcdef1234567890abcdef12345678"
       },
+      "expirationDate": "2025-10-05T19:24:25.522Z",
       "credentialStatus": {
-        "id": "https://total-plugin.biz/",
+        "id": "https://failing-boyfriend.org/",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "revNonce": 6845739826660168,
+      "updatable": false
     },
     "expectedValid": false
   },
@@ -1014,38 +1014,38 @@
     "name": "Invalid publicAddress: Missing 0x prefix",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "aa4ba59f-71b7-49bf-be10-f3073c95df42",
+      "id": "c9a450e3-6a95-48b0-b3bd-712e5c562652",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://timely-suv.info"
+        "id": "https://buzzing-relative.info"
       },
-      "issuanceDate": "2024-07-24T08:29:17.186Z",
+      "issuanceDate": "2025-05-26T13:59:34.120Z",
+      "expirationDate": "2025-10-10T21:38:40.571Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
+      "subjectPosition": "none",
       "merklizationRootPosition": "none",
-      "revNonce": 7231063164277121,
+      "revNonce": 3493018683189629,
+      "version": 729143371488214,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:igvSziC6MATw1QZcFPdsaNWAifri5vh6lGIuEmHzbx",
-        "name": "Mrs. Ada Mueller",
-        "licenceNumber": "89b1def0-59f1-4ec1-a6ab-781209e3fd40",
-        "country": "Florida",
+        "id": "did:receptor:redbelly:testnet:7D0dhRLeY6X4Z90wUp1MxFlazTQrJRoY6oC2ybMzCN",
+        "name": "Sam Brown IV",
+        "licenceNumber": "91b69137-aaad-47cd-bc56-cdfad1f88cab",
+        "country": "Montana",
         "birthDate": 20250715,
-        "expiryDate": 20250724,
+        "expiryDate": 20250725,
         "publicAddress": "1234567890abcdef1234567890abcdef12345678"
       },
-      "expirationDate": "2025-12-04T06:23:19.836Z",
       "credentialStatus": {
-        "id": "https://probable-collectivization.info/",
+        "id": "https://mammoth-cricket.com",
         "type": "CredentialStatusList2021"
-      },
-      "subjectPosition": "value",
-      "version": 3880685788775371,
-      "updatable": false
+      }
     },
     "expectedValid": false
   },
@@ -1053,36 +1053,36 @@
     "name": "Invalid publicAddress: Uppercase 0X prefix",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "396c85f4-fa06-4613-8622-db498a6319c6",
+      "id": "35107ebb-be2f-4b61-93c7-6adad78f614a",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://idealistic-hunt.info/"
+        "id": "https://glittering-t-shirt.net/"
       },
-      "issuanceDate": "2024-11-04T18:18:51.045Z",
-      "expirationDate": "2025-08-30T14:35:01.886Z",
+      "issuanceDate": "2025-05-09T13:39:09.809Z",
+      "expirationDate": "2025-11-05T15:52:20.393Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "none",
-      "merklizationRootPosition": "index",
-      "revNonce": 1200205060139469,
-      "version": 4418622112568687,
-      "updatable": false,
+      "merklizationRootPosition": "value",
+      "revNonce": 6985877131657571,
+      "version": 8454079308384042,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:reha5eylF3O9wIzKRQomOlWXj5XQpp2lV20elSRVON",
-        "name": "Gary Padberg",
-        "licenceNumber": "5cbe892c-5636-4617-b416-a01220de7dd0",
-        "country": "Iowa",
-        "birthDate": 20250719,
-        "expiryDate": 20250722,
+        "id": "did:receptor:redbelly:mainnet:4diZy53DxqTVSfOecWRFNZRFtlbRlL1e8cxh4bstit",
+        "name": "Mr. Sam Flatley",
+        "licenceNumber": "eea15d49-2abd-4eed-9853-5bb45d0bc9b5",
+        "country": "Georgia",
+        "birthDate": 20250713,
+        "expiryDate": 20250724,
         "publicAddress": "0XABCDEF1234567890ABCDEF1234567890ABCDEF12"
       },
       "credentialStatus": {
-        "id": "https://golden-meander.biz/",
+        "id": "https://alive-labourer.net",
         "type": "CredentialStatusList2021"
       }
     },
@@ -1092,38 +1092,38 @@
     "name": "Valid publicAddress: Mixed case (allowed in Ethereum)",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "id": "e61af0a7-d609-4388-b77f-3342c5a82b22",
+      "id": "cfc1b314-b7ff-4b7c-a6e1-3835d5ad39b9",
       "type": [
         "VerifiableCredential",
         "Drivers Licence"
       ],
       "issuer": {
-        "id": "https://punctual-accompanist.com"
+        "id": "https://stained-hierarchy.net"
       },
-      "issuanceDate": "2025-04-07T01:49:19.194Z",
-      "expirationDate": "2025-10-17T15:53:29.797Z",
+      "issuanceDate": "2025-06-17T22:16:15.911Z",
+      "expirationDate": "2025-09-04T05:37:05.444Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json",
         "type": "JsonSchemaValidator2018"
       },
+      "subjectPosition": "index",
       "merklizationRootPosition": "none",
-      "revNonce": 7031365813076793,
-      "updatable": false,
+      "revNonce": 7164852516095185,
+      "version": 1977235609961930,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:U5vvaM2EdPNUKZjSYfvRv9jyhogI4H2AwQ33uEl9bT",
-        "name": "Marlene Stoltenberg",
-        "licenceNumber": "94059050-08f4-4dc0-baf5-0dc42a4bef94",
-        "country": "South Dakota",
-        "birthDate": 20250712,
+        "id": "did:receptor:redbelly:testnet:BfMHIf1JZuv1ItDIfNiLIshAuiPkUNMARvGtIpJh9E",
+        "name": "Sammy Will",
+        "licenceNumber": "84440192-1674-4c08-aff3-ae49070c4941",
+        "country": "Georgia",
+        "birthDate": 20250721,
         "expiryDate": 20250724,
         "publicAddress": "0xAbCdEf1234567890ABCDEF1234567890abcdef12"
       },
       "credentialStatus": {
-        "id": "https://wasteful-skeleton.org/",
+        "id": "https://assured-decryption.org",
         "type": "CredentialStatusList2021"
-      },
-      "subjectPosition": "none",
-      "version": 359186090310269
+      }
     },
     "expectedValid": true
   }
