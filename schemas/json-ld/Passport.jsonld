@@ -6,7 +6,7 @@
         "id": "@id",
         "type": "@type",
         "Passport": {
-          "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Passport.jsonld#Passport",
+          "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/feature/PROD-3840/vc-naming/schemas/json-ld/Passport.jsonld#Passport",
           "@context": {
             "@version": 1.1,
             "@protected": true,
