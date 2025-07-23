@@ -5,41 +5,37 @@
       "@protected": true,
       "id": "@id",
       "type": "@type",
-      "Essential ID": {
-        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Essential%20ID.jsonld#Essential%20ID",
+      "NationalID": {
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld#NationalID",
         "@context": {
           "@version": 1.1,
           "@protected": true,
           "id": "@id",
           "type": "@type",
-          "kyc-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/essentialID.md#",
+          "nid-vocab": "https://github.com/redbellynetwork/receptor-schema/blob/main/credentials/nationalId.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
           "name": {
-            "@id": "kyc-vocab:name",
+            "@id": "nid-vocab:name",
             "@type": "xsd:string"
           },
           "birthDate": {
-            "@id": "kyc-vocab:birthDate",
+            "@id": "nid-vocab:birthDate",
             "@type": "xsd:integer"
           },
-          "referenceId": {
-            "@id": "kyc-vocab:referenceId",
+          "nationalIDNumber": {
+            "@id": "nid-vocab:nationalIDNumber",
             "@type": "xsd:string"
           },
           "country": {
-            "@id": "kyc-vocab:country",
-            "@type": "xsd:string"
-          },
-          "documentType": {
-            "@id": "kyc-vocab:documentType",
+            "@id": "nid-vocab:country",
             "@type": "xsd:string"
           },
           "expiryDate": {
-            "@id": "kyc-vocab:expiryDate",
+            "@id": "nid-vocab:expiryDate",
             "@type": "xsd:integer"
           },
           "publicAddress": {
-            "@id": "kyc-vocab:publicAddress",
+            "@id": "nid-vocab:publicAddress",
             "@type": "xsd:string"
           }
         }

@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "AU Sophisticated Wholesale Investor",
-  "description": "AU Sophisticated Wholesale Investor Credential",
+  "title": "National ID",
+  "description": "National ID Credential",
   "type": "object",
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AU%20Sophisticated%20Wholesale%20Investor.jsonld",
-      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AU%20Sophisticated%20Wholesale%20Investor.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json"
     }
   },
   "required": [
@@ -64,22 +64,6 @@
         }
       }
     },
-    "credentialStatus": {
-      "type": "object",
-      "required": ["id", "revocationNonce", "type"],
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        },
-        "revocationNonce": {
-          "type": "integer"
-        },
-        "type": {
-          "type": "string"
-        }
-      }
-    },
     "subjectPosition": {
       "type": "string",
       "enum": ["none", "index", "value"]
@@ -101,9 +85,12 @@
       "type": "object",
       "required": [
         "id",
-        "accountantCertification",
-        "accountantMembershipNumber",
-        "accountantEmail"
+        "name",
+        "birthDate",
+        "nationalIDNumber",
+        "country",
+        "expiryDate",
+        "publicAddress"
       ],
       "properties": {
         "id": {
@@ -112,18 +99,37 @@
           "format": "uri",
           "description": "Identifier for the subject of the credential."
         },
-        "accountantCertification": {
+        "name": {
           "type": "string",
-          "description": "Certification status of the accountant"
+          "pattern": "^\\S.*\\S$|^\\S$",
+          "description": "Full legal name of the individual."
         },
-        "accountantMembershipNumber": {
-          "type": "string",
-          "description": "Membership number of the accountant"
+        "birthDate": {
+          "type": "integer",
+          "minimum": 19000101,
+          "maximum": 22251231,
+          "description": "Date of birth, in YYYYMMDD format."
         },
-        "accountantEmail": {
+        "nationalIDNumber": {
           "type": "string",
-          "format": "email",
-          "description": "Email address of the accountant"
+          "pattern": "^[^\\s]+$",
+          "description": "Unique national ID number."
+        },
+        "country": {
+          "type": "string",
+          "pattern": "^[A-Za-z]+(?: [A-Za-z]+)*$",
+          "description": "Country of issuance."
+        },
+        "expiryDate": {
+          "type": "integer",
+          "minimum": 19000101,
+          "maximum": 22251231,
+          "description": "Date until which the NationalID is valid, in YYYYMMDD format."
+        },
+        "publicAddress": {
+          "type": "string",
+          "pattern": "^0x[a-fA-F0-9]{40}$",
+          "description": "Public address of the owner of the credential."
         }
       }
     }

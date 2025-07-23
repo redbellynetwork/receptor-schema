@@ -5,8 +5,8 @@
       "@protected": true,
       "id": "@id",
       "type": "@type",
-      "Drivers Licence": {
-        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld#Drivers%20Licence",
+      "DriversLicence": {
+        "@id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/DriversLicence.jsonld#DriversLicence",
         "@context": {
           "@version": 1.1,
           "@protected": true,

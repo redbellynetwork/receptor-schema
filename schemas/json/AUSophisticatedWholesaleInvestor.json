@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Drivers Licence",
-  "description": "Drivers Licence Credential",
+  "title": "AU Sophisticated Wholesale Investor",
+  "description": "AU Sophisticated Wholesale Investor Credential",
   "type": "object",
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/Drivers%20Licence.jsonld",
-      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/Drivers%20Licence.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json"
     }
   },
   "required": [
@@ -64,6 +64,22 @@
         }
       }
     },
+    "credentialStatus": {
+      "type": "object",
+      "required": ["id", "revocationNonce", "type"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        },
+        "revocationNonce": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    },
     "subjectPosition": {
       "type": "string",
       "enum": ["none", "index", "value"]
@@ -85,12 +101,9 @@
       "type": "object",
       "required": [
         "id",
-        "name",
-        "licenceNumber",
-        "country",
-        "birthDate",
-        "expiryDate",
-        "publicAddress"
+        "accountantCertification",
+        "accountantMembershipNumber",
+        "accountantEmail"
       ],
       "properties": {
         "id": {
@@ -99,37 +112,18 @@
           "format": "uri",
           "description": "Identifier for the subject of the credential."
         },
-        "name": {
+        "accountantCertification": {
           "type": "string",
-          "pattern": "^\\S.*\\S$|^\\S$",
-          "description": "Full name as per DL"
+          "description": "Certification status of the accountant"
         },
-        "licenceNumber": {
+        "accountantMembershipNumber": {
           "type": "string",
-          "pattern": "^[^\\s]+$",
-          "description": "Licence number as per DL."
+          "description": "Membership number of the accountant"
         },
-        "country": {
+        "accountantEmail": {
           "type": "string",
-          "pattern": "^[A-Za-z]+(?: [A-Za-z]+)*$",
-          "description": "Country of issuance."
-        },
-        "birthDate": {
-          "type": "integer",
-          "minimum": 19000101,
-          "maximum": 22251231,
-          "description": "Date of birth as per DL, in YYYYMMDD format ."
-        },
-        "expiryDate": {
-          "type": "integer",
-          "minimum": 19000101,
-          "maximum": 22251231,
-          "description": "Expiration date of DL, in YYYYMMDD format ."
-        },
-        "publicAddress": {
-          "type": "string",
-          "pattern": "^0x[a-fA-F0-9]{40}$",
-          "description": "Public address of the owner of DL."
+          "format": "email",
+          "description": "Email address of the accountant"
         }
       }
     }

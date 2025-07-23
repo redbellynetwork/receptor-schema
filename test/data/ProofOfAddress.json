@@ -1,0 +1,415 @@
+[
+  {
+    "name": "Valid Proof of Address",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddress.jsonld",
+      "id": "8e730ca7-9c86-4830-9156-038be6f8bbf9",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddress"
+      ],
+      "issuer": {
+        "id": "https://outgoing-opera.org/"
+      },
+      "issuanceDate": "2025-03-13T16:02:27.018Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddress.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://realistic-galoshes.net",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 8800420649535113
+      },
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:Qt4sa0k43Z5qY4hImjHA49o6gt5rzTrFYjP06gBz0C",
+        "street": "Wolff Burg",
+        "city": "Rohnert Park",
+        "postCode": "78436",
+        "country": "BMU"
+      },
+      "expirationDate": "2026-05-27T16:49:37.305Z",
+      "subjectPosition": "value",
+      "merklizationRootPosition": "none",
+      "revNonce": 5721783942570719,
+      "version": 8917880618080663,
+      "updatable": true
+    },
+    "expectedValid": true
+  },
+  {
+    "name": "Missing Required Field: country",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddress.jsonld",
+      "id": "829318ef-6726-4be1-ab05-37bf481f5ead",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddress"
+      ],
+      "issuer": {
+        "id": "https://narrow-final.org"
+      },
+      "issuanceDate": "2025-03-18T00:48:43.315Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddress.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://arid-concentration.biz",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 8562573997475873
+      },
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:v2EWlnMLSR0PrnsdsIsgopYgYbsi9SZP6DLFh9dMfJ",
+        "street": "Aglae Meadow",
+        "city": "Osinskiland",
+        "postCode": "12186"
+      },
+      "expirationDate": "2025-08-21T19:32:16.175Z",
+      "subjectPosition": "none",
+      "merklizationRootPosition": "index",
+      "revNonce": 7147496720507453,
+      "version": 8396494295226393,
+      "updatable": false
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: city",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddress.jsonld",
+      "id": "88f90125-b980-4cad-9783-b4cddea51707",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddress"
+      ],
+      "issuer": {
+        "id": "https://actual-term.com/"
+      },
+      "issuanceDate": "2024-12-24T01:13:34.235Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddress.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://monstrous-heroine.info",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 6673250233747042
+      },
+      "revNonce": 4357097517037051,
+      "version": 621684344627104,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:F9HWcpSp5DWWB2CA99fvhhohlKcoOEgBfEcWmuD6M7",
+        "street": "O'Hara Bypass",
+        "postCode": "42291",
+        "country": "PRI"
+      },
+      "expirationDate": "2026-06-10T07:50:41.400Z",
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value"
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: street",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddress.jsonld",
+      "id": "0068d5f9-6ea1-4998-9865-3b6b1094dad1",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddress"
+      ],
+      "issuer": {
+        "id": "https://unconscious-noon.com"
+      },
+      "issuanceDate": "2024-12-04T23:44:10.902Z",
+      "expirationDate": "2026-05-04T13:07:16.746Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddress.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://content-pilot.biz",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 3381394644151994
+      },
+      "subjectPosition": "value",
+      "revNonce": 4203126376825897,
+      "version": 7487345913735310,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:xiJ8NbUwoWJOXieUczZGk1POmEabouQAA9YEAnGx0L",
+        "city": "Fort Delphaburgh",
+        "postCode": "58122",
+        "country": "GRL"
+      },
+      "merklizationRootPosition": "value"
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: postCode",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddress.jsonld",
+      "id": "0f6556d7-0d41-4c17-9735-d8d9495bb453",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddress"
+      ],
+      "issuer": {
+        "id": "https://handy-hunger.biz/"
+      },
+      "issuanceDate": "2025-02-17T02:53:23.499Z",
+      "expirationDate": "2026-05-01T03:08:16.145Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddress.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://well-off-corporation.info/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 1691893142423558
+      },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "none",
+      "revNonce": 8353178596266213,
+      "version": 5431037728365621,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:JjXJGwSlloyR1vTiBNufvH5jJA6RlKmVFYKIsjT8uk",
+        "street": "The Croft",
+        "city": "Lake Abbey",
+        "country": "SDN"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Wrong Data Type: postCode as number",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddress.jsonld",
+      "id": "239e7514-315c-4061-94d6-40cae1283afb",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddress"
+      ],
+      "issuer": {
+        "id": "https://similar-brief.net"
+      },
+      "issuanceDate": "2024-10-14T03:30:40.527Z",
+      "expirationDate": "2025-12-16T05:25:30.324Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddress.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://warmhearted-diversity.org/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 6987334523480056
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "value",
+      "revNonce": 7708947831375526,
+      "version": 5194765183818903,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:5vFHaqeBFjdOZV1KdEWqNrnhFnzNtG35sSjKTGoggJ",
+        "street": "Murray Orchard",
+        "city": "New Brandon",
+        "postCode": 12345,
+        "country": "GMB"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Wrong Data Type: city as number",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddress.jsonld",
+      "id": "2bad823d-3dc5-4dd0-abd5-8417c953bded",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddress"
+      ],
+      "issuer": {
+        "id": "https://sneaky-discourse.org/"
+      },
+      "issuanceDate": "2025-06-29T07:07:03.746Z",
+      "expirationDate": "2025-09-21T12:16:45.703Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddress.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://animated-chairperson.net/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 7374330796437728
+      },
+      "subjectPosition": "index",
+      "merklizationRootPosition": "none",
+      "revNonce": 8449309706526308,
+      "version": 2837845360884261,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:W9eZZ4jkvx9kcEXddPlFnPP0pXHnF1HOj9BulNuWed",
+        "street": "D'Amore Lane",
+        "city": 9876,
+        "postCode": "05547",
+        "country": "POL"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Malformed Context: undefined",
+    "data": {
+      "id": "d3f74a9f-0b04-459a-979f-a2d118428ad9",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddress"
+      ],
+      "issuer": {
+        "id": "https://magnificent-kiss.name/"
+      },
+      "issuanceDate": "2025-06-25T13:31:10.090Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddress.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://incomplete-babushka.org/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 5722552473947802
+      },
+      "merklizationRootPosition": "none",
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:k2TfxfEetlbm8uwC1LYhdGMJfJulm1gmkjQmDwEEyY",
+        "street": "Ratke Union",
+        "city": "North Hoythaven",
+        "postCode": "20433",
+        "country": "SXM"
+      },
+      "expirationDate": "2025-11-09T08:48:01.015Z",
+      "subjectPosition": "value",
+      "revNonce": 1937136412838325,
+      "version": 3207004309518176,
+      "updatable": true
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Invalid postCode: empty string",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddress.jsonld",
+      "id": "d2e09b27-88e9-427f-a07f-b898dcdeb198",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddress"
+      ],
+      "issuer": {
+        "id": "https://primary-governance.info/"
+      },
+      "issuanceDate": "2025-01-26T02:53:59.772Z",
+      "expirationDate": "2026-06-24T02:33:03.408Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddress.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://proud-costume.net/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 896792571558108
+      },
+      "subjectPosition": "index",
+      "merklizationRootPosition": "none",
+      "revNonce": 1951466748835831,
+      "version": 3936314324615548,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:xJzSNjKzKQV7GP3gdMw0WidajhjlMe4G6s4MfEsRn3",
+        "street": "Boyer Fall",
+        "city": "Fort Tito",
+        "postCode": "",
+        "country": "CYM"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Invalid postCode: alphanumeric",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddress.jsonld",
+      "id": "07998fd2-9c90-4848-8e15-4966dab1412b",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddress"
+      ],
+      "issuer": {
+        "id": "https://writhing-lace.info/"
+      },
+      "issuanceDate": "2025-06-12T09:57:12.486Z",
+      "expirationDate": "2026-04-05T13:36:04.427Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddress.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://ashamed-drug.org",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 4357582175929569
+      },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "revNonce": 1481605990732684,
+      "version": 689243731262285,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:s134zAkjN2tVP1IVlf224wWgwTgBRoikEKn2yZe0hj",
+        "street": "N Elm Street",
+        "city": "Okeyborough",
+        "postCode": "123AB",
+        "country": "TKL"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Invalid country: whitespace only",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddress.jsonld",
+      "id": "c8b9fdde-d07f-460a-8339-2d7086120023",
+      "type": [
+        "VerifiableCredential",
+        "ProofOfAddress"
+      ],
+      "issuer": {
+        "id": "https://cluttered-individual.biz/"
+      },
+      "issuanceDate": "2025-03-24T04:21:35.982Z",
+      "expirationDate": "2025-08-19T20:22:07.944Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/ProofOfAddress.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://cheap-pneumonia.com",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 4747599344359112
+      },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "none",
+      "revNonce": 6407238058929424,
+      "version": 7995844616910768,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:VSt0TZFZ7dCvnPyv8dfpYiRaKgIEPNPjHyTDmtMFq4",
+        "street": "N Chestnut Street",
+        "city": "Port Elfrieda",
+        "postCode": "25764",
+        "country": "   "
+      }
+    },
+    "expectedValid": false
+  }
+]

@@ -1,0 +1,219 @@
+[
+  {
+    "name": "Valid Au Sophisticated Wholesale Investor",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld",
+      "id": "4b084247-89ed-4c17-ac10-bb680537bad7",
+      "type": [
+        "VerifiableCredential",
+        "AUSophisticatedWholesaleInvestor"
+      ],
+      "issuer": {
+        "id": "https://weary-institute.com/"
+      },
+      "issuanceDate": "2025-02-08T03:47:24.788Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://ruddy-newsstand.biz",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 5309332187396652
+      },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "none",
+      "revNonce": 1194328532096840,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:21AdmsIzZEtoKv1JK4hNwaAnuLhF3s6VhO7evaKsXz",
+        "accountantCertification": "CA",
+        "accountantMembershipNumber": "ead13d60-8838-43f5-92f6-4c4ff424efc0",
+        "accountantEmail": "Treva_Hettinger99@yahoo.com"
+      },
+      "expirationDate": "2026-06-18T01:37:02.273Z",
+      "version": 2537034892672007
+    },
+    "expectedValid": true
+  },
+  {
+    "name": "Missing Required Field: id",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld",
+      "id": "6656b8da-488f-4ea0-8d67-bd587b43dfb3",
+      "type": [
+        "VerifiableCredential",
+        "AUSophisticatedWholesaleInvestor"
+      ],
+      "issuer": {
+        "id": "https://pessimistic-handful.com"
+      },
+      "issuanceDate": "2025-06-16T16:18:54.611Z",
+      "expirationDate": "2026-04-17T22:35:24.410Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://clear-cut-venom.com",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 8277132185657607
+      },
+      "subjectPosition": "index",
+      "merklizationRootPosition": "value",
+      "revNonce": 7908218214868925,
+      "version": 7599138640947551,
+      "updatable": false,
+      "credentialSubject": {
+        "accountantCertification": "CA",
+        "accountantMembershipNumber": "a9e982ca-b77c-47c2-a4c0-1b4394547414",
+        "accountantEmail": "Name5@yahoo.com"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: accountantMembershipNumber",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld",
+      "id": "b66dda2d-14d1-46d3-bcc2-f14dd7599f20",
+      "type": [
+        "VerifiableCredential",
+        "AUSophisticatedWholesaleInvestor"
+      ],
+      "issuer": {
+        "id": "https://haunting-substitution.net"
+      },
+      "issuanceDate": "2024-10-11T05:37:03.096Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://radiant-valentine.name/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 7273753119268192
+      },
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:PcGcgMChlrGpPyn18bJPQ4fHUgygWPQUK2VPLQ0BeI",
+        "accountantCertification": "CA",
+        "accountantEmail": "Nicholaus_Emard-Schoen11@hotmail.com"
+      },
+      "expirationDate": "2026-03-09T22:18:15.956Z",
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "revNonce": 2951268015097965,
+      "version": 8029921493942837,
+      "updatable": false
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: accountantCertification",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld",
+      "id": "3c237383-8e2e-4c10-b6bd-e6776ea33034",
+      "type": [
+        "VerifiableCredential",
+        "AUSophisticatedWholesaleInvestor"
+      ],
+      "issuer": {
+        "id": "https://guilty-certification.net"
+      },
+      "issuanceDate": "2025-02-02T16:04:45.348Z",
+      "expirationDate": "2025-10-04T10:15:40.846Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://staid-someplace.com/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 2016734598270600
+      },
+      "subjectPosition": "index",
+      "merklizationRootPosition": "index",
+      "revNonce": 6097074555145072,
+      "version": 3423921801281587,
+      "updatable": false,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:rU4mdVvemSQisSGywZoz6pQsTuH6Bd13dC1HYSDNzd",
+        "accountantMembershipNumber": "7df05b1f-7610-48aa-8ce2-ad191b4d3221",
+        "accountantEmail": "Kacie_MacGyver81@yahoo.com"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Missing Required Field: accountantEmail",
+    "data": {
+      "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld",
+      "id": "6c8ce596-0109-4daf-b206-601f18af7564",
+      "type": [
+        "VerifiableCredential",
+        "AUSophisticatedWholesaleInvestor"
+      ],
+      "issuer": {
+        "id": "https://miserable-ice-cream.org/"
+      },
+      "issuanceDate": "2025-05-18T09:21:04.050Z",
+      "expirationDate": "2025-08-24T05:21:48.146Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://serene-swim.info/",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 4206649499402497
+      },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "index",
+      "revNonce": 1777534363549629,
+      "version": 7805379966465146,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:mainnet:PMGLPBRztFQMFUYiJquU2yPw2gdB6uf7jlv8SZyO9W",
+        "accountantCertification": "CPA",
+        "accountantMembershipNumber": "b1963dde-785a-429a-837e-1977e64ea2fd"
+      }
+    },
+    "expectedValid": false
+  },
+  {
+    "name": "Malformed Context: undefined",
+    "data": {
+      "id": "3b87ac7a-e004-484e-9563-7ef04a2c3840",
+      "type": [
+        "VerifiableCredential",
+        "AUSophisticatedWholesaleInvestor"
+      ],
+      "issuer": {
+        "id": "https://forsaken-gradient.biz/"
+      },
+      "issuanceDate": "2025-05-10T18:06:37.795Z",
+      "expirationDate": "2026-07-22T18:09:57.334Z",
+      "credentialSchema": {
+        "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/AUSophisticatedWholesaleInvestor.json",
+        "type": "JsonSchemaValidator2018"
+      },
+      "credentialStatus": {
+        "id": "https://tidy-boulevard.biz",
+        "type": "CredentialStatusList2021",
+        "revocationNonce": 8797244584449507
+      },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "index",
+      "revNonce": 2858087896476486,
+      "version": 299794381379289,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:kJVg2SskpCNZGQcdElQkZPJk2P3VT2K0qjN9eDQhL2",
+        "accountantCertification": "CPA",
+        "accountantMembershipNumber": "fd845928-f75d-492b-8abd-798da2fa3f9f",
+        "accountantEmail": "Blanca_Grimes@yahoo.com"
+      }
+    },
+    "expectedValid": false
+  }
+]
