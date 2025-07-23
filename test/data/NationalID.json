@@ -3,35 +3,35 @@
     "name": "Valid National ID",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "4e4ac726-b012-4f5b-88d3-50a773653984",
+      "id": "efd72746-4c81-40a4-94d5-415d6cdbf4e3",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://meager-breastplate.biz/"
+        "id": "https://small-forgery.com/"
       },
-      "issuanceDate": "2024-11-24T22:12:04.824Z",
-      "expirationDate": "2026-01-27T00:42:48.782Z",
+      "issuanceDate": "2025-01-26T02:05:56.558Z",
+      "expirationDate": "2026-02-08T08:11:19.550Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "value",
-      "merklizationRootPosition": "index",
-      "version": 3097817786119254,
-      "updatable": false,
+      "merklizationRootPosition": "value",
+      "version": 2821487462013161,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:rT9T084lsK4cVHYUydE6QqZCKPobqkgtt7o5jjiJbW",
-        "name": "Daryl Marvin",
-        "birthDate": 20250716,
-        "nationalIDNumber": "0433cd64-6b3c-4f53-9ba4-fad159f0f665",
-        "country": "Saint Martin",
-        "expiryDate": 20250726,
-        "publicAddress": "0xe1af62d48b0a3090dd6d502ce561ea9ebb18159b"
+        "id": "did:receptor:redbelly:mainnet:tS6EVdNxzQldeG7EpLbXbUwfVp0usISkwW3q7vK2se",
+        "name": "Angel Herman",
+        "birthDate": 20250721,
+        "nationalIDNumber": "58908318-168b-4f60-b081-813b3b5c157b",
+        "country": "Brunei Darussalam",
+        "expiryDate": 20250728,
+        "publicAddress": "0xe5f3dc99a4ed1afeea02ffaafc1dcb8f6cbf0bfa"
       },
       "credentialStatus": {
-        "id": "https://bruised-maintainer.net/",
+        "id": "https://wilted-spring.info",
         "type": "CredentialStatusList2021"
       }
     },
@@ -41,34 +41,34 @@
     "name": "Missing Required Field",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "10b80b11-c469-4b0c-9b15-ee57782b1483",
+      "id": "800cd4be-2fa8-4bd4-9924-a572c82650dd",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://necessary-cork.com"
+        "id": "https://utter-boulevard.org/"
       },
-      "issuanceDate": "2025-04-13T19:48:19.540Z",
-      "expirationDate": "2025-09-20T15:54:09.252Z",
+      "issuanceDate": "2025-07-06T13:01:50.978Z",
+      "expirationDate": "2025-11-07T18:52:28.579Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "merklizationRootPosition": "index",
-      "version": 4244010472428387,
+      "subjectPosition": "index",
+      "merklizationRootPosition": "value",
+      "version": 926327439816106,
       "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:DHE5SZ5jHNXjx59nJ3Jd7aGsKn9qcNRL3EwGic0P2U",
-        "name": "Angela Schimmel",
-        "birthDate": 20250720,
-        "country": "Libyan Arab Jamahiriya",
-        "expiryDate": 20250728,
-        "publicAddress": "0x8de0b5f8c0d11bf53851cf0382fc24af7f065681"
+        "id": "did:receptor:redbelly:testnet:cbUF46yyh6zGEeJCdlWOQyQXFUy3iADq40tSt7e9i4",
+        "name": "Jim Feeney",
+        "birthDate": 20250716,
+        "country": "France",
+        "expiryDate": 20250724,
+        "publicAddress": "0x0593bc9ecc8cec174a325bebb84a765fd82c3ee8"
       },
       "credentialStatus": {
-        "id": "https://careless-rust.org",
+        "id": "https://stiff-rawhide.biz",
         "type": "CredentialStatusList2021"
       }
     },
@@ -78,35 +78,35 @@
     "name": "Wrong Data Type",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "4fff47d5-78b1-4e1c-9597-d7cfa6654db5",
+      "id": "3d0a0b28-1342-4636-9bbd-443280eb841d",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://velvety-contrail.net"
+        "id": "https://self-reliant-unique.name/"
       },
-      "issuanceDate": "2025-01-19T08:13:00.659Z",
-      "expirationDate": "2026-02-02T11:09:44.541Z",
+      "issuanceDate": "2024-07-29T22:16:02.270Z",
+      "expirationDate": "2025-11-19T17:01:44.952Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "value",
       "merklizationRootPosition": "value",
-      "version": 2682525699331872,
+      "version": 6957168793790295,
       "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:DV5pKYHJO4LCmhr2N6Gg8C5fyGzZ8LFRN7VQVRiaKN",
-        "name": "Justin Schiller",
+        "id": "did:receptor:redbelly:testnet:M6kfr6LUdvjOXR4IFl1Rf5M5Gl9gFSJ3bhDZ3jbNNZ",
+        "name": "Gretchen Schmidt-Schmitt",
         "birthDate": "not_a_date",
-        "nationalIDNumber": "15e9c07b-2954-4ec1-a597-d9e6cc4c7014",
-        "country": "Poland",
-        "expiryDate": 20250725,
-        "publicAddress": "0x3a98eeb2ab750c6dce567bb0aed6441c7cd2f8d6"
+        "nationalIDNumber": "c228ac83-38fe-491d-bc25-dff601551196",
+        "country": "Somalia",
+        "expiryDate": 20250728,
+        "publicAddress": "0xbfa5ceacb04f6cb7cd4d2ebdece2def30037fc95"
       },
       "credentialStatus": {
-        "id": "https://necessary-dead.com/",
+        "id": "https://profitable-secrecy.net/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -115,37 +115,37 @@
   {
     "name": "Malformed Context: undefined",
     "data": {
-      "id": "8b761795-c6fc-4b63-967e-7a11ac1e8de8",
+      "id": "8b34f378-249e-415e-8ab7-99b1e840063c",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://sturdy-jacket.name/"
+        "id": "https://jittery-kinase.biz"
       },
-      "issuanceDate": "2025-06-14T06:11:43.492Z",
+      "issuanceDate": "2024-10-26T19:49:50.961Z",
+      "expirationDate": "2026-01-08T05:23:17.081Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "none",
-      "version": 5857951347890900,
+      "merklizationRootPosition": "value",
+      "version": 2783948322471495,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:Hm5T8nJ5uPiCi5KMQXWyhO2DIbKsEmwwmjHJYXPqtg",
-        "name": "Theresa Nitzsche",
-        "birthDate": 20250716,
-        "nationalIDNumber": "a1874aa7-aed7-425c-8c31-c67f9c98ace2",
-        "country": "Saint Pierre and Miquelon",
-        "expiryDate": 20250724,
-        "publicAddress": "0xc94af0daef22bb0beff4e4da1ef7da1880b14809"
+        "id": "did:receptor:redbelly:testnet:ZRDoWMb1mJhvFOfbZiWSo6kG2gOD5atRCkvIGPcJgf",
+        "name": "Bethany Bernhard",
+        "birthDate": 20250719,
+        "nationalIDNumber": "fa00d175-9afc-4b03-862f-692a8b61e036",
+        "country": "Estonia",
+        "expiryDate": 20250728,
+        "publicAddress": "0xf13bd554fdacb9d1904780c1fbd50a1a8fc53ef2"
       },
-      "expirationDate": "2026-03-17T23:38:48.095Z",
       "credentialStatus": {
-        "id": "https://legal-jacket.org",
+        "id": "https://waterlogged-gerbil.info",
         "type": "CredentialStatusList2021"
-      },
-      "merklizationRootPosition": "index"
+      }
     },
     "expectedValid": false
   },
@@ -153,35 +153,35 @@
     "name": "Invalid URL in id",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "4b7fc1cb-624a-43d4-af14-488b47ac9b15",
+      "id": "3d7eb0b0-bb4b-4c19-828e-02c934aab239",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://serpentine-stir-fry.biz/"
+        "id": "https://cumbersome-grandson.net"
       },
-      "issuanceDate": "2024-08-13T11:12:30.607Z",
-      "expirationDate": "2025-11-09T21:08:03.031Z",
+      "issuanceDate": "2024-08-22T18:00:56.387Z",
+      "expirationDate": "2026-03-27T16:17:50.714Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "none",
-      "version": 2263307697475190,
-      "updatable": true,
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "version": 386877616088999,
+      "updatable": false,
       "credentialSubject": {
         "id": "invalid_url",
-        "name": "Alfredo Oberbrunner",
-        "birthDate": 20250715,
-        "nationalIDNumber": "1ebbd78f-8e90-4a82-8165-ef4a6c8ca760",
-        "country": "Pitcairn Islands",
-        "expiryDate": 20250727,
-        "publicAddress": "0xc1fb856b1bc8b351cb436bedf1faac7ee0e6851b"
+        "name": "Amos Ritchie I",
+        "birthDate": 20250718,
+        "nationalIDNumber": "2ab2cdc2-c214-460e-a016-403102677d93",
+        "country": "Bosnia and Herzegovina",
+        "expiryDate": 20250723,
+        "publicAddress": "0x93f5c8b0155ed2b547e89e3a1f20fc0fd0f41c7a"
       },
       "credentialStatus": {
-        "id": "https://hopeful-gastropod.info",
+        "id": "https://whole-promise.name",
         "type": "CredentialStatusList2021"
       }
     },
@@ -191,35 +191,35 @@
     "name": "Null Values",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "dd8b7da8-9492-46a9-9e1a-4d6768c49fc0",
+      "id": "6c311f55-146d-4f05-bf5a-05d55f0852da",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://courageous-ectoderm.com/"
+        "id": "https://minty-republican.com"
       },
-      "issuanceDate": "2025-06-09T15:47:48.563Z",
-      "expirationDate": "2025-10-31T12:48:17.088Z",
+      "issuanceDate": "2025-06-04T06:42:53.990Z",
+      "expirationDate": "2025-08-21T09:27:10.747Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "index",
-      "merklizationRootPosition": "index",
-      "version": 6499906908580486,
+      "merklizationRootPosition": "value",
+      "version": 4041528051841224,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:rStwOJDNO1RR0nN2kqdarC7wtx69GhAkhN57gn3LnT",
-        "name": "Grant Bahringer",
-        "birthDate": 20250717,
-        "nationalIDNumber": "b8c33557-e7f1-41db-8292-b55f572adacc",
+        "id": "did:receptor:redbelly:mainnet:n9du3Im0F2jGoEe9QvcdHZIU7FMqYBKiTvOxmSDuxt",
+        "name": "Kelly Okuneva",
+        "birthDate": 20250716,
+        "nationalIDNumber": "499a09f8-669e-48c3-a2e7-bec801bfff6a",
         "country": null,
-        "expiryDate": 20250728,
-        "publicAddress": "0x135a40aec0edbbf07794fb7b33b30e12be4c7cea"
+        "expiryDate": 20250726,
+        "publicAddress": "0x24256aae20a1c1daeb904a5ffb9c3ffd2a1732bd"
       },
       "credentialStatus": {
-        "id": "https://rubbery-coliseum.name",
+        "id": "https://profuse-fax.org/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -229,34 +229,34 @@
     "name": "Missing id",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "5e2c233a-307b-4e0c-a68e-b39e92d88ed6",
+      "id": "9d6cc177-1557-4f65-a44f-beecc4dcd9f6",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://political-dividend.info/"
+        "id": "https://failing-independence.com/"
       },
-      "issuanceDate": "2025-03-18T05:20:36.917Z",
-      "expirationDate": "2026-02-13T23:38:52.674Z",
+      "issuanceDate": "2025-01-15T23:36:57.199Z",
+      "expirationDate": "2026-04-18T18:27:11.027Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "index",
-      "version": 2221768831007960,
-      "updatable": true,
+      "subjectPosition": "index",
+      "merklizationRootPosition": "value",
+      "version": 1267353877821863,
+      "updatable": false,
       "credentialSubject": {
-        "name": "Marta Hermann",
-        "birthDate": 20250722,
-        "nationalIDNumber": "2e0943e3-dd9c-4c61-a939-dcfdd73c333e",
-        "country": "Mexico",
-        "expiryDate": 20250726,
-        "publicAddress": "0x8afbe92faf5af9cafcf886fc76eec7e56df68f70"
+        "name": "Mr. Simon Parisian",
+        "birthDate": 20250717,
+        "nationalIDNumber": "b5a53b27-bdbd-4b50-9dcd-64d4cd04abf8",
+        "country": "Slovenia",
+        "expiryDate": 20250725,
+        "publicAddress": "0xd64f01618cfaeaf0dca6d5dd33c90aaecadac7fd"
       },
       "credentialStatus": {
-        "id": "https://mild-bathrobe.net/",
+        "id": "https://enlightened-stall.biz/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -265,38 +265,38 @@
   {
     "name": "Leading/Trailing Spaces",
     "data": {
+      "credentialStatus": {
+        "id": "https://quarterly-perfection.biz",
+        "type": "CredentialStatusList2021"
+      },
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "a0262b3e-f512-447e-9635-c8811ee3f56a",
+      "id": "85c4e7c4-52b0-4c3d-a5a0-19f6fc9c8e3c",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://murky-fog.com"
+        "id": "https://neighboring-wilderness.name"
       },
-      "issuanceDate": "2025-07-19T03:03:39.285Z",
-      "expirationDate": "2025-08-23T10:21:53.915Z",
+      "issuanceDate": "2025-03-15T02:25:26.393Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "merklizationRootPosition": "index",
-      "version": 1122030477650644,
-      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:viZehus9RI0jV22lzTcA1o0dwuYkOTKFP4xml1vYvO",
-        "name": "Rickey Hegmann-Jenkins IV",
-        "birthDate": 20250715,
-        "nationalIDNumber": "13bae08b-6342-49d2-bc5f-b1d90f1f22c6",
+        "id": "did:receptor:redbelly:testnet:nkcHa5kGT6rgqbsY6TuH0NgiVfP83VBrJBoFoRidiU",
+        "name": "Dexter Hayes MD",
+        "birthDate": 20250722,
+        "nationalIDNumber": "5e710b44-0efa-4cff-b25b-7cb05d54173f",
         "country": " USA ",
-        "expiryDate": 20250726,
-        "publicAddress": "0xbe8ed9bee3d5de5eb585dad3fba0bfa6e8eecbea"
+        "expiryDate": 20250727,
+        "publicAddress": "0x0f165a8cff2fe774f8e9d5d5e7b0ea3ae5ceda7a"
       },
-      "credentialStatus": {
-        "id": "https://sentimental-adult.info",
-        "type": "CredentialStatusList2021"
-      }
+      "expirationDate": "2026-07-20T13:34:49.565Z",
+      "subjectPosition": "index",
+      "merklizationRootPosition": "value",
+      "version": 832995299178121,
+      "updatable": false
     },
     "expectedValid": false
   },
@@ -304,35 +304,35 @@
     "name": "Invalid credentialSubject.id: invalid string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "15a23bc0-2c91-4b87-98c6-2f1e705ce557",
+      "id": "bce41a0e-3f33-4819-be19-bbdf9f8f797e",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://wide-eyed-nougat.org"
+        "id": "https://purple-affiliate.com"
       },
-      "issuanceDate": "2025-01-01T23:53:01.223Z",
-      "expirationDate": "2026-03-05T20:46:19.156Z",
+      "issuanceDate": "2024-08-23T15:26:57.359Z",
+      "expirationDate": "2025-11-14T19:59:11.208Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "none",
-      "version": 6859081414617193,
+      "subjectPosition": "index",
+      "merklizationRootPosition": "value",
+      "version": 8561919794364728,
       "updatable": true,
       "credentialSubject": {
         "id": "did:In-valid string:redbelly",
-        "name": "Marcus Hansen",
-        "birthDate": 20250723,
-        "nationalIDNumber": "93fa7c54-a01f-4802-9af1-c6c8ae2d6321",
-        "country": "Angola",
-        "expiryDate": 20250724,
-        "publicAddress": "0xe698285c870be22d67ddea3bd34f0cd1e86c00ff"
+        "name": "Lorena Zboncak",
+        "birthDate": 20250719,
+        "nationalIDNumber": "f66621a5-bb50-4617-b777-647af4e27d1e",
+        "country": "Trinidad and Tobago",
+        "expiryDate": 20250728,
+        "publicAddress": "0xdc8a3c32adc54acc5f731e70fa01afafc7c514ab"
       },
       "credentialStatus": {
-        "id": "https://emotional-pinstripe.org/",
+        "id": "https://scared-emergent.name/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -342,35 +342,35 @@
     "name": "Invalid credentialSubject.id: empty string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "daaf8995-aab3-4f0e-94d0-aca29ead5027",
+      "id": "40505c4e-e654-4aaf-b873-9ed69dbaf73e",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://limited-community.name/"
+        "id": "https://sticky-dividend.org"
       },
-      "issuanceDate": "2025-03-16T20:33:55.741Z",
-      "expirationDate": "2026-02-14T04:49:02.709Z",
+      "issuanceDate": "2025-07-13T22:36:15.989Z",
+      "expirationDate": "2025-08-05T16:55:01.251Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "none",
-      "version": 1821109750954668,
-      "updatable": false,
+      "subjectPosition": "index",
+      "merklizationRootPosition": "value",
+      "version": 2235169633196593,
+      "updatable": true,
       "credentialSubject": {
         "id": "",
-        "name": "Andre Kuhlman",
+        "name": "Eric Dickinson-Nikolaus",
         "birthDate": 20250718,
-        "nationalIDNumber": "4d54450d-dec1-4a6a-af61-5f70534d5ecc",
-        "country": "Falkland Islands (Malvinas)",
-        "expiryDate": 20250726,
-        "publicAddress": "0x5baeeddbddefbaeb73ab5512f35ad02dd7aa79a0"
+        "nationalIDNumber": "68f0b56d-1bec-4bbe-9646-e846f760316f",
+        "country": "Greece",
+        "expiryDate": 20250727,
+        "publicAddress": "0x0dc869fd7cdea1a6f0b336fff4f40ff9dcdb44bc"
       },
       "credentialStatus": {
-        "id": "https://wealthy-omelet.biz",
+        "id": "https://lazy-piglet.info",
         "type": "CredentialStatusList2021"
       }
     },
@@ -380,37 +380,37 @@
     "name": "Invalid credentialSubject.name: empty",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "b45eb594-b6d6-4a60-b281-47540dcb231f",
+      "id": "2391d82c-2525-4a43-b365-f4a949c711b8",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://helpless-rust.com"
+        "id": "https://blue-analogy.net"
       },
-      "issuanceDate": "2024-11-03T23:54:09.576Z",
+      "issuanceDate": "2024-12-30T03:00:54.392Z",
+      "expirationDate": "2025-12-28T14:22:59.226Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
+      "subjectPosition": "none",
+      "merklizationRootPosition": "index",
+      "version": 5028590762338546,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:513YqIhZl8HXuIr2M0bQWnkHCov9dMKGT3jov8vw3X",
+        "id": "did:receptor:redbelly:testnet:R9DvYLx4QVEodIbXjESKC0DD80zxufDK44ImF2uFGA",
         "name": "",
-        "birthDate": 20250717,
-        "nationalIDNumber": "40da3b6f-3fcf-4e8a-9106-bc9491cf3a3e",
-        "country": "Haiti",
+        "birthDate": 20250719,
+        "nationalIDNumber": "566a5206-5acc-42a6-abc7-017e23bd1ff6",
+        "country": "Cocos (Keeling) Islands",
         "expiryDate": 20250726,
-        "publicAddress": "0xe6bbc6d786a50b670bea75ae6bb9fd85d2ab9afa"
+        "publicAddress": "0x1ad9198f690d224dbaedf41dfab848ac7e8b1bff"
       },
-      "expirationDate": "2026-06-14T13:41:27.049Z",
       "credentialStatus": {
-        "id": "https://youthful-behest.name/",
+        "id": "https://hefty-amendment.net/",
         "type": "CredentialStatusList2021"
-      },
-      "merklizationRootPosition": "none",
-      "version": 1919638810172778,
-      "updatable": false
+      }
     },
     "expectedValid": false
   },
@@ -418,37 +418,37 @@
     "name": "Invalid credentialSubject.nationalIDNumber: leading spaces",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "1ec2c62e-de19-4963-8b56-d4223b75e6b3",
+      "id": "8cc26d72-22f5-401b-9a6a-30a54fe3c8b1",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://back-depot.com/"
+        "id": "https://grouchy-kettledrum.net/"
       },
-      "issuanceDate": "2024-09-26T20:24:14.813Z",
-      "expirationDate": "2026-02-17T11:16:45.936Z",
+      "issuanceDate": "2024-12-15T14:11:20.632Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
-      "merklizationRootPosition": "index",
-      "version": 3262110265834590,
-      "updatable": true,
+      "version": 8484537046688981,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:ov5sWxn3wUYNCbXxYDQ5RsZadNTHuuC4xWmqDnl0JX",
-        "name": "Tracey Predovic",
-        "birthDate": 20250714,
+        "id": "did:receptor:redbelly:testnet:PhWR2Hp2Q94CopQNyyTlEl3KihFeyh6b1KcZ7LXxLr",
+        "name": "Beatrice Anderson",
+        "birthDate": 20250715,
         "nationalIDNumber": " QWER12345",
-        "country": "Madagascar",
+        "country": "South Africa",
         "expiryDate": 20250723,
-        "publicAddress": "0x4f0c3e07cafd515ea21b5ea9fce211adecd6bcb9"
+        "publicAddress": "0x7ba8bf1743ad1dfe73cff3afa6dd00fbbecb4f0e"
       },
+      "expirationDate": "2026-07-17T02:56:57.793Z",
       "credentialStatus": {
-        "id": "https://icy-unibody.biz/",
+        "id": "https://light-underpants.info/",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "value"
     },
     "expectedValid": false
   },
@@ -456,37 +456,37 @@
     "name": "Invalid credentialSubject.nationalIDNumber: trailing spaces",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "970c3cf8-a3ac-4f2f-b2cb-7a4db54dbc9c",
+      "id": "9a08ffff-2f61-4833-89ef-f859293dd80c",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://unlined-wriggler.com"
+        "id": "https://suburban-kinase.org"
       },
-      "issuanceDate": "2025-05-12T13:23:45.297Z",
+      "issuanceDate": "2025-03-01T23:03:07.299Z",
+      "expirationDate": "2025-11-29T12:31:36.072Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "version": 598684469955218,
-      "updatable": false,
-      "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:sGXfczroLpSethp45LgDVVmNjHW3BUcrSTaIJ6TQNJ",
-        "name": "Caroline Welch",
-        "birthDate": 20250717,
-        "nationalIDNumber": "QWER12345 ",
-        "country": "Guinea",
-        "expiryDate": 20250724,
-        "publicAddress": "0xadbfa80adc8cccbe0ea86c60c4457e2ff3f71bcd"
-      },
-      "expirationDate": "2026-02-10T03:57:50.685Z",
-      "credentialStatus": {
-        "id": "https://immense-bookend.biz/",
-        "type": "CredentialStatusList2021"
-      },
       "subjectPosition": "none",
-      "merklizationRootPosition": "index"
+      "merklizationRootPosition": "index",
+      "version": 3707657303544832,
+      "updatable": true,
+      "credentialSubject": {
+        "id": "did:receptor:redbelly:testnet:8jM1MH1yKhBRri0kWOjZp2uyJc34bLAWn93fNvDILy",
+        "name": "Micheal Green",
+        "birthDate": 20250718,
+        "nationalIDNumber": "QWER12345 ",
+        "country": "Iceland",
+        "expiryDate": 20250725,
+        "publicAddress": "0xe7eb89fccf6fab738bbbe6a06662c8b2a9efa4df"
+      },
+      "credentialStatus": {
+        "id": "https://live-negotiation.info/",
+        "type": "CredentialStatusList2021"
+      }
     },
     "expectedValid": false
   },
@@ -494,37 +494,37 @@
     "name": "Invalid credentialSubject.nationalIDNumber: empty string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "74e402ab-7445-4f9c-bf52-dea3f74ea938",
+      "id": "989425ef-5099-42e4-80b9-19b6de67fc4f",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://short-term-haversack.name"
+        "id": "https://burly-tomatillo.org"
       },
-      "issuanceDate": "2024-08-08T05:37:04.707Z",
+      "issuanceDate": "2025-06-01T14:56:28.715Z",
+      "expirationDate": "2026-05-28T13:09:50.818Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "merklizationRootPosition": "value",
-      "version": 6663965831145473,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:0lAPPMjV4KdCcjEkAC3HzJJOCTnE5UiWnmdfJZCIY0",
-        "name": "Adrian Bosco-Gusikowski",
+        "id": "did:receptor:redbelly:testnet:SQ7flYEASgJ9c6LvkPufAsD4ou7YMNF5RZjvah8MOK",
+        "name": "Dr. Blake Breitenberg Sr.",
         "birthDate": 20250718,
         "nationalIDNumber": "",
-        "country": "Pakistan",
-        "expiryDate": 20250724,
-        "publicAddress": "0xb17adfb7eaba1b33db8db2cc1ba4a188bc342fbb"
+        "country": "Spain",
+        "expiryDate": 20250726,
+        "publicAddress": "0xdaaa99b8f345a4c4d198ca6f1846b3cb1150f831"
       },
-      "expirationDate": "2025-09-07T15:41:19.115Z",
       "credentialStatus": {
-        "id": "https://baggy-piglet.org",
+        "id": "https://petty-hutch.net",
         "type": "CredentialStatusList2021"
       },
-      "subjectPosition": "value",
-      "updatable": true
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "version": 1669987085426002
     },
     "expectedValid": false
   },
@@ -532,37 +532,37 @@
     "name": "Invalid credentialSubject.nationalIDNumber: spaces in between",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "9a564363-213f-47ce-a8b4-f44ac48cc8bc",
+      "id": "76de582e-6fc3-4a16-9a8e-dd90638e1c71",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://disloyal-formation.org"
+        "id": "https://rusty-ravioli.com"
       },
-      "issuanceDate": "2024-08-09T00:23:41.416Z",
-      "expirationDate": "2025-10-14T01:37:06.971Z",
+      "issuanceDate": "2024-11-26T17:06:09.665Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "index",
-      "version": 2744802123520261,
-      "updatable": false,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:8YxWQkLlRFkBusU9l9V6Uj4cZZvqOjZqqfuQYqzNKr",
-        "name": "Dr. Angelo Okuneva",
-        "birthDate": 20250721,
+        "id": "did:receptor:redbelly:mainnet:4qK5cMQNNXWxxUJeLEC3sE1pWgrPSfniOUUHtjw2Mz",
+        "name": "Billy Reilly",
+        "birthDate": 20250714,
         "nationalIDNumber": "QWER 12345",
-        "country": "Nepal",
+        "country": "Republic of Korea",
         "expiryDate": 20250725,
-        "publicAddress": "0xb01bcf7cb8ee25ef96a72c97c5dfeef76e1c09c9"
+        "publicAddress": "0xd57e1877a047d90b077b97eaef93537678dfffd4"
       },
+      "expirationDate": "2026-04-24T13:09:25.278Z",
       "credentialStatus": {
-        "id": "https://greedy-obedience.name",
+        "id": "https://colossal-making.com/",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "subjectPosition": "value",
+      "merklizationRootPosition": "index",
+      "version": 6548862576256733
     },
     "expectedValid": false
   },
@@ -570,35 +570,35 @@
     "name": "Invalid credentialSubject.country: spaces in between",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "b670833d-bd90-40dc-967a-4d3cc63b82da",
+      "id": "834195c0-5cbe-419d-a3b7-116edbcbc9ef",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://obvious-legging.org/"
+        "id": "https://silver-characterization.biz/"
       },
-      "issuanceDate": "2024-09-06T05:49:39.077Z",
-      "expirationDate": "2026-07-15T15:28:36.395Z",
+      "issuanceDate": "2024-09-28T08:04:49.086Z",
+      "expirationDate": "2025-09-17T12:07:56.983Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
+      "subjectPosition": "none",
       "merklizationRootPosition": "none",
-      "version": 7668966584461698,
-      "updatable": true,
+      "version": 2212348002693019,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:JqkiwML9gRauS9ySanuvnVHt7mA3cjTMhVFDpb3wi9",
-        "name": "Terence Schiller",
-        "birthDate": 20250716,
-        "nationalIDNumber": "5edb6934-a351-493c-91e5-1706face14f1",
+        "id": "did:receptor:redbelly:mainnet:yNNgTPwhB2AGuG3phq0CHjcX4MMkDU4InpMu7wmN7w",
+        "name": "Alex Nitzsche",
+        "birthDate": 20250723,
+        "nationalIDNumber": "a92dfd13-4152-4733-9224-7c9414ab7a7b",
         "country": "Martha's vineyard",
-        "expiryDate": 20250725,
-        "publicAddress": "0x3a9eeedd2eb4e2097c5bc7d7190de9d5ebfc5eca"
+        "expiryDate": 20250724,
+        "publicAddress": "0xd1c5cd29d8b1e6c63ce9e2ed4fd1fc8dd78ff6a4"
       },
       "credentialStatus": {
-        "id": "https://rectangular-detective.com/",
+        "id": "https://frightened-apparatus.name/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -608,35 +608,35 @@
     "name": "Invalid credentialSubject.country: empty string",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "f18c8610-02fa-4409-b335-59a035b8e8c8",
+      "id": "ced538c6-cb59-4498-856d-c3cfe11f7c9f",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://tired-co-producer.name/"
+        "id": "https://fruitful-vanadyl.info/"
       },
-      "issuanceDate": "2024-08-24T06:14:10.325Z",
-      "expirationDate": "2025-09-01T15:37:54.284Z",
+      "issuanceDate": "2025-03-21T04:13:27.336Z",
+      "expirationDate": "2026-03-24T07:11:56.369Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "index",
       "merklizationRootPosition": "value",
-      "version": 2928250325392842,
-      "updatable": false,
+      "version": 4405133277117980,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:CSyo8FitD63j7gYnE5Qn17rNzMyYYX0x02gMgRqQaT",
-        "name": "Frankie Schimmel",
-        "birthDate": 20250713,
-        "nationalIDNumber": "53520614-de95-4ae4-a68b-ee7e1ba9a726",
+        "id": "did:receptor:redbelly:mainnet:wlfEimZr8ll3BfBIPpkcjovQJVA41OZjrwV2D0lIfr",
+        "name": "Angelina Gusikowski",
+        "birthDate": 20250717,
+        "nationalIDNumber": "d4d755cf-5ba4-4a58-bd04-e00633ba1aae",
         "country": "",
-        "expiryDate": 20250725,
-        "publicAddress": "0x1e4b255f7ac908ea5d93b6a2d47de54a3bc0adfd"
+        "expiryDate": 20250724,
+        "publicAddress": "0xcf52cfaa47bdfb5e4b3cc0c2befaa134f14f3fd2"
       },
       "credentialStatus": {
-        "id": "https://oddball-quinoa.com/",
+        "id": "https://remorseful-typeface.net",
         "type": "CredentialStatusList2021"
       }
     },
@@ -646,37 +646,37 @@
     "name": "Invalid credentialSubject.country: trailing space",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "6d338ddf-e6ca-4e9b-b0fd-2c22388e801a",
+      "id": "cc126361-25a5-4c42-aa40-c0a3a5ec22d5",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://mean-awareness.org"
+        "id": "https://chilly-place.biz/"
       },
-      "issuanceDate": "2025-04-18T19:39:33.635Z",
-      "expirationDate": "2025-10-24T13:04:11.892Z",
+      "issuanceDate": "2024-08-30T07:20:14.714Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
       "merklizationRootPosition": "value",
-      "version": 586420572921163,
-      "updatable": false,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:z77HoJLg88ctMzioXCbwr77S7llC6QgKWKrH87A5De",
-        "name": "Oliver Lindgren",
-        "birthDate": 20250720,
-        "nationalIDNumber": "c31c9d71-19e9-464e-9e50-b85a123d2ff3",
+        "id": "did:receptor:redbelly:mainnet:qFcdt4MiDK509Rr1Jq73ZmHsfnSCEIDjRotyMVMoDJ",
+        "name": "Eva Stamm",
+        "birthDate": 20250714,
+        "nationalIDNumber": "7abb0622-0904-4ba3-8b40-cd8154bbbc4e",
         "country": "CA ",
-        "expiryDate": 20250725,
-        "publicAddress": "0xfc9ef0ab23c1ecdeb5f19736b0ebf4a434ec8a28"
+        "expiryDate": 20250727,
+        "publicAddress": "0xd3d8eb9ff5ea029cc1c7fe0e0b64b3ff7bd7cecb"
       },
+      "expirationDate": "2025-11-04T21:32:12.131Z",
       "credentialStatus": {
-        "id": "https://infamous-slime.name/",
+        "id": "https://defenseless-swim.net",
         "type": "CredentialStatusList2021"
-      }
+      },
+      "subjectPosition": "none",
+      "version": 5089599969023066
     },
     "expectedValid": false
   },
@@ -684,35 +684,35 @@
     "name": "Invalid credentialSubject.country: leading space",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "5f6b1779-6601-487d-a53c-aaaeee84dc95",
+      "id": "be9f44e7-3579-4e96-804a-51768314113a",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://short-term-midwife.org"
+        "id": "https://illiterate-lawmaker.net"
       },
-      "issuanceDate": "2024-11-29T06:04:22.366Z",
-      "expirationDate": "2026-05-16T22:39:25.710Z",
+      "issuanceDate": "2024-10-07T23:08:11.445Z",
+      "expirationDate": "2025-12-25T17:48:54.029Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "value",
-      "version": 6586346013863211,
+      "subjectPosition": "value",
+      "merklizationRootPosition": "index",
+      "version": 8766203409709978,
       "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:i4tymWHH5rtUQ3pix56gfLTDBNcJOcfwOI3Dq8mxk9",
-        "name": "Mr. Ted Howe I",
+        "id": "did:receptor:redbelly:mainnet:75fxrX9viIhnkD2RfrxwxK25tftbIqc0oYmekxDekj",
+        "name": "Viola Koelpin III",
         "birthDate": 20250719,
-        "nationalIDNumber": "6d9df65b-09df-46f2-8413-ac5ad66d93d5",
+        "nationalIDNumber": "f4ac1296-0c27-4ce8-9516-5ceb81e9777f",
         "country": " California",
-        "expiryDate": 20250724,
-        "publicAddress": "0x5d78f1b6da8fee02f4ff1f510cbaf7feb54beb3a"
+        "expiryDate": 20250723,
+        "publicAddress": "0x7eacc1faf2631a321641ecf04ed8157dafede29a"
       },
       "credentialStatus": {
-        "id": "https://flowery-pharmacopoeia.net",
+        "id": "https://uniform-cake.name",
         "type": "CredentialStatusList2021"
       }
     },
@@ -722,35 +722,35 @@
     "name": "Invalid credentialSubject.country: hyphen not allowed",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "cf00f4e3-2940-4467-9f69-e9b923889ae1",
+      "id": "ddb51436-57bb-450d-bdaf-40e611f3ff47",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://favorable-chasuble.info"
+        "id": "https://wrathful-commercial.net/"
       },
-      "issuanceDate": "2024-12-01T22:10:53.662Z",
-      "expirationDate": "2025-11-04T13:39:24.051Z",
+      "issuanceDate": "2025-03-11T02:36:43.199Z",
+      "expirationDate": "2026-07-04T12:14:58.542Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
+      "subjectPosition": "value",
       "merklizationRootPosition": "none",
-      "version": 8720515295783096,
+      "version": 6400541064158408,
       "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:LtVrYz1H77DTpEbVz0oiB7o6h84iFfRumRaMP9yzfU",
-        "name": "Iris Glover MD",
-        "birthDate": 20250720,
-        "nationalIDNumber": "fc9d263a-b407-451d-a197-457ed6071d7c",
+        "id": "did:receptor:redbelly:mainnet:p7ouTTFxgTQw3GBe0y8qMy0a1Fp8bWxj3gcRXimbmO",
+        "name": "Juanita Legros",
+        "birthDate": 20250717,
+        "nationalIDNumber": "51b5ed8c-b1bb-4147-bf3f-76b1ef62e977",
         "country": "New-York",
-        "expiryDate": 20250724,
-        "publicAddress": "0x6ceeaa1bf54aec5defff81eaa28ccfc0aff7c243"
+        "expiryDate": 20250726,
+        "publicAddress": "0x9aacddecc21b2a8f3a935bf48a10c2acd21de711"
       },
       "credentialStatus": {
-        "id": "https://sugary-programme.biz/",
+        "id": "https://unaware-shadowbox.name",
         "type": "CredentialStatusList2021"
       }
     },
@@ -759,38 +759,38 @@
   {
     "name": "Invalid credentialSubject.country: numbers not allowed",
     "data": {
+      "credentialStatus": {
+        "id": "https://cheerful-smoke.biz/",
+        "type": "CredentialStatusList2021"
+      },
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "b5613586-599c-4123-9714-a33c0ae378ad",
+      "id": "4d93b4fe-81f9-408a-80be-f5414caeffc6",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://soft-giggle.net/"
+        "id": "https://acclaimed-meal.net/"
       },
-      "issuanceDate": "2025-01-01T16:10:32.397Z",
-      "expirationDate": "2026-06-17T15:00:21.303Z",
+      "issuanceDate": "2025-04-11T09:07:40.641Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "index",
-      "merklizationRootPosition": "value",
-      "version": 4582398770813793,
-      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:29ty1wdsKBeq0XpGh5djuHaLLM4UdEf3ukBXg4GHEm",
-        "name": "Tammy Bogisich",
-        "birthDate": 20250719,
-        "nationalIDNumber": "7f95e2b2-5b25-4818-b178-5bc1837ac1a2",
+        "id": "did:receptor:redbelly:testnet:rsfcHixf7YjpvPjXSzE5XuKxvWsrgwKSyNZbG4gxtR",
+        "name": "Jody Nicolas",
+        "birthDate": 20250714,
+        "nationalIDNumber": "2596b502-1275-48f7-bde1-bf54d2e02fbd",
         "country": "1234",
-        "expiryDate": 20250724,
-        "publicAddress": "0x8eafef1997ae694bc7ef33c8d2b40dc6b0effaaa"
+        "expiryDate": 20250723,
+        "publicAddress": "0xde15fdb7ece1725afac1bbc2714ff63bbeb7ea1f"
       },
-      "credentialStatus": {
-        "id": "https://happy-go-lucky-space.biz",
-        "type": "CredentialStatusList2021"
-      }
+      "expirationDate": "2026-01-08T14:24:48.362Z",
+      "subjectPosition": "value",
+      "merklizationRootPosition": "none",
+      "version": 265809321307091,
+      "updatable": true
     },
     "expectedValid": false
   },
@@ -798,35 +798,35 @@
     "name": "Invalid birthDate: Too short",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "d6546153-1109-4876-8fd0-a39d9817198e",
+      "id": "2c8864a4-5ecb-4c05-9dda-da43f67fd6ed",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://salty-priesthood.org/"
+        "id": "https://these-apparatus.net/"
       },
-      "issuanceDate": "2024-08-14T18:25:21.449Z",
-      "expirationDate": "2026-06-03T10:34:59.993Z",
+      "issuanceDate": "2024-08-01T20:36:51.223Z",
+      "expirationDate": "2026-04-28T22:38:50.761Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "index",
       "merklizationRootPosition": "value",
-      "version": 1534702054772400,
-      "updatable": false,
+      "version": 3142906014169900,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:uLhAGc5WfEJKXYcl8pkQJJEffsKKxb6drKmEZKWwyg",
-        "name": "Dallas Upton",
+        "id": "did:receptor:redbelly:mainnet:qkZButWaIF2A0m0wKbu3MZCqHLBnLJ1nUisudACypa",
+        "name": "Gustavo Spencer",
         "birthDate": 10101,
-        "nationalIDNumber": "e176834f-5529-4530-a024-8231f0261c14",
-        "country": "Lebanon",
-        "expiryDate": 20250726,
-        "publicAddress": "0xefc0d8873ef36f2e54edede3be6b462e2bdaa230"
+        "nationalIDNumber": "f5740571-3f30-41e6-9919-4194d56dcac0",
+        "country": "Turks and Caicos Islands",
+        "expiryDate": 20250724,
+        "publicAddress": "0x027ed238bca3ebdfbeadfffed8cc30ee4aa39763"
       },
       "credentialStatus": {
-        "id": "https://pink-ownership.com/",
+        "id": "https://experienced-trolley.info/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -836,35 +836,35 @@
     "name": "Invalid birthDate: Too long",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "eba45d00-96f3-47e6-8b0a-23c89953ba96",
+      "id": "c864dc4d-b9ea-429f-8a43-8657793f3323",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://passionate-mousse.com"
+        "id": "https://fair-bench.org/"
       },
-      "issuanceDate": "2025-02-25T12:42:56.897Z",
-      "expirationDate": "2025-09-06T15:34:49.665Z",
+      "issuanceDate": "2025-02-27T05:56:08.997Z",
+      "expirationDate": "2025-08-11T13:29:29.352Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
       "subjectPosition": "value",
-      "merklizationRootPosition": "none",
-      "version": 4183715209600474,
+      "merklizationRootPosition": "index",
+      "version": 2932470933408965,
       "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:PZOxjNx9X4ttFpZiFLcyJ9wrgmWE3mDkujMtEPIw5V",
-        "name": "Nora Terry DDS",
+        "id": "did:receptor:redbelly:mainnet:eULBWrk29Z5k1EOTHLv75yEq6qtMUJ5S1vbHwzv1dg",
+        "name": "Alberta Kutch",
         "birthDate": 199901011,
-        "nationalIDNumber": "601d5307-df49-4c9f-8e42-9c4e55d47627",
-        "country": "United States of America",
-        "expiryDate": 20250724,
-        "publicAddress": "0xe6b81ac55ee0eb97ca71da86b65abaa8861ce254"
+        "nationalIDNumber": "e6baa0d0-c5be-4367-9a10-83e8b9e8b43f",
+        "country": "Monaco",
+        "expiryDate": 20250727,
+        "publicAddress": "0xa6d7ddce259e1eedcead3e7bfe094bafe12d61dc"
       },
       "credentialStatus": {
-        "id": "https://last-orchid.com",
+        "id": "https://polite-bran.com",
         "type": "CredentialStatusList2021"
       }
     },
@@ -874,75 +874,75 @@
     "name": "Invalid publicAddress: Too short",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "da9c0604-cbce-4cb1-9234-f72e420dc523",
+      "id": "148ea966-6e6d-4c63-9b21-7fc518a75d3f",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://unfortunate-unit.com/"
+        "id": "https://every-gloom.info/"
       },
-      "issuanceDate": "2025-01-20T12:23:17.318Z",
+      "issuanceDate": "2025-04-05T17:54:34.748Z",
+      "expirationDate": "2025-11-19T11:29:21.605Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
+      "subjectPosition": "value",
       "merklizationRootPosition": "index",
-      "version": 1098624384122925,
-      "updatable": true,
+      "version": 4592955179758446,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:GREy17hJfx29SVjpaFPf3p9KIj43dpXboAx5w7qhpV",
-        "name": "Sophie Boyle-Baumbach",
-        "birthDate": 20250723,
-        "nationalIDNumber": "bec71e8d-9bcb-4d87-a019-dcb1a3e439e4",
-        "country": "Andorra",
-        "expiryDate": 20250727,
+        "id": "did:receptor:redbelly:testnet:cCBJQ4CFPrQevunAHmSCY6TG4nEdSy7ioO3l1oPOiv",
+        "name": "Mr. Horace Lehner",
+        "birthDate": 20250717,
+        "nationalIDNumber": "31fdec96-032c-466f-b13a-b5481af3e0a5",
+        "country": "Italy",
+        "expiryDate": 20250726,
         "publicAddress": "0x123"
       },
-      "expirationDate": "2026-05-15T10:16:01.683Z",
       "credentialStatus": {
-        "id": "https://alert-battle.net/",
+        "id": "https://trim-kiss.com",
         "type": "CredentialStatusList2021"
-      },
-      "subjectPosition": "none"
+      }
     },
     "expectedValid": false
   },
   {
     "name": "Invalid publicAddress: Contains non-hex characters",
     "data": {
-      "credentialStatus": {
-        "id": "https://twin-straw.biz/",
-        "type": "CredentialStatusList2021"
-      },
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "d9721ce7-b60a-4f93-9fdb-d869a4712ac3",
+      "id": "138b6b63-b0b8-4569-accc-bbdf62d347e3",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://whopping-clavicle.com/"
+        "id": "https://left-place.name"
       },
-      "issuanceDate": "2024-08-27T00:09:41.132Z",
+      "issuanceDate": "2024-09-14T20:53:50.883Z",
+      "expirationDate": "2025-10-09T21:12:25.255Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
+      "subjectPosition": "none",
+      "merklizationRootPosition": "value",
+      "version": 8344931675964213,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:testnet:9apoNw4oVARn2WbOjcgyDZqSBNLekHIwkiSsQvLcY5",
-        "name": "Roosevelt Walker-Ryan",
-        "birthDate": 20250717,
-        "nationalIDNumber": "20d63fb4-0ea7-4e2c-9162-fb5240957ad6",
-        "country": "Nigeria",
-        "expiryDate": 20250726,
+        "id": "did:receptor:redbelly:testnet:C8b61oxsvv93NIQIMhUvZXST26Qv7SfHcTKHuI9TEM",
+        "name": "Roger Reichel",
+        "birthDate": 20250714,
+        "nationalIDNumber": "c4807a74-d6b0-458e-b49d-5c01045883f5",
+        "country": "Grenada",
+        "expiryDate": 20250723,
         "publicAddress": "0xGHIJKL7890abcdef1234567890abcdef12345678"
       },
-      "expirationDate": "2026-04-26T18:30:56.587Z",
-      "subjectPosition": "none",
-      "merklizationRootPosition": "index",
-      "version": 1179774700914603,
-      "updatable": true
+      "credentialStatus": {
+        "id": "https://internal-lox.name/",
+        "type": "CredentialStatusList2021"
+      }
     },
     "expectedValid": false
   },
@@ -950,35 +950,35 @@
     "name": "Invalid publicAddress: Missing 0x prefix",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "28e70352-dfa5-411c-9dc0-258dc31c501f",
+      "id": "a5d49038-cd0d-4c2f-a965-d770166cce91",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://warm-waterspout.info"
+        "id": "https://interesting-incandescence.com"
       },
-      "issuanceDate": "2025-07-18T19:01:37.307Z",
-      "expirationDate": "2025-10-12T14:18:07.854Z",
+      "issuanceDate": "2024-08-14T20:28:36.313Z",
+      "expirationDate": "2025-08-02T04:18:53.967Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
+      "subjectPosition": "none",
       "merklizationRootPosition": "index",
-      "version": 8768496861936623,
-      "updatable": true,
+      "version": 7285632132840260,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:2l8DvDekwXM4tvqO3100IbugvBHmMd7Sz8tR1194z7",
-        "name": "Mattie Reinger III",
+        "id": "did:receptor:redbelly:mainnet:Okj1SlNAR7e0X4e6l7QWYsO9bTseGDojo9thuScRGX",
+        "name": "Marilyn Langosh",
         "birthDate": 20250721,
-        "nationalIDNumber": "65a8f0ff-2414-4c61-9012-d2c1d234e1b9",
-        "country": "Turks and Caicos Islands",
+        "nationalIDNumber": "73d024fb-7d27-4374-a418-4fd055764ee1",
+        "country": "Saint Martin",
         "expiryDate": 20250727,
         "publicAddress": "1234567890abcdef1234567890abcdef12345678"
       },
       "credentialStatus": {
-        "id": "https://ultimate-derby.biz/",
+        "id": "https://voluminous-galoshes.biz/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -988,35 +988,35 @@
     "name": "Invalid publicAddress: Uppercase 0X prefix",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "1f862228-ab22-4c18-bd1a-989567ddd790",
+      "id": "e87a561a-9b42-433b-a2c9-35eb9a16e535",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://legal-backbone.com/"
+        "id": "https://fearless-hydrant.biz/"
       },
-      "issuanceDate": "2024-08-10T04:05:55.990Z",
-      "expirationDate": "2025-08-11T17:22:05.454Z",
+      "issuanceDate": "2024-11-18T06:27:02.684Z",
+      "expirationDate": "2025-10-31T07:34:14.260Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "none",
-      "merklizationRootPosition": "none",
-      "version": 5938158404791005,
-      "updatable": false,
+      "subjectPosition": "index",
+      "merklizationRootPosition": "index",
+      "version": 6518825115904881,
+      "updatable": true,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:YNVND2SaWklyX4ZGefB5pgsjVLZvTYeHEL6uYN6Scu",
-        "name": "Sally Lindgren",
-        "birthDate": 20250715,
-        "nationalIDNumber": "94ac998b-995c-4804-bc97-b5ad0d2f4fcc",
-        "country": "Wallis and Futuna",
-        "expiryDate": 20250727,
+        "id": "did:receptor:redbelly:mainnet:c0nvk6cVmz2UvpmiVbgjKvkArAFqFuNC7atwn8L2Fc",
+        "name": "Julia Kirlin",
+        "birthDate": 20250719,
+        "nationalIDNumber": "eb43c893-9dfd-4aa5-8479-9ce7ca9ba6d3",
+        "country": "Martinique",
+        "expiryDate": 20250723,
         "publicAddress": "0XABCDEF1234567890ABCDEF1234567890ABCDEF12"
       },
       "credentialStatus": {
-        "id": "https://lucky-horst.com/",
+        "id": "https://glittering-exasperation.biz/",
         "type": "CredentialStatusList2021"
       }
     },
@@ -1026,35 +1026,35 @@
     "name": "Valid publicAddress: Mixed case (allowed in Ethereum)",
     "data": {
       "@context": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld",
-      "id": "1911b114-161e-4e09-b9df-ebf1470f2143",
+      "id": "30af08e6-4b96-49ce-b4ba-536fce6f2f49",
       "type": [
         "VerifiableCredential",
-        "National ID"
+        "NationalID"
       ],
       "issuer": {
-        "id": "https://insecure-shoulder.name"
+        "id": "https://indolent-switchboard.org/"
       },
-      "issuanceDate": "2025-01-08T15:26:32.018Z",
-      "expirationDate": "2026-07-07T20:13:53.378Z",
+      "issuanceDate": "2024-10-12T22:11:42.129Z",
+      "expirationDate": "2026-04-07T23:28:21.048Z",
       "credentialSchema": {
         "id": "https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json/NationalID.json",
         "type": "JsonSchemaValidator2018"
       },
-      "subjectPosition": "value",
+      "subjectPosition": "index",
       "merklizationRootPosition": "value",
-      "version": 8485675946980503,
-      "updatable": true,
+      "version": 8081549138886974,
+      "updatable": false,
       "credentialSubject": {
-        "id": "did:receptor:redbelly:mainnet:uCzosV63nOezwAEqzR3ZUpRvHR6txqyoojfoKrLGbn",
-        "name": "Jon Schneider PhD",
-        "birthDate": 20250722,
-        "nationalIDNumber": "731fb5f2-a9a2-4dfd-b304-1b7d96384208",
-        "country": "Cameroon",
-        "expiryDate": 20250723,
+        "id": "did:receptor:redbelly:mainnet:vgIpn4wXY4T8W1Xt3ZboTWrCHw9uBjjoplGk31Avnk",
+        "name": "Jean Kub-Considine",
+        "birthDate": 20250718,
+        "nationalIDNumber": "5ae44a8d-e796-4a33-bdb4-5530688fe535",
+        "country": "Cook Islands",
+        "expiryDate": 20250725,
         "publicAddress": "0xAbCdEf1234567890ABCDEF1234567890abcdef12"
       },
       "credentialStatus": {
-        "id": "https://memorable-pecan.info/",
+        "id": "https://sunny-developing.org/",
         "type": "CredentialStatusList2021"
       }
     },

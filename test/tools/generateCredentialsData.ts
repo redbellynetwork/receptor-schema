@@ -98,7 +98,7 @@ function generateDriversLicenceCredential(callback?: (data: any) => void): any {
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/DriversLicence.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'Drivers Licence'];
+  data.type = ['VerifiableCredential', 'DriversLicence'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
@@ -147,7 +147,7 @@ function generateEssentialIDCredential(callback?: (data: any) => void): any {
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/EssentialID.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'Essential ID'];
+  data.type = ['VerifiableCredential', 'EssentialID'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
@@ -201,7 +201,7 @@ function generateNationalIdCredential(callback?: (data: any) => void): any {
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/NationalID.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'National ID'];
+  data.type = ['VerifiableCredential', 'NationalID'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
@@ -296,7 +296,7 @@ function generateOptimaV1Credential(callback?: (data: any) => void): any {
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/OptimaV1.jsonld',
   ];
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'Optima V1'];
+  data.type = ['VerifiableCredential', 'OptimaV1'];
   data.validFrom = faker.date.past().toISOString();
   data.validUntil = faker.date.future().toISOString();
   data.issuer = faker.internet.url();
@@ -321,7 +321,7 @@ function generateProofOfAddressCredential(callback?: (data: any) => void): any {
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/ProofOfAddress.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'Proof of Address'];
+  data.type = ['VerifiableCredential', 'ProofOfAddress'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
@@ -377,7 +377,7 @@ function generateWholesaleInvestorCredentials(
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestor.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'AU Sophisticated Wholesale Investor'];
+  data.type = ['VerifiableCredential', 'AUSophisticatedWholesaleInvestor'];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };
