@@ -12,6 +12,7 @@
   "required": [
     "@context",
     "id",
+    "title",
     "type",
     "issuer",
     "issuanceDate",
