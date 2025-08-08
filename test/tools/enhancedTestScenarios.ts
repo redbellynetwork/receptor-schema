@@ -65,7 +65,7 @@ function generateEnhancedIDCredential(callback?: (data: any) => void): any {
 
 export const enhancedTestScenarios = [
   {
-    name: 'Valid Essential ID',
+    name: 'Valid Enhanced ID',
     data: generateEnhancedIDCredential(),
     expectedValid: true,
   },
