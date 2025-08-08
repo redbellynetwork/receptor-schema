@@ -3,6 +3,7 @@ import path from 'path';
 
 import { dLTestScenarios } from './driverLicenseTestScenarios';
 import { essentialTestScenarios } from './essentialIdTestScenarios';
+import { enhancedTestScenarios } from './enhancedTestScenarios';
 import { nationalIdTestScenarios } from './nationalIdTestScenarios';
 import { amlCtfTestScenarios } from './amlctfTestScenarios';
 import { passportTestScenarios } from './passportTestScenarios';
@@ -15,6 +16,7 @@ const testObject = {
   DriversLicenceCredential: dLTestScenarios,
   NationalIdCredential: nationalIdTestScenarios,
   EssentialIdCredential: essentialTestScenarios,
+  EnhancedIdCredential: enhancedTestScenarios,
   PassportCredential: passportTestScenarios,
   OptimaV1Credential: optimaV1TestScenarios,
   ProofOfAddressCredential: proofOfAddressTestScenarios,
