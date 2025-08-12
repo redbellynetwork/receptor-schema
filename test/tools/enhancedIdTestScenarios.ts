@@ -63,7 +63,7 @@ function generateEnhancedIDCredential(callback?: (data: any) => void): any {
   return data;
 }
 
-export const enhancedTestScenarios = [
+export const enhancedIdTestScenarios = [
   {
     name: 'Valid Enhanced ID',
     data: generateEnhancedIDCredential(),
