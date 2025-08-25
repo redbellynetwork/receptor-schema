@@ -16,7 +16,6 @@
 - NationalIdCredential
 - PassportCredential
 - OptimaV1Credential
-- KYC1By1Credential
 - WholesaleInvestorCredential
 
 # To Create test cases :-
