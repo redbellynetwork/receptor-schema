@@ -9,7 +9,7 @@
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "jest": "^29.7.0",
-    "json-schema-faker": "^0.5.8",
+    "json-schema-faker": "^0.5.9",
     "prettier": "^3.4.2",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.1",
