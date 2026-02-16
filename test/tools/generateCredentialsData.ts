@@ -11,9 +11,11 @@ import { passportTestScenarios } from './passportTestScenarios';
 import { optimaV1TestScenarios } from './optimaTestSecenarios';
 import { proofOfAddressTestScenarios } from './poaTestScenarios';
 import { wholesaleInvestorTestScenarios } from './wholesalesTestScenarios';
+import { beneficiariesTestScenarios } from './beneficiariesTestScenarios';
 
 const testObject = {
   AMLCTFCredential: amlCtfTestScenarios,
+  BeneficiariesCredential: beneficiariesTestScenarios,
   DriversLicenceCredential: dLTestScenarios,
   NationalIdCredential: nationalIdTestScenarios,
   EssentialIdCredential: essentialTestScenarios,
