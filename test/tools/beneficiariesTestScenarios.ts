@@ -41,17 +41,12 @@ function generateBeneficiariesCredential(
   data.version = faker.number.int();
   data.updatable = faker.datatype.boolean();
 
-  // Generate valid beneficiaries array
-  const beneficiaryTypes = ['ubo', 'shareholder', 'director', 'beneficialOwner'];
   const numBeneficiaries = faker.number.int({ min: 1, max: 5 });
-
   data.credentialSubject = {
     id: did,
-    beneficiaries: Array.from({ length: numBeneficiaries }, () => ({
-      beneficiaryType: faker.helpers.arrayElement(beneficiaryTypes),
-      name: faker.person.fullName(),
-      email: faker.internet.email(),
-    })),
+    beneficiaryNames: Array.from({ length: numBeneficiaries }, () =>
+      faker.person.fullName()
+    ),
   };
 
   if (callback) {
@@ -68,9 +63,9 @@ export const beneficiariesTestScenarios = [
     expectedValid: true,
   },
   {
-    name: 'Missing Required Field: beneficiaries',
+    name: 'Missing Required Field: beneficiaryNames',
     data: generateBeneficiariesCredential((data) => {
-      delete data.credentialSubject.beneficiaries;
+      delete data.credentialSubject.beneficiaryNames;
     }),
     expectedValid: false,
   },
@@ -82,69 +77,40 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Empty beneficiaries array',
+    name: 'Empty beneficiaryNames array',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries = [];
+      data.credentialSubject.beneficiaryNames = [];
     }),
     expectedValid: false,
   },
   {
     name: 'Too many beneficiaries (exceeds maxItems: 10)',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries = Array.from({ length: 11 }, () => ({
-        beneficiaryType: 'ubo',
-        name: faker.person.fullName(),
-        email: faker.internet.email(),
-      }));
+      data.credentialSubject.beneficiaryNames = Array.from(
+        { length: 11 },
+        (_, i) => `Beneficiary ${i + 1}`
+      );
     }),
     expectedValid: false,
   },
   {
-    name: 'Missing beneficiaryType in array item',
+    name: 'Wrong Data Type: beneficiaryNames as string',
     data: generateBeneficiariesCredential((data) => {
-      delete data.credentialSubject.beneficiaries[0].beneficiaryType;
+      data.credentialSubject.beneficiaryNames = 'not an array';
     }),
     expectedValid: false,
   },
   {
-    name: 'Missing name in array item',
+    name: 'Wrong Data Type: array item as number',
     data: generateBeneficiariesCredential((data) => {
-      delete data.credentialSubject.beneficiaries[0].name;
+      data.credentialSubject.beneficiaryNames[0] = 9876;
     }),
     expectedValid: false,
   },
   {
-    name: 'Missing email in array item',
+    name: 'Invalid name: empty string in array',
     data: generateBeneficiariesCredential((data) => {
-      delete data.credentialSubject.beneficiaries[0].email;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Wrong Data Type: beneficiaries as string',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries = 'not an array';
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Wrong Data Type: beneficiaryType as number',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].beneficiaryType = 12345;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Wrong Data Type: name as number',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].name = 9876;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Wrong Data Type: email as number',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].email = 12345;
+      data.credentialSubject.beneficiaryNames[0] = '';
     }),
     expectedValid: false,
   },
@@ -170,119 +136,19 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Invalid beneficiaryType: empty string',
+    name: 'Null value in beneficiaryNames array',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].beneficiaryType = '';
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Invalid beneficiaryType: leading spaces',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].beneficiaryType =
-        ' ' + data.credentialSubject.beneficiaries[0].beneficiaryType;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Invalid beneficiaryType: trailing spaces',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].beneficiaryType =
-        data.credentialSubject.beneficiaries[0].beneficiaryType + ' ';
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Invalid name: empty string',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].name = '';
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Invalid name: leading spaces',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].name =
-        ' ' + data.credentialSubject.beneficiaries[0].name;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Invalid name: trailing spaces',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].name =
-        data.credentialSubject.beneficiaries[0].name + ' ';
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Invalid email: empty string',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].email = '';
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Invalid email: not a valid email format',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].email = 'not-an-email';
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Invalid email: missing @ symbol',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].email = 'user.example.com';
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Invalid email: missing domain',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].email = 'user@';
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Null Values: beneficiaryType',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].beneficiaryType = null;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Null Values: name',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].name = null;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Null Values: email',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries[0].email = null;
+      data.credentialSubject.beneficiaryNames[0] = null;
     }),
     expectedValid: false,
   },
   {
     name: 'Valid: Multiple beneficiaries',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries = [
-        {
-          beneficiaryType: 'ubo',
-          name: 'John Doe',
-          email: 'john.doe@example.com',
-        },
-        {
-          beneficiaryType: 'shareholder',
-          name: 'Jane Smith',
-          email: 'jane.smith@example.com',
-        },
-        {
-          beneficiaryType: 'director',
-          name: 'Bob Johnson',
-          email: 'bob.johnson@example.com',
-        },
+      data.credentialSubject.beneficiaryNames = [
+        'John Doe',
+        'Jane Smith',
+        'Bob Johnson',
       ];
     }),
     expectedValid: true,
@@ -290,11 +156,10 @@ export const beneficiariesTestScenarios = [
   {
     name: 'Valid: Maximum beneficiaries (10)',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaries = Array.from({ length: 10 }, (_, i) => ({
-        beneficiaryType: 'ubo',
-        name: `Beneficiary ${i + 1}`,
-        email: `beneficiary${i + 1}@example.com`,
-      }));
+      data.credentialSubject.beneficiaryNames = Array.from(
+        { length: 10 },
+        (_, i) => `Beneficiary ${i + 1}`
+      );
     }),
     expectedValid: true,
   },
