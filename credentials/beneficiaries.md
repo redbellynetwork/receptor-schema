@@ -1,37 +1,10 @@
-# beneficiaries
+# beneficiaryNames
 
-Array of beneficiaries.
+List of beneficiary names linked to the business. An array of strings (1 to 10 items).
 
 ```
-  "beneficiaries": [
-    {
-      "beneficiaryType": "ubo",
-      "name": "John Doe",
-      "email": "john.doe@example.com"
-    }
+  "beneficiaryNames": [
+    "John Doe",
+    "Jane Smith"
   ]
-```
-
-# beneficiaryType
-
-Type of the beneficiary.
-
-```
-  "beneficiaryType": "ubo"
-```
-
-# name
-
-Name of the beneficiary.
-
-```
-  "name": "John Doe"
-```
-
-# email
-
-Email address of the beneficiary.
-
-```
-  "email": "john.doe@example.com"
 ```
