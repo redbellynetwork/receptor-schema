@@ -41,12 +41,9 @@ function generateBeneficiariesCredential(
   data.version = faker.number.int();
   data.updatable = faker.datatype.boolean();
 
-  const numBeneficiaries = faker.number.int({ min: 1, max: 5 });
   data.credentialSubject = {
     id: did,
-    beneficiaryNames: Array.from({ length: numBeneficiaries }, () =>
-      faker.person.fullName()
-    ),
+    beneficiaryNames: faker.person.fullName(),
   };
 
   if (callback) {
@@ -77,40 +74,23 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Empty beneficiaryNames array',
+    name: 'Empty beneficiaryNames string',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames = [];
+      data.credentialSubject.beneficiaryNames = '';
     }),
     expectedValid: false,
   },
   {
-    name: 'Too many beneficiaries (exceeds maxItems: 10)',
+    name: 'Wrong Data Type: beneficiaryNames as array',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames = Array.from(
-        { length: 11 },
-        (_, i) => `Beneficiary ${i + 1}`
-      );
+      data.credentialSubject.beneficiaryNames = ['not', 'a', 'string'] as any;
     }),
     expectedValid: false,
   },
   {
-    name: 'Wrong Data Type: beneficiaryNames as string',
+    name: 'Wrong Data Type: beneficiaryNames as number',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames = 'not an array';
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Wrong Data Type: array item as number',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames[0] = 9876;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Invalid name: empty string in array',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames[0] = '';
+      data.credentialSubject.beneficiaryNames = 123 as any;
     }),
     expectedValid: false,
   },
@@ -136,30 +116,10 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Null value in beneficiaryNames array',
+    name: 'Valid: beneficiary names as string',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames[0] = null;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Valid: Multiple beneficiaries',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames = [
-        'John Doe',
-        'Jane Smith',
-        'Bob Johnson',
-      ];
-    }),
-    expectedValid: true,
-  },
-  {
-    name: 'Valid: Maximum beneficiaries (10)',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames = Array.from(
-        { length: 10 },
-        (_, i) => `Beneficiary ${i + 1}`
-      );
+      data.credentialSubject.beneficiaryNames =
+        'John Doe, Jane Smith, Bob Johnson';
     }),
     expectedValid: true,
   },
