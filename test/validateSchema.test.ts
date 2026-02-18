@@ -26,11 +26,11 @@ fileList.forEach((file) => {
             ? validate.errors
                 .map((error) => `${error.instancePath} ${error.message}`)
                 .join(', ')
-            : "An Unknown error occured";
+            : 'An Unknown error occured';
 
-            if (!valid) {
-              console.error(`Validation failed for ${scenario.name}:`, errors);
-            }
+          if (valid !== expectedValid) {
+            console.error(`Validation failed for ${scenario.name}:`, errors);
+          }
           expect(valid).toBe(expectedValid);
         });
       }
