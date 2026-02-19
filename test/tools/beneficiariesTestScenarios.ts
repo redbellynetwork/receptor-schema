@@ -6,6 +6,15 @@ const beneficiariesSchema = JSON.parse(
   fs.readFileSync('./schemas/json/BeneficiariesCredential.json', 'utf-8')
 );
 
+/**
+ * Generates a valid beneficiaryNames string per pattern: ^\S+(?: \S+)*(?:,\S+(?: \S+)*)*$
+ * I.e. one or more space-separated words; multiple names comma-separated with no space after comma.
+ */
+function validBeneficiaryNamesString(numNames = 1): string {
+  const names = Array.from({ length: numNames }, () => faker.person.fullName());
+  return names.join(',');
+}
+
 function generateBeneficiariesCredential(
   callback?: (data: any) => void
 ): any {
@@ -41,11 +50,10 @@ function generateBeneficiariesCredential(
   data.version = faker.number.int();
   data.updatable = faker.datatype.boolean();
 
-  const numBeneficiaries = faker.number.int({ min: 1, max: 5 });
   data.credentialSubject = {
     id: did,
-    beneficiaryNames: Array.from({ length: numBeneficiaries }, () =>
-      faker.person.fullName()
+    beneficiaryNames: validBeneficiaryNamesString(
+      faker.number.int({ min: 1, max: 4 })
     ),
   };
 
@@ -77,40 +85,16 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Empty beneficiaryNames array',
+    name: 'Empty beneficiaryNames string',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames = [];
+      data.credentialSubject.beneficiaryNames = '';
     }),
     expectedValid: false,
   },
   {
-    name: 'Too many beneficiaries (exceeds maxItems: 10)',
+    name: 'Wrong Data Type: beneficiaryNames as array',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames = Array.from(
-        { length: 11 },
-        (_, i) => `Beneficiary ${i + 1}`
-      );
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Wrong Data Type: beneficiaryNames as string',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames = 'not an array';
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Wrong Data Type: array item as number',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames[0] = 9876;
-    }),
-    expectedValid: false,
-  },
-  {
-    name: 'Invalid name: empty string in array',
-    data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames[0] = '';
+      data.credentialSubject.beneficiaryNames = ['John Doe', 'Jane Smith'];
     }),
     expectedValid: false,
   },
@@ -136,31 +120,109 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
-    name: 'Null value in beneficiaryNames array',
+    name: 'Wrong Data Type: beneficiaryNames as null',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames[0] = null;
+      data.credentialSubject.beneficiaryNames = null as any;
     }),
     expectedValid: false,
   },
   {
-    name: 'Valid: Multiple beneficiaries',
+    name: 'Wrong Data Type: beneficiaryNames as boolean',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames = [
-        'John Doe',
-        'Jane Smith',
-        'Bob Johnson',
-      ];
+      data.credentialSubject.beneficiaryNames = true as any;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: beneficiaryNames whitespace only',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryNames = '   ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: beneficiaryNames single space',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryNames = ' ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: beneficiaryNames leading space',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryNames = ' Alice Smith';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: beneficiaryNames trailing space',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryNames = 'Alice Smith ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Valid: single beneficiary name',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryNames = 'Alice Smith';
     }),
     expectedValid: true,
   },
   {
-    name: 'Valid: Maximum beneficiaries (10)',
+    name: 'Valid: single word name',
     data: generateBeneficiariesCredential((data) => {
-      data.credentialSubject.beneficiaryNames = Array.from(
-        { length: 10 },
-        (_, i) => `Beneficiary ${i + 1}`
-      );
+      data.credentialSubject.beneficiaryNames = 'Alice';
     }),
     expectedValid: true,
+  },
+  {
+    name: 'Valid: comma-separated names (no space after comma)',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryNames =
+        'John Doe,Jane Smith,Bob Johnson';
+    }),
+    expectedValid: true,
+  },
+  {
+    name: 'Invalid: space after comma in beneficiaryNames',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryNames = 'John Doe, Jane Smith';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: double space between words in beneficiaryNames',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryNames = 'John  Doe';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Valid: beneficiary name with hyphen',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryNames = 'Mary-Jane Watson';
+    }),
+    expectedValid: true,
+  },
+  {
+    name: 'Missing required: issuanceDate',
+    data: generateBeneficiariesCredential((data) => {
+      delete data.issuanceDate;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Missing required: credentialStatus',
+    data: generateBeneficiariesCredential((data) => {
+      delete data.credentialStatus;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid issuer: missing id',
+    data: generateBeneficiariesCredential((data) => {
+      data.issuer = {};
+    }),
+    expectedValid: false,
   },
 ];

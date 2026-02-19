@@ -1,10 +1,7 @@
 # beneficiaryNames
 
-List of beneficiary names linked to the business. An array of strings (1 to 10 items).
+The names of Beneficiaries linked to the business in a comma separated format.
 
 ```
-  "beneficiaryNames": [
-    "John Doe",
-    "Jane Smith"
-  ]
+  "beneficiaryNames": "John Doe,Jane Smith"
 ```
