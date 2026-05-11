@@ -12,6 +12,7 @@ import { optimaV1TestScenarios } from './optimaTestSecenarios';
 import { proofOfAddressTestScenarios } from './poaTestScenarios';
 import { wholesaleInvestorTestScenarios } from './wholesalesTestScenarios';
 import { beneficiariesTestScenarios } from './beneficiariesTestScenarios';
+import { proofOfIncorporationTestScenarios } from './proofOfIncorporationTestScenarios';
 
 const testObject = {
   AMLCTFCredential: amlCtfTestScenarios,
@@ -25,6 +26,7 @@ const testObject = {
   OptimaV1Credential: optimaV1TestScenarios,
   ProofOfAddressCredential: proofOfAddressTestScenarios,
   AUSophisticatedWholesaleInvestorCredential: wholesaleInvestorTestScenarios,
+  ProofOfIncorporationCredential: proofOfIncorporationTestScenarios,
 };
 
 if (!fs.existsSync('./test/data')) {
