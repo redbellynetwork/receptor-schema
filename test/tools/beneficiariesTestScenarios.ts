@@ -16,13 +16,21 @@ function validBeneficiaryNamesString(numNames = 1): string {
 }
 
 /**
- * Generates a valid beneficiaryRoles string per pattern: ^[A-Za-z]+(?:,[A-Za-z]+)*$
- * I.e. one or more comma-separated words; multiple roles comma-separated with no space after comma.
+ * Generates a valid beneficiaryRoles string per pattern:
+ * ^[A-Za-z]+(?:&[A-Za-z]+)*(?:,[A-Za-z]+(?:&[A-Za-z]+)*)*$
+ * I.e. roles for one beneficiary are ampersand-separated, and beneficiaries are comma-separated.
  */
-function validBeneficiaryRolesString(numRoles = 1): string {
-  const roles = ['ubo', 'director', 'representative'];
+function validBeneficiaryRolesString(numBeneficiaries = 1): string {
+  const roleGroups = [
+    ['ubo', 'director'],
+    ['ubo', 'representative'],
+    ['representative'],
+  ];
 
-  return roles.slice(0, numRoles).join(',');
+  return roleGroups
+    .slice(0, numBeneficiaries)
+    .map((roles) => roles.join('&'))
+    .join(',');
 }
 
 function generateBeneficiariesCredential(callback?: (data: any) => void): any {
@@ -258,9 +266,24 @@ export const beneficiariesTestScenarios = [
     expectedValid: true,
   },
   {
-    name: 'Valid: comma-separated roles (no space after comma)',
+    name: 'Valid: comma-separated beneficiary roles (no space after comma)',
     data: generateBeneficiariesCredential((data) => {
       data.credentialSubject.beneficiaryRoles = 'ubo,director,representative';
+    }),
+    expectedValid: true,
+  },
+  {
+    name: 'Valid: ampersand-separated roles for one beneficiary',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo&director';
+    }),
+    expectedValid: true,
+  },
+  {
+    name: 'Valid: ampersand roles for comma-separated beneficiaries',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles =
+        'ubo&director,ubo&representative';
     }),
     expectedValid: true,
   },
@@ -275,6 +298,34 @@ export const beneficiariesTestScenarios = [
     name: 'Invalid: space after comma in beneficiaryRoles',
     data: generateBeneficiariesCredential((data) => {
       data.credentialSubject.beneficiaryRoles = 'ubo, director';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: space around ampersand in beneficiaryRoles',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo &director';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: trailing ampersand in beneficiaryRoles',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo&';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: leading ampersand in beneficiaryRoles',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = '&ubo';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: double ampersand in beneficiaryRoles',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo&&director';
     }),
     expectedValid: false,
   },
