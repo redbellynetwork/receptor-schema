@@ -7,7 +7,6 @@ const enhancedIdschema = JSON.parse(
   fs.readFileSync('./schemas/json/EnhancedIdCredential.json', 'utf-8')
 );
 
-
 function generateEnhancedIDCredential(callback?: (data: any) => void): any {
   const data = jsf.generate(enhancedIdschema) as any;
   const did = `did:receptor:redbelly:${faker.helpers.arrayElement([

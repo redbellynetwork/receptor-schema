@@ -56,7 +56,6 @@ function generateDriversLicenceCredential(callback?: (data: any) => void): any {
   return data;
 }
 
-
 export const dLTestScenarios = [
   {
     name: 'Valid Drivers Licence',

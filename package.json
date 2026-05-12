@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "format": "prettier --write .",
+    "format": "prettier --write \".prettierrc\" \"*.{json,md,ts}\" \"schemas/json/**/*.json\" \"schemas/json-ld/**/*.jsonld\" \"test/**/*.{json,ts}\" \"credentials/**/*.md\" \"proofs/**/*.md\"",
+    "format:check": "prettier --check \".prettierrc\" \"*.{json,md,ts}\" \"schemas/json/**/*.json\" \"schemas/json-ld/**/*.jsonld\" \"test/**/*.{json,ts}\" \"credentials/**/*.md\" \"proofs/**/*.md\"",
+    "lint": "tsc --noEmit",
     "test": "npx jest"
   },
   "devDependencies": {
