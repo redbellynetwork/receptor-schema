@@ -7,7 +7,6 @@ const kyc1by1schema = JSON.parse(
   fs.readFileSync('./schemas/json/EssentialIdCredential.json', 'utf-8')
 );
 
-
 function generateEssentialIDCredential(callback?: (data: any) => void): any {
   const data = jsf.generate(kyc1by1schema) as any;
   const did = `did:receptor:redbelly:${faker.helpers.arrayElement([

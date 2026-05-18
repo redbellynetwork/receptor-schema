@@ -3,7 +3,10 @@ import { faker } from '@faker-js/faker';
 import jsf from 'json-schema-faker';
 
 const wholesaleInvestorSchema = JSON.parse(
-  fs.readFileSync('./schemas/json/AUSophisticatedWholesaleInvestorCredential.json', 'utf-8')
+  fs.readFileSync(
+    './schemas/json/AUSophisticatedWholesaleInvestorCredential.json',
+    'utf-8'
+  )
 );
 
 function generateWholesaleInvestorCredentials(
@@ -24,7 +27,10 @@ function generateWholesaleInvestorCredentials(
   data['@context'] =
     'https://raw.githubusercontent.com/redbellynetwork/receptor-schema/refs/heads/main/schemas/json-ld/AUSophisticatedWholesaleInvestorCredential.jsonld';
   data.id = faker.string.uuid();
-  data.type = ['VerifiableCredential', 'AUSophisticatedWholesaleInvestorCredential'];
+  data.type = [
+    'VerifiableCredential',
+    'AUSophisticatedWholesaleInvestorCredential',
+  ];
   data.issuanceDate = faker.date.past().toISOString();
   data.expirationDate = faker.date.future().toISOString();
   data.issuer = { id: faker.internet.url() };

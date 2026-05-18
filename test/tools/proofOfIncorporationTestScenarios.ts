@@ -57,7 +57,9 @@ function generateProofOfIncorporationCredential(
     id: did,
     legalName: faker.company.name(),
     legalAddress: `${faker.location.streetAddress()}, ${faker.location.city()}, ${faker.location.country()}`,
-    registrationNumber: faker.string.alphanumeric({ length: { min: 6, max: 12 } }),
+    registrationNumber: faker.string.alphanumeric({
+      length: { min: 6, max: 12 },
+    }),
     jurisdiction: faker.location.country(),
     legalForm: faker.helpers.arrayElement(legalForms),
   };
@@ -183,14 +185,16 @@ export const proofOfIncorporationTestScenarios = [
   {
     name: 'Invalid credentialSubject.legalAddress: leading spaces',
     data: generateProofOfIncorporationCredential((data) => {
-      data.credentialSubject.legalAddress = ' ' + data.credentialSubject.legalAddress;
+      data.credentialSubject.legalAddress =
+        ' ' + data.credentialSubject.legalAddress;
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.legalAddress: trailing spaces',
     data: generateProofOfIncorporationCredential((data) => {
-      data.credentialSubject.legalAddress = data.credentialSubject.legalAddress + ' ';
+      data.credentialSubject.legalAddress =
+        data.credentialSubject.legalAddress + ' ';
     }),
     expectedValid: false,
   },
@@ -225,14 +229,16 @@ export const proofOfIncorporationTestScenarios = [
   {
     name: 'Invalid credentialSubject.jurisdiction: leading space',
     data: generateProofOfIncorporationCredential((data) => {
-      data.credentialSubject.jurisdiction = ' ' + data.credentialSubject.jurisdiction;
+      data.credentialSubject.jurisdiction =
+        ' ' + data.credentialSubject.jurisdiction;
     }),
     expectedValid: false,
   },
   {
     name: 'Invalid credentialSubject.jurisdiction: trailing space',
     data: generateProofOfIncorporationCredential((data) => {
-      data.credentialSubject.jurisdiction = data.credentialSubject.jurisdiction + ' ';
+      data.credentialSubject.jurisdiction =
+        data.credentialSubject.jurisdiction + ' ';
     }),
     expectedValid: false,
   },
@@ -267,14 +273,15 @@ export const proofOfIncorporationTestScenarios = [
   {
     name: 'Valid legalForm with special characters',
     data: generateProofOfIncorporationCredential((data) => {
-      data.credentialSubject.legalForm = 'Etaireia Periorismenis Efthynis (E.P.E.) Ltd';
+      data.credentialSubject.legalForm =
+        'Etaireia Periorismenis Efthynis (E.P.E.) Ltd';
     }),
     expectedValid: true,
   },
   {
     name: 'Valid legalForm with ampersand',
     data: generateProofOfIncorporationCredential((data) => {
-      data.credentialSubject.legalForm = 'Smith & Associates, LLC';
+      data.credentialSubject.legalForm = 'Smith & Associates LLC';
     }),
     expectedValid: true,
   },

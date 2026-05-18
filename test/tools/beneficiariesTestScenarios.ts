@@ -15,9 +15,25 @@ function validBeneficiaryNamesString(numNames = 1): string {
   return names.join(',');
 }
 
-function generateBeneficiariesCredential(
-  callback?: (data: any) => void
-): any {
+/**
+ * Generates a valid beneficiaryRoles string per pattern:
+ * ^[A-Za-z]+(?:&[A-Za-z]+)*(?:,[A-Za-z]+(?:&[A-Za-z]+)*)*$
+ * I.e. roles for one beneficiary are ampersand-separated, and beneficiaries are comma-separated.
+ */
+function validBeneficiaryRolesString(numBeneficiaries = 1): string {
+  const roleGroups = [
+    ['ubo', 'director'],
+    ['ubo', 'representative'],
+    ['representative'],
+  ];
+
+  return roleGroups
+    .slice(0, numBeneficiaries)
+    .map((roles) => roles.join('&'))
+    .join(',');
+}
+
+function generateBeneficiariesCredential(callback?: (data: any) => void): any {
   const data = jsf.generate(beneficiariesSchema) as any;
   const did = `did:receptor:redbelly:${faker.helpers.arrayElement([
     'testnet',
@@ -55,6 +71,9 @@ function generateBeneficiariesCredential(
     beneficiaryNames: validBeneficiaryNamesString(
       faker.number.int({ min: 1, max: 4 })
     ),
+    beneficiaryRoles: validBeneficiaryRolesString(
+      faker.number.int({ min: 1, max: 3 })
+    ),
   };
 
   if (callback) {
@@ -78,6 +97,13 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
+    name: 'Missing Required Field: beneficiaryRoles',
+    data: generateBeneficiariesCredential((data) => {
+      delete data.credentialSubject.beneficiaryRoles;
+    }),
+    expectedValid: false,
+  },
+  {
     name: 'Missing Required Field: id',
     data: generateBeneficiariesCredential((data) => {
       delete data.credentialSubject.id;
@@ -92,9 +118,23 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
+    name: 'Empty beneficiaryRoles string',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = '';
+    }),
+    expectedValid: false,
+  },
+  {
     name: 'Wrong Data Type: beneficiaryNames as array',
     data: generateBeneficiariesCredential((data) => {
       data.credentialSubject.beneficiaryNames = ['John Doe', 'Jane Smith'];
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Wrong Data Type: beneficiaryRoles as array',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = ['ubo', 'director'];
     }),
     expectedValid: false,
   },
@@ -127,9 +167,23 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
+    name: 'Wrong Data Type: beneficiaryRoles as null',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = null as any;
+    }),
+    expectedValid: false,
+  },
+  {
     name: 'Wrong Data Type: beneficiaryNames as boolean',
     data: generateBeneficiariesCredential((data) => {
       data.credentialSubject.beneficiaryNames = true as any;
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Wrong Data Type: beneficiaryRoles as boolean',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = true as any;
     }),
     expectedValid: false,
   },
@@ -141,9 +195,23 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
+    name: 'Invalid: beneficiaryRoles whitespace only',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = '   ';
+    }),
+    expectedValid: false,
+  },
+  {
     name: 'Invalid: beneficiaryNames single space',
     data: generateBeneficiariesCredential((data) => {
       data.credentialSubject.beneficiaryNames = ' ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: beneficiaryRoles single space',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = ' ';
     }),
     expectedValid: false,
   },
@@ -155,9 +223,23 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
+    name: 'Invalid: beneficiaryRoles leading space',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = ' ubo';
+    }),
+    expectedValid: false,
+  },
+  {
     name: 'Invalid: beneficiaryNames trailing space',
     data: generateBeneficiariesCredential((data) => {
       data.credentialSubject.beneficiaryNames = 'Alice Smith ';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: beneficiaryRoles trailing space',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo ';
     }),
     expectedValid: false,
   },
@@ -184,6 +266,28 @@ export const beneficiariesTestScenarios = [
     expectedValid: true,
   },
   {
+    name: 'Valid: comma-separated beneficiary roles (no space after comma)',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo,director,representative';
+    }),
+    expectedValid: true,
+  },
+  {
+    name: 'Valid: ampersand-separated roles for one beneficiary',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo&director';
+    }),
+    expectedValid: true,
+  },
+  {
+    name: 'Valid: ampersand roles for comma-separated beneficiaries',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles =
+        'ubo&director,ubo&representative';
+    }),
+    expectedValid: true,
+  },
+  {
     name: 'Invalid: space after comma in beneficiaryNames',
     data: generateBeneficiariesCredential((data) => {
       data.credentialSubject.beneficiaryNames = 'John Doe, Jane Smith';
@@ -191,9 +295,51 @@ export const beneficiariesTestScenarios = [
     expectedValid: false,
   },
   {
+    name: 'Invalid: space after comma in beneficiaryRoles',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo, director';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: space around ampersand in beneficiaryRoles',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo &director';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: trailing ampersand in beneficiaryRoles',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo&';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: leading ampersand in beneficiaryRoles',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = '&ubo';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: double ampersand in beneficiaryRoles',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo&&director';
+    }),
+    expectedValid: false,
+  },
+  {
     name: 'Invalid: double space between words in beneficiaryNames',
     data: generateBeneficiariesCredential((data) => {
       data.credentialSubject.beneficiaryNames = 'John  Doe';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Invalid: beneficiaryRoles with number',
+    data: generateBeneficiariesCredential((data) => {
+      data.credentialSubject.beneficiaryRoles = 'ubo1';
     }),
     expectedValid: false,
   },

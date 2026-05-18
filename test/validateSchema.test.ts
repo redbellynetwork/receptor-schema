@@ -17,7 +17,7 @@ fileList.forEach((file) => {
 
   describe(`Testcases for ${file}: `, () => {
     scenarios.forEach(
-      (scenario: { name?: any; data?: any; expectedValid?: any; }) => {
+      (scenario: { name?: any; data?: any; expectedValid?: any }) => {
         test(scenario.name, async () => {
           const { data, expectedValid } = scenario;
           const valid = validate(data);
