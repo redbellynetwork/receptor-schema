@@ -125,6 +125,27 @@ export const proofOfAddressTestScenarios = [
     expectedValid: false,
   },
   {
+    name: 'Invalid postCode: fewer than 4 digits',
+    data: generateProofOfAddressCredential((data) => {
+      data.credentialSubject.postCode = '123';
+    }),
+    expectedValid: false,
+  },
+  {
+    name: 'Valid postCode: exactly 4 digits',
+    data: generateProofOfAddressCredential((data) => {
+      data.credentialSubject.postCode = '1234';
+    }),
+    expectedValid: true,
+  },
+  {
+    name: 'Valid postCode: more than 5 digits',
+    data: generateProofOfAddressCredential((data) => {
+      data.credentialSubject.postCode = '123456789';
+    }),
+    expectedValid: true,
+  },
+  {
     name: 'Invalid country: whitespace only',
     data: generateProofOfAddressCredential((data) => {
       data.credentialSubject.country = '   ';
